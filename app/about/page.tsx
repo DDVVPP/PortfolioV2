@@ -1,5 +1,7 @@
-const About = async () => {
-  return <div>About Page</div>;
+import About from '@/components/About';
+
+const AboutWrapper = async () => {
+  return <About />;
 };
 
-export default About;
+export default AboutWrapper;

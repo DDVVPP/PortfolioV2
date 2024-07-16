@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <section className="flex flex-col gap-y-8">
       <section className="flex flex-col">
-        <div className="text-3xl">
+        <div className="text-4xl font-bold">
           <h1>Darshin</h1>
           <h1>Van Parijs</h1>
         </div>
