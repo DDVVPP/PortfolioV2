@@ -1,13 +1,19 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 import githubLogo from '@/public/github-mark.svg';
 import linkedInLogo from '@/public/In-White-14.png';
+import { navbarItems } from '@/lib/constants';
 
 const Navbar = () => {
+  const pathname = usePathname();
+
   return (
     <section className="sticky flex flex-col gap-y-16">
-      <section className="flex flex-col">
+      <section className="mr-4 flex flex-col ">
         <div className="text-right text-4xl font-bold text-slate-400">
           <h1>Darshin</h1>
           <h1>Van Parijs</h1>
@@ -34,11 +40,19 @@ const Navbar = () => {
         </a>
       </section>
 
-      <section className="flex flex-col items-end gap-y-4 text-base font-normal text-red-400">
-        <Link href="/about">About</Link>
-        <Link href="/work">Work</Link>
-        <Link href="/projects">Projects</Link>
-        <Link href="/hobbies">Hobbies</Link>
+      <section className="flex flex-col items-end gap-y-4 text-base font-light text-slate-400">
+        {navbarItems.map((item) => {
+          const isSelected = pathname.includes(item.route);
+          return (
+            <Link
+              key={item.route}
+              href={item.route}
+              className={`${isSelected ? 'rounded-xl rounded-r-none bg-slate-800 p-4 font-normal text-red-400 transition duration-300' : ' mr-4'}`}
+            >
+              {item.title}
+            </Link>
+          );
+        })}
       </section>
     </section>
   );
