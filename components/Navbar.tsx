@@ -53,7 +53,7 @@ const Navbar = () => {
             <Link
               key={item.route}
               href={item.route}
-              className={`${isSelected ? 'rounded-xl rounded-r-none bg-slate-800 px-6 py-4 font-normal text-red-400 duration-300' : 'px-6 py-4'}`}
+              className={`${isSelected ? 'rounded-xl rounded-r-none bg-dark-800 px-6 py-4 font-normal text-red-400 duration-300' : 'px-6 py-4'}`}
             >
               {item.title}
             </Link>
