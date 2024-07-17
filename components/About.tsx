@@ -3,7 +3,7 @@ import profile from '@/public/profile-pic.jpg';
 
 const About = () => {
   return (
-    <section className="flex h-dvh flex-col items-center justify-center gap-y-10 rounded-xl bg-slate-800 p-4">
+    <section className="flex flex-col items-center justify-center gap-y-10 p-4">
       <div className="relative size-64 shrink-0 align-middle">
         <Image
           priority
@@ -14,7 +14,7 @@ const About = () => {
         />
       </div>
       <div className="w-3/4 justify-center">
-        <p className="text-center">
+        <p className="text-center font-light text-slate-300">
           Hi! I am an Architectural Designer turned Software Developer who lives
           in Los Angeles, California and likes to eat delicious food, workout,
           hike, and dance Brazilian Zouk (a latin partner dance). <br />
