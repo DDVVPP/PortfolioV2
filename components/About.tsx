@@ -1,9 +1,17 @@
+'use client';
+
 import Image from 'next/image';
 import profile from '@/public/profile-pic.jpg';
+import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <section className="flex flex-col items-center justify-center gap-y-10 p-4">
+    <motion.section
+      className="flex flex-col items-center justify-center gap-y-10 p-4"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
       <div className="relative size-64 shrink-0 align-middle">
         <Image
           priority
@@ -13,7 +21,7 @@ const About = () => {
           className="rounded-full"
         />
       </div>
-      <div className="w-3/4 justify-center">
+      <div className="w-3/4 justify-center max-md:text-sm">
         <p className="text-center font-light text-slate-300">
           Hi! I am an Architectural Designer turned Software Developer who lives
           in Los Angeles, California and likes to eat delicious food, workout,
@@ -32,7 +40,7 @@ const About = () => {
           entire process debuggin easier
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
