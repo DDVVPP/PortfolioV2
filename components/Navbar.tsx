@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
 import githubLogo from '@/public/github-mark.svg';
-import linkedInLogo from '@/public/In-White-14.png';
+import linkedInLogo from '@/public/linkedin.svg';
 import { navbarItems } from '@/lib/constants';
 
 const Navbar = () => {
@@ -13,41 +13,47 @@ const Navbar = () => {
 
   return (
     <section className="sticky flex flex-col gap-y-16">
-      <section className="mr-4 flex flex-col ">
+      <section className="mr-6 flex flex-col gap-y-1">
         <div className="text-right text-4xl font-bold text-slate-400">
           <h1>Darshin</h1>
           <h1>Van Parijs</h1>
         </div>
-        <div className="mt-2 flex justify-end gap-x-2 text-sm font-light text-slate-300">
-          <a href="/resume-2024.pdf" target="_blank">
-            <p>Resume</p>
-          </a>
+        <div className="mb-0.5 mt-2 flex items-center justify-end gap-x-4 text-sm font-light text-slate-300">
           <a
             href="https://www.linkedin.com/in/DarshinVanParijs/"
             target="_blank"
           >
-            <Image priority src={linkedInLogo} alt="LogoLight" width={20} />
+            <Image priority src={linkedInLogo} alt="LogoLight" width={22} />
           </a>
           <a href="https://github.com/DDVVPP" target="_blank">
-            <Image priority src={githubLogo} alt="LogoLight" width={24} />
+            <Image priority src={githubLogo} alt="LogoLight" width={19} />
+          </a>
+          <a
+            href="/resume-2024.pdf"
+            target="_blank"
+            className="rounded-md border border-slate-500 p-1"
+          >
+            <p>Resume</p>
           </a>
         </div>
-        <a
-          href="mailto:darshinvp@gmail.com"
-          className="text-right text-sm font-light text-slate-300"
-        >
-          darshinvp@gmail.com
-        </a>
+        <div className="flex justify-end">
+          <a
+            href="mailto:darshinvp@gmail.com"
+            className="rounded-md border border-slate-500 p-1 text-end text-sm font-light text-slate-300"
+          >
+            darshinvp@gmail.com
+          </a>
+        </div>
       </section>
 
-      <section className="flex flex-col items-end gap-y-4 text-base font-light text-slate-400">
+      <section className="flex flex-col items-end text-base font-light text-slate-400">
         {navbarItems.map((item) => {
           const isSelected = pathname.includes(item.route);
           return (
             <Link
               key={item.route}
               href={item.route}
-              className={`${isSelected ? 'rounded-xl rounded-r-none bg-slate-800 p-4 font-normal text-red-400 transition duration-300' : ' mr-4'}`}
+              className={`${isSelected ? 'rounded-xl rounded-r-none bg-slate-800 px-6 py-4 font-normal text-red-400 duration-300' : 'px-6 py-4'}`}
             >
               {item.title}
             </Link>
