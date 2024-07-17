@@ -11,7 +11,7 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
       <div className="sticky mx-8 mt-8 rounded-xl md:hidden">
         <NavbarMobile />
       </div>
-      <div className="my-10 mr-10 content-center rounded-2xl bg-dark-800 max-md:mx-8 max-md:mt-0 max-md:rounded-t-none md:w-full">
+      <div className="my-10 mr-10 rounded-2xl bg-dark-800 max-md:mx-8 max-md:mt-0 max-md:rounded-t-none md:w-full">
         {' '}
         {children}
       </div>
