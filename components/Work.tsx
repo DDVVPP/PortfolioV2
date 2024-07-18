@@ -1,10 +1,14 @@
 'use client';
 
+import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+
+import Software from './Software';
+import Architecture from './Architecture';
 
 const Work = () => {
   const [isSelected, setIsSelected] = useState('work');
+  const ref = useRef('software');
 
   return (
     <motion.section
@@ -17,31 +21,25 @@ const Work = () => {
         <button
           type="button"
           onClick={() => {
-            setIsSelected('softwareEngineering');
+            setIsSelected('software');
+            ref.current = 'software';
           }}
-          className="rounded-lg border border-slate-400 p-2 focus:border-red-400 focus:text-slate-300"
+          // className="rounded-lg border border-slate-400 p-2 duration-300 hover:border-red-400 hover:text-slate-300 focus:border-red-400 focus:text-slate-300"
+          className={`rounded-lg border border-slate-400 p-2 duration-300 hover:border-red-400 hover:text-slate-300 ${ref.current === 'software' && 'focus:border-red-400'}`}
         >
           Software Engineering
         </button>
         <button
           type="button"
           onClick={() => setIsSelected('architecture')}
-          className="rounded-lg border border-slate-400 p-2 focus:border-red-400 focus:text-slate-300"
+          className="rounded-lg border border-slate-400 p-2 duration-300 hover:border-red-400 hover:text-slate-300 focus:border-red-400 focus:text-slate-300"
         >
           Architecture
         </button>
       </section>
 
-      {isSelected === 'softwareEngineering' && (
-        <section className="mt-5">
-          <p>all software eng work</p>
-        </section>
-      )}
-      {isSelected === 'architecture' && (
-        <section>
-          <p>all architecture work</p>
-        </section>
-      )}
+      {isSelected === 'software' && <Software />}
+      {isSelected === 'architecture' && <Architecture />}
     </motion.section>
   );
 };
