@@ -7,12 +7,12 @@ import Software from './Software';
 import Architecture from './Architecture';
 
 const Work = () => {
-  const [isSelected, setIsSelected] = useState('work');
+  const [isSelected, setIsSelected] = useState('software');
   const ref = useRef('software');
 
   return (
     <motion.section
-      className="m-5 flex flex-col"
+      className="m-10 flex flex-col"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
