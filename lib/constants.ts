@@ -51,3 +51,14 @@ export const workItems = [
     website: 'https://tyca.nyc/',
   },
 ];
+
+export const workTabs = [
+  {
+    tabType: 'software',
+    buttonText: 'Software Engineering',
+  },
+  {
+    tabType: 'architecture',
+    buttonText: 'Architecture',
+  },
+];
