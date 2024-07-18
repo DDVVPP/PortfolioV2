@@ -1,5 +1,7 @@
-const Work = async () => {
-  return <div>Work Page</div>;
+import Work from '@/components/Work';
+
+const WorkWrapper = async () => {
+  return <Work />;
 };
 
-export default Work;
+export default WorkWrapper;

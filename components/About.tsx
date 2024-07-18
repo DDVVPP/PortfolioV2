@@ -7,12 +7,12 @@ import { motion } from 'framer-motion';
 const About = () => {
   return (
     <motion.section
-      className="flex flex-col items-center justify-center gap-y-10 p-4"
+      className="m-10 flex flex-col items-center justify-center max-xs-362:mx-8 xl:m-12"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="relative size-64 shrink-0 align-middle">
+      <div className="relative size-64 shrink-0 align-middle max-md:size-60">
         <Image
           priority
           alt="profile-photo"
@@ -21,7 +21,7 @@ const About = () => {
           className="rounded-full"
         />
       </div>
-      <div className="w-3/4 justify-center max-md:text-sm">
+      <div className="mt-7 w-4/5 justify-center max-md:w-full max-md:text-sm xl:mt-10 xl:w-3/4">
         <p className="text-center font-light text-slate-300">
           Hi! I am an Architectural Designer turned{' '}
           <span className="text-red-400">Software Developer</span> who lives in
