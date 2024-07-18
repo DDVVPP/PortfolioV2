@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { workItems } from '@/lib/constants';
+import { softwareWorkItems } from '@/lib/constants';
 
 const Software = () => {
   return (
@@ -12,7 +12,7 @@ const Software = () => {
       transition={{ duration: 0.8 }}
     >
       <div className="flex flex-col gap-y-8 max-md:gap-y-0">
-        {workItems.map((item) => {
+        {softwareWorkItems.map((item) => {
           return (
             <a
               key={item.company}
