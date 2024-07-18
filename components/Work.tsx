@@ -1,14 +1,19 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import {
+  useRouter,
+  usePathname,
+  useSearchParams,
+  useParams,
+} from 'next/navigation';
 
 import Software from './Software';
 import Architecture from './Architecture';
 
 const Work = () => {
   const [isSelected, setIsSelected] = useState('software');
-  const ref = useRef('software');
 
   return (
     <motion.section
@@ -20,19 +25,15 @@ const Work = () => {
       <section className="sticky flex gap-x-4 text-base font-light text-slate-400  max-md:mx-8 max-md:mt-8 max-md:justify-between max-md:text-sm max-sm:text-xs max-xs-362:mx-7 max-xs-345:mx-5">
         <button
           type="button"
-          onClick={() => {
-            setIsSelected('software');
-            ref.current = 'software';
-          }}
-          // className="rounded-lg border border-slate-400 p-2 duration-300 hover:border-red-400 hover:text-slate-300 focus:border-red-400 focus:text-slate-300"
-          className={`rounded-lg border border-slate-400 p-2 duration-300 hover:border-red-400 hover:text-slate-300 max-md:p-1.5 ${ref.current === 'software' && 'focus:border-red-400'}`}
+          onClick={() => setIsSelected('software')}
+          className={`rounded-lg border border-slate-400 p-2 duration-300 hover:border-red-400 hover:text-slate-300 max-md:p-1.5 ${isSelected === 'software' && 'border-red-400 text-slate-300'}`}
         >
           Software Engineering
         </button>
         <button
           type="button"
           onClick={() => setIsSelected('architecture')}
-          className="rounded-lg border border-slate-400 p-2 duration-300 hover:border-red-400 hover:text-slate-300 focus:border-red-400 focus:text-slate-300 max-md:p-1.5"
+          className={`rounded-lg border border-slate-400 p-2 duration-300 hover:border-red-400 hover:text-slate-300 max-md:p-1.5 ${isSelected === 'architecture' && 'border-red-400 text-slate-300'}`}
         >
           Architecture
         </button>
