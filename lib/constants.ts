@@ -17,6 +17,17 @@ export const navbarItems = [
   },
 ];
 
+export const workTabs = [
+  {
+    tabType: 'software',
+    buttonText: 'Software Engineering',
+  },
+  {
+    tabType: 'architecture',
+    buttonText: 'Architecture',
+  },
+];
+
 export const softwareWorkItems = [
   {
     date: 'Feb 2023 - May 2023',
@@ -52,13 +63,49 @@ export const softwareWorkItems = [
   },
 ];
 
-export const workTabs = [
+export const architectureWorkItems = [
   {
-    tabType: 'software',
-    buttonText: 'Software Engineering',
+    date: 'Sept 2017 - Dec 2018',
+    company: 'Bade Stageberg Cox Architecture',
+    role: 'Project Architect / Architectural Designer',
+    description: `Supervised multiple construction phases for the relocation of Artists Space, an iconic NYC art gallery – Managed the renovation of a summer kitchen highly tailored to high-profile client’s requirements – Implemented diagrams, detailed sketches, and revised shop drawings in AutoCad and Illustrator – Illustrated concepts as 3D models and renderings in Sketch-up, V-ray, Rhinoceros and Photoshop.`,
+    website: 'https://www.bscarchitecture.com/',
   },
   {
-    tabType: 'architecture',
-    buttonText: 'Architecture',
+    date: 'Oct 2015 - Sept 2017',
+    company: "O'Neill Rose Architects",
+    role: 'Project Architect / Architectural Designer',
+    description: `Managed multiple phases of single-family NYC residences – Developed and generated detailed drawings and sketches in AutoCad – Revised shop drawings in Adobe Illustrator – Generated 3D models, diagrams, and renderings in Sketch-up, V-ray, Rhinoceros, and Adobe Photoshop`,
+    website: 'https://www.oneillrosearchitects.com/',
+  },
+  {
+    date: 'Jun 2013 - Oct 2015',
+    company: 'Audrey Matlock Architect',
+    role: 'Project Architect / Architectural Designer',
+    description: `Managed the Construction Administration phase for a single-family NYC apartment
+– Organized and coordinated interior design work of an award-winning Hamptons residence – Developed design drawings and detailed drawings in Vectorworks, Adobe Illustrator, and Photoshop – Generated 3D models and renderings in Rhinoceros, and V-ray`,
+    website: 'http://www.audreymatlock.com/',
+  },
+  {
+    date: 'Nov 2011 - Apr 2013',
+    company: 'Lauren Rubin Architecture',
+    role: 'Architectural Designer',
+    description: `Assisted in the construction administration phase of multiple single family residences
+– Organized and coordinated interior design work for an advertising company and a single-family residence – Generated drawings for furniture placement with AutoCad – Generated 3D concept renderings of each room with Sketchup, Adobe Photoshop, and AutoCad – Created all phases of document sets for two single-family residences with AutoCad`,
+    website: 'https://laurenrubinarchitecture.com/',
+  },
+  {
+    date: 'Jul 2009 - Apr 2010',
+    company: 'Brillembourg Architects',
+    role: 'Junior Architectural Designer',
+    description: '',
+    website: 'https://www.carlosbrillembourgarchitects.com/',
+  },
+  {
+    date: 'Sep 2007 - April 2009',
+    company: 'Garrison Architects',
+    role: 'Junior Architectural Designer',
+    description: '',
+    website: 'https://www.garrisonarchitects.com/',
   },
 ];
