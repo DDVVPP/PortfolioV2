@@ -23,7 +23,7 @@ const Work = () => {
             key={tab.tabType}
             type="button"
             onClick={() => setIsSelected(tab.tabType)}
-            className={`rounded-lg border border-slate-400 p-2 duration-300 hover:border-red-400 hover:text-slate-300 max-md:p-1.5 ${isSelected === tab.tabType && 'border-red-400 text-slate-300'}`}
+            className={`rounded-lg border p-2 duration-300 hover:border-red-400 hover:text-slate-300 max-md:p-1.5 ${isSelected === tab.tabType ? 'border-red-400 text-slate-300' : 'border-slate-400'}`}
           >
             {tab.buttonText}
           </button>
