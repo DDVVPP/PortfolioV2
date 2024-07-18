@@ -17,7 +17,7 @@ export const navbarItems = [
   },
 ];
 
-export const workItems = [
+export const softwareWorkItems = [
   {
     date: 'Feb 2023 - May 2023',
     company: 'UStrive',
