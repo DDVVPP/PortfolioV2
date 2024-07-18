@@ -1,7 +1,11 @@
 import About from '@/components/About';
 
 const AboutWrapper = async () => {
-  return <About />;
+  return (
+    <div className="content-center">
+      <About />
+    </div>
+  );
 };
 
 export default AboutWrapper;
