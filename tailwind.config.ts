@@ -16,6 +16,7 @@ const config: Config = {
       screens: {
         'xs-345': '345px',
         'xs-362': '362px',
+        md: '820px',
       },
       colors: {
         dark: {
