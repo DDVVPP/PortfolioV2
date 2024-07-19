@@ -27,7 +27,7 @@ const Architecture = () => {
                   <h6 className="mb-1 font-medium uppercase text-slate-100">
                     {item.company}
                   </h6>
-                  <h6 className="mb-1 font-normal text-slate-100">
+                  <h6 className="mb-1 font-normal text-slate-100 duration-300 group-hover:text-corral">
                     {item.role}
                   </h6>
                   <p className="font-light text-slate-300">

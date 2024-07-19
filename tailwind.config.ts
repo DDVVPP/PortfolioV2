@@ -21,6 +21,7 @@ const config: Config = {
         dark: {
           800: '#182335',
         },
+        corral: '#ff9292',
       },
     },
   },
