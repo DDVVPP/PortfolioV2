@@ -12,8 +12,8 @@ export const navbarItems = [
     title: 'Projects',
   },
   {
-    route: '/hobbies',
-    title: 'Hobbies',
+    route: '/art',
+    title: 'Art',
   },
 ];
 
