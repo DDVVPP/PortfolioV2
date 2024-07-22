@@ -30,7 +30,7 @@ const Art = () => {
 
   return (
     <motion.section
-      className="flex flex-wrap gap-2"
+      className="flex flex-wrap gap-2 p-2"
       variants={container}
       initial="hidden"
       animate="show"
@@ -38,12 +38,12 @@ const Art = () => {
       {artImages.map((image) => {
         return (
           <motion.div
-            key={image.altText}
+            key={image.id}
             variants={item}
-            className="relative size-24 shrink-0 overflow-hidden align-middle max-md:size-24"
+            className="relative min-h-28 min-w-28 grow overflow-hidden max-md:size-28"
           >
             <Image
-              key={image.altText}
+              key={image.id}
               alt={image.altText}
               src={image.src}
               fill

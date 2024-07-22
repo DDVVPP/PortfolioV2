@@ -239,220 +239,272 @@ export const architectureWorkItems = [
 
 export const artImages = [
   {
+    id: 1,
     src: ArmadilloTails,
     altText: 'armadillo-tails',
   },
   {
+    id: 2,
     src: BenchLines,
     altText: 'bench-lines',
   },
   {
+    id: 3,
     src: Clothesline,
     altText: 'clothesline',
   },
   {
+    id: 4,
     src: HouseLines,
     altText: 'house-lines',
   },
   {
+    id: 5,
     src: ManWithWeeds,
     altText: 'man-with-weeds',
   },
   {
+    id: 6,
     src: SpaceMan,
     altText: 'space-man',
   },
   {
+    id: 7,
     src: SpaghettiPeople,
     altText: 'spaghetti-people',
   },
   {
+    id: 8,
     src: CrowsSelfPortrait,
     altText: 'crows-self-portrait',
   },
   {
+    id: 9,
     src: SpillingOver,
     altText: 'spilling-over',
   },
   {
+    id: 10,
     src: Beowolf,
     altText: 'beowolf',
   },
   {
+    id: 11,
     src: KingCrownDiamonds,
     altText: 'king-crown-diamonds',
   },
   {
+    id: 12,
     src: Flowers,
     altText: 'flowers',
   },
   {
+    id: 13,
     src: BleedingBlues,
     altText: 'bleeding-blues',
   },
   {
+    id: 14,
     src: HeartSplatters,
     altText: 'heart-splatters',
   },
   {
+    id: 15,
     src: Day2Spider,
     altText: 'day-2-spider',
   },
   {
+    id: 16,
     src: Day4PipeWorms,
     altText: 'day-4-pipe-worms',
   },
   {
+    id: 17,
     src: Day5CityMoon,
     altText: 'day-5-city-moon',
   },
   {
+    id: 18,
     src: MirrorMirror,
     altText: 'mirror-mirror',
   },
   {
+    id: 19,
     src: Toothbrush,
     altText: 'toothbrush',
   },
   {
+    id: 20,
     src: TreesAndMountains,
     altText: 'trees-and-mountains',
   },
   {
+    id: 21,
     src: Curlew,
     altText: 'curlew',
   },
   {
+    id: 22,
     src: LandscapeHand,
     altText: 'landscape-hand',
   },
   {
+    id: 23,
     src: PhonesRamen,
     altText: 'phones-ramen',
   },
   {
+    id: 24,
     src: CrowProcess,
     altText: 'crow-process',
   },
   {
+    id: 25,
     src: Crow,
     altText: 'crow',
   },
   {
+    id: 26,
     src: AbstractFlowerProcess,
     altText: 'abstract-flower-process',
   },
   {
+    id: 27,
     src: AbstractFlower,
     altText: 'abstract-flower',
   },
   {
+    id: 28,
     src: Jellyfish,
     altText: 'jellyfish',
   },
   {
+    id: 29,
     src: Jellyfish2,
     altText: 'jellyfish-2',
   },
   {
+    id: 30,
     src: FlyingGeckoProcess,
     altText: 'flying-gecko-process',
   },
   {
+    id: 31,
     src: FlyingGecko,
     altText: 'flying-gecko',
   },
   {
+    id: 32,
     src: SelfPortraitPaint,
     altText: 'self-portrait-paint',
   },
   {
+    id: 33,
     src: ManLinesPaint,
     altText: 'man-lines-paint',
   },
   {
+    id: 34,
     src: ColoredTiles,
     altText: 'colored-tiles',
   },
   {
+    id: 35,
     src: ColorSplatsDots,
     altText: 'color-splats-dots',
   },
   {
+    id: 36,
     src: ColorSplats,
     altText: 'color-splats',
   },
   {
+    id: 37,
     src: ColorSplats2,
     altText: 'color-splats-2',
   },
-
   {
+    id: 38,
     src: GlazedPlates,
     altText: 'glazed-plates',
   },
   {
+    id: 39,
     src: HatGlazeware2,
     altText: 'hat-glazeware-2',
   },
   {
+    id: 40,
     src: BeehiveVase,
     altText: 'beehive-vase',
   },
   {
+    id: 41,
     src: RamenGlazeware1,
     altText: 'ramen-glazeware-1',
   },
   {
+    id: 42,
     src: RamenGlazeware2,
     altText: 'ramen-glazeware-2',
   },
   {
+    id: 43,
     src: BubbleVase1,
     altText: 'bubble-vase-1',
   },
   {
+    id: 44,
     src: BubbleVase2,
     altText: 'bubble-vase-2',
   },
   {
+    id: 45,
     src: QuizzicalFigure,
     altText: 'quizzical-figure',
   },
-
   {
+    id: 46,
     src: UndulatingPlanter,
     altText: 'undulating-planter',
   },
   {
+    id: 47,
     src: WormVase,
     altText: 'worm-vase',
   },
   {
+    id: 48,
     src: Mask1,
     altText: 'mask-1',
   },
   {
+    id: 49,
     src: Mask2,
     altText: 'mask-2',
   },
   {
+    id: 50,
     src: Agape,
     altText: 'agape',
   },
   {
+    id: 51,
     src: LittleMan,
     altText: 'little-man',
   },
   {
+    id: 52,
     src: LittleManGlazed,
     altText: 'little-man-glazed',
   },
   {
+    id: 53,
     src: LoopyManProcess,
     altText: 'loopy-man-process',
   },
   {
+    id: 54,
     src: LoopyManGlazed3,
     altText: 'loopy-man-glazed-3',
   },
