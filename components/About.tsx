@@ -10,7 +10,7 @@ const About = () => {
       className="m-10 flex flex-col items-center max-xs-362:mx-8 xl:m-12"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 1 }}
     >
       <div className="relative size-64 shrink-0 align-middle max-md:size-60">
         <Image
@@ -19,6 +19,7 @@ const About = () => {
           src={profile}
           fill
           className="rounded-full"
+          placeholder="blur"
         />
       </div>
       <div className="mt-7 w-4/5 justify-center max-md:w-full max-md:text-sm xl:mt-10 xl:w-3/4">
