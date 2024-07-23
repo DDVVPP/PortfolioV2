@@ -50,7 +50,7 @@ const Art = () => {
                 />
               </div>
               <div className="flex flex-wrap justify-center gap-2">
-                {image.tags?.map((tag) => (
+                {image.tags.map((tag) => (
                   <Tag
                     key={image.id}
                     text={tag}
