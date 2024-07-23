@@ -539,7 +539,7 @@ export const artImages = [
     id: 42,
     src: RamenGlazeware2,
     altText: 'ramen-glazeware-2',
-    title: 'Ramnen Bowl',
+    title: 'Ramen Bowl',
     tags: ['ceramics', 'wheel-thrown', 'glazed and fired'],
   },
   {

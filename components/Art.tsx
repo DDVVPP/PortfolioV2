@@ -37,7 +37,9 @@ const Art = () => {
 
             <DialogContent className="size-fit rounded-xl bg-white">
               <DialogHeader>
-                <DialogTitle>{image.title}</DialogTitle>
+                <DialogTitle className="text-center text-slate-800">
+                  {image.title}
+                </DialogTitle>
               </DialogHeader>
               <div className="relative size-fit">
                 <Image
@@ -47,8 +49,15 @@ const Art = () => {
                   placeholder="blur"
                 />
               </div>
-              <div className="flex flex-wrap gap-2">
-                {image.tags?.map((tag) => <Tag key={image.id} text={tag} />)}
+              <div className="flex flex-wrap justify-center gap-2">
+                {image.tags?.map((tag) => (
+                  <Tag
+                    key={image.id}
+                    text={tag}
+                    textColor={'text-slate-500'}
+                    borderColor={'border-slate-500'}
+                  />
+                ))}
               </div>
             </DialogContent>
           </Dialog>
