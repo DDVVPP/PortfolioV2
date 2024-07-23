@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 const About = () => {
   return (
     <motion.section
-      className="m-10 flex flex-col items-center justify-center max-xs-362:mx-8 xl:m-12"
+      className="m-10 flex flex-col items-center max-xs-362:mx-8 xl:m-12"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
