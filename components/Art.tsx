@@ -15,7 +15,7 @@ import Tag from '@/components/shared/Tag';
 const Art = () => {
   return (
     <motion.section
-      className="flex flex-wrap gap-2 p-2"
+      className="flex flex-wrap gap-2 p-6"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
