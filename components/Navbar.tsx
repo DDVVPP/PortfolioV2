@@ -14,10 +14,13 @@ const Navbar = () => {
   return (
     <section className="sticky flex flex-col gap-y-16">
       <section className="mr-6 flex flex-col gap-y-1">
-        <div className="text-right text-4xl font-bold text-slate-400">
+        <Link
+          href="/about"
+          className="cursor-pointer text-right text-4xl font-bold text-slate-400 duration-300 hover:text-red-300"
+        >
           <h1>Darshin</h1>
           <h1>Van Parijs</h1>
-        </div>
+        </Link>
         <div className="mb-0.5 mt-2 flex items-center justify-end gap-x-4 text-sm font-light text-slate-300">
           <a
             href="https://www.linkedin.com/in/DarshinVanParijs/"
@@ -31,7 +34,7 @@ const Navbar = () => {
           <a
             href="/resume-2024.pdf"
             target="_blank"
-            className="rounded-md border border-slate-500 p-1"
+            className="rounded-md border border-slate-500 p-1 duration-300 hover:border-red-400 hover:text-slate-300"
           >
             <p>Resume</p>
           </a>
@@ -39,7 +42,7 @@ const Navbar = () => {
         <div className="flex justify-end">
           <a
             href="mailto:darshinvp@gmail.com"
-            className="rounded-md border border-slate-500 p-1 text-end text-sm font-light text-slate-300"
+            className="rounded-md border border-slate-500 p-1 text-end text-sm font-light text-slate-300 duration-300 hover:border-red-400 hover:text-slate-300"
           >
             darshinvp@gmail.com
           </a>
@@ -53,7 +56,7 @@ const Navbar = () => {
             <Link
               key={item.route}
               href={item.route}
-              className={`${isSelected ? 'rounded-xl rounded-r-none bg-dark-800 px-6 py-4 font-normal text-red-400 duration-300' : 'px-6 py-4'}`}
+              className={`${isSelected ? 'rounded-xl rounded-r-none bg-dark-800 px-6 py-4 font-normal text-red-400 duration-300' : 'px-6 py-4 duration-300 hover:text-red-400'}`}
             >
               {item.title}
             </Link>
