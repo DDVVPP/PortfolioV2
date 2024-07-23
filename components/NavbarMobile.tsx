@@ -14,10 +14,13 @@ const Navbar = () => {
   return (
     <section className="sticky flex flex-col gap-y-6">
       <section className="flex items-center justify-between">
-        <div className="text-base font-bold text-slate-400">
+        <Link
+          href="/about"
+          className="text-base font-bold text-slate-400 duration-300 hover:text-red-300"
+        >
           <h1>Darshin</h1>
           <h1>Van Parijs</h1>
-        </div>
+        </Link>
 
         <div className="mt-0">
           <div className="mb-0.5 flex items-center justify-end gap-x-[18px] text-xs font-light text-slate-300">
