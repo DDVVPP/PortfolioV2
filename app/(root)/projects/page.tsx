@@ -1,5 +1,7 @@
-const Projects = async () => {
-  return <div>Projects Page</div>;
+import Projects from '@/components/Projects';
+
+const ProjectsWrapper = async () => {
+  return <Projects />;
 };
 
-export default Projects;
+export default ProjectsWrapper;
