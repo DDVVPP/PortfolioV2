@@ -1,3 +1,5 @@
+import DevTodayImage from '@/public/dev-today.png';
+
 import {
   AbstractFlower,
   ArmadilloTails,
@@ -233,6 +235,47 @@ export const architectureWorkItems = [
       'Sketchup',
       'Vray',
       'Maxwell Render',
+    ],
+  },
+];
+
+export const projects = [
+  {
+    title: 'Git Note',
+    description:
+      'A comprehensive knowledge repository for developers to document, track, and retrieve learnings, set learning goals, and visualize progress.',
+    image: DevTodayImage,
+    altText: 'git-note',
+    route: '/projects/dev-today',
+    tags: [
+      'Next.js',
+      'TypeScript',
+      'Auth',
+      'PostgreSQL',
+      'Prisma ORM',
+      'Supabase',
+      'Tailwind CSS',
+      'Shadcn',
+      'TinyMCE',
+    ],
+  },
+  {
+    title: 'Dev Today',
+    description:
+      'A comprehensive content creation platform tailored for developers, featuring a feed of dev news, podcasts, and events, fostering community engagement and knowledge sharing',
+    image: DevTodayImage,
+    route: '/projects/dev-today',
+    altText: 'dev-today',
+    tags: [
+      'Next.js',
+      'TypeScript',
+      'Clerk',
+      'PostgreSQL',
+      'Prisma ORM',
+      'Supabase',
+      'Tailwind CSS',
+      'Shadcn',
+      'TinyMCE',
     ],
   },
 ];
