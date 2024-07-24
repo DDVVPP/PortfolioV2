@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import Image from 'next/image';
@@ -24,14 +25,11 @@ const Art = () => {
         return (
           <Dialog key={image.id}>
             <DialogTrigger className="relative size-28 grow cursor-pointer max-md:size-28">
-              <Image
+              <img
                 alt={image.altText}
-                src={image.src}
+                src={image.src as string}
                 key={image.id}
-                fill
-                className="rounded-xl object-cover"
-                placeholder="blur"
-                sizes="250px"
+                className="size-full rounded-xl object-cover"
               />
             </DialogTrigger>
 
@@ -42,11 +40,10 @@ const Art = () => {
                 </DialogTitle>
               </DialogHeader>
               <div className="relative size-fit">
-                <Image
+                <img
                   alt={image.altText}
-                  src={image.src}
+                  src={image.src as string}
                   className="rounded-lg border border-slate-200"
-                  placeholder="blur"
                 />
               </div>
               <div className="flex flex-wrap justify-center gap-2">
