@@ -3,9 +3,12 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-import DevTodayImage from '@/public/dev-today.png';
+import { projects } from '@/lib/constants';
+import Tag from './shared/Tag';
 
 const DevToday = () => {
+  const project = projects[1];
+
   return (
     <motion.section
       className="m-10 flex max-w-[600px] flex-col max-md:m-0 xl:m-16"
@@ -14,24 +17,32 @@ const DevToday = () => {
       transition={{ duration: 0.8 }}
     >
       <header className="mb-8 text-center ">
-        <h1 className="text-2xl font-bold">Dev Today</h1>
+        <h1 className="text-2xl font-bold">{project.title}</h1>
         <h3 className="text-sm font-light text-slate-300">
-          A comprehensive content creation platform tailored for developers,
-          featuring a feed of dev news, podcasts, and events, fostering
-          community engagement and knowledge sharing
+          {project.description}
         </h3>
       </header>
 
       <div className="relative mb-8 max-md:size-28">
         <Image
           alt="dev-today"
-          src={DevTodayImage}
+          src={project.image}
           className="rounded-xl"
           placeholder="blur"
         />
       </div>
 
       <section className="flex flex-col gap-y-6">
+        <div className="flex flex-col gap-y-2">
+          <h4>Deployed Site</h4>
+          <a
+            href="https://dev-today-v2.vercel.app/posts"
+            target="_blank"
+            className="text-xs text-slate-300"
+          >
+            https://dev-today-v2.vercel.app/
+          </a>
+        </div>
         <div className="flex flex-col gap-y-2">
           <h4>Overview</h4>
           <p className="text-xs text-slate-300">
@@ -44,7 +55,11 @@ const DevToday = () => {
         </div>
         <div className="flex flex-col gap-y-2">
           <h4>Tech Stack</h4>
-          <p className="text-xs text-slate-300">tags</p>
+          <div className="flex flex-wrap gap-x-3 gap-y-2">
+            {project.tags.map((tag) => {
+              return <Tag key={tag} text={tag} />;
+            })}
+          </div>
         </div>
         <div className="flex flex-col gap-y-2">
           <h4>Reflection</h4>
@@ -60,16 +75,6 @@ const DevToday = () => {
             allowed us to integrate seamlessly, resulting in a robust and
             responsive platform.
           </p>
-        </div>
-        <div className="flex flex-col gap-y-2">
-          <h4>Deployed Site</h4>
-          <a
-            href="https://dev-today-v2.vercel.app/posts"
-            target="_blank"
-            className="text-xs text-slate-300"
-          >
-            https://dev-today-v2.vercel.app/posts
-          </a>
         </div>
         <div className="flex flex-col gap-y-2">
           <h4>Learning</h4>
