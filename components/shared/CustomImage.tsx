@@ -25,10 +25,9 @@ const CustomImage = ({
   return (
     <>
       <img
+        id={image.altText}
         alt={image.altText}
         src={image.src as string}
-        key={image.id}
-        id={image.altText}
         className="size-full rounded-xl object-cover"
         loading="lazy"
         onLoad={onLoad}

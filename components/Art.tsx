@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import {
   Dialog,
@@ -25,8 +24,8 @@ const Art = () => {
       {artImages.map((image) => {
         return (
           <Dialog key={image.id}>
-            <DialogTrigger className="relative size-28 grow cursor-pointer max-md:size-28">
-              <CustomImage image={image} />
+            <DialogTrigger className="relative size-28 grow cursor-pointer duration-300 hover:opacity-50 max-md:size-28">
+              <CustomImage key={image.id} image={image} />
             </DialogTrigger>
 
             <DialogContent className="size-fit rounded-xl bg-white">
