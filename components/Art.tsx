@@ -12,6 +12,7 @@ import {
 } from '@/components/ui/dialog';
 import { artImages } from '@/lib/constants';
 import Tag from '@/components/shared/Tag';
+import CustomImage from './shared/CustomImage';
 
 const Art = () => {
   return (
@@ -25,12 +26,7 @@ const Art = () => {
         return (
           <Dialog key={image.id}>
             <DialogTrigger className="relative size-28 grow cursor-pointer max-md:size-28">
-              <img
-                alt={image.altText}
-                src={image.src as string}
-                key={image.id}
-                className="size-full rounded-xl object-cover"
-              />
+              <CustomImage image={image} />
             </DialogTrigger>
 
             <DialogContent className="size-fit rounded-xl bg-white">
