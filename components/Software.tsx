@@ -25,7 +25,7 @@ const Software = () => {
               <div className="flex gap-x-4 text-sm text-slate-300 max-md:flex-col max-md:gap-x-0">
                 <p className="min-w-44 uppercase text-slate-300">{item.date}</p>
                 <div className="flex flex-col">
-                  <div className="mb-1 flex gap-x-0.5">
+                  <div className="flex gap-x-0.5">
                     <h6 className="flex items-center font-medium uppercase text-slate-100">
                       {item.company}
                     </h6>
@@ -34,13 +34,14 @@ const Software = () => {
                       className="flex stroke-slate-400 duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                     />
                   </div>
+                  <p className="mb-3 text-sm font-light text-slate-400">
+                    {item.description}
+                  </p>
 
                   <h6 className="mb-1 font-normal text-slate-100 duration-300 group-hover:text-corral">
                     {item.role}
                   </h6>
-                  <p className="font-light text-slate-300">
-                    {item.description}
-                  </p>
+                  <p className="font-light text-slate-300">{item.details}</p>
                   <div className="mt-3 flex flex-wrap gap-x-3 gap-y-2">
                     {item.tags.map((tag) => {
                       return <Tag key={tag} text={tag} />;
