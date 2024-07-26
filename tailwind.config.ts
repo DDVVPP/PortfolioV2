@@ -23,6 +23,7 @@ const config = {
       screens: {
         'xs-345': '345px',
         'xs-362': '362px',
+        md: '820px',
         '2xl': '1400px',
       },
       colors: {

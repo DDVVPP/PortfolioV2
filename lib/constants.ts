@@ -89,9 +89,10 @@ export const softwareWorkItems = [
   {
     date: 'Feb 2023 - May 2023',
     company: 'UStrive',
+    description: 'An online career and college mentoring platform.',
     role: 'Full-stack Developer',
-    description:
-      'Developed and maintained mentor and student portals for an online mentoring platform',
+    details:
+      'Developed and maintained mentor and student portals for an online mentoring platform – Debugged duplicate messages issue – Updated onboarding process in mixpanel to document user interaction ',
     website: 'https://ustrive.com/',
     tags: [
       'JavaScript',
@@ -107,9 +108,11 @@ export const softwareWorkItems = [
   {
     date: 'May 2022 - Jan 2023',
     company: 'Mapistry',
-    role: 'Full-stack Developer',
     description:
-      'Contributed to the front end and back end of the application around dynamic form generation for internal and external use, as well as implemented the maintenance and migration of the existing functionality of the app, to the new site using updated UX/UI designs with the new React, React hooks, React Query, and Typescript tech stack.',
+      'An Environmental, Health, and Safety compliance SaaS platform and an early stage startup.',
+    role: 'Full-stack Developer',
+    details:
+      'Contributed to the fullstack of the application around dynamic form generation for internal and external use – Implemented the migration of the existing functionality of the app to the new site using updated UX/UI designs and a new tech stack, while maintaining the functionality of the existing site – Implemented Jest unit tests on the front end and Mocha unit tests on the BE to ensure code quality',
     website: 'https://www.mapistry.com/',
     tags: [
       'JavaScript',
@@ -126,37 +129,41 @@ export const softwareWorkItems = [
   {
     date: 'Jun 2020 - May 2022',
     company: 'Ready',
-    role: 'Front-end Software Engineer',
     description:
-      'Worked on the client-facing app on the front-end team and have seen the app through from inception to production.',
+      "A healthcare startup that provides more easily accessible non-emergency healthcare by sending responders to a patient's home.",
+    role: 'Front-end Software Engineer',
+    details:
+      'Implemented new features in the client facing side of the app used by responders, supervisors, and clinicians – Assisted in interviewing and evaluating 15+ candidates on technical screens – Implemented jest unit tests for new features – Transitioned the app on the front end from the original tech stack to a new tech stack',
     website: 'https://www.mylaurelhealth.com/',
     tags: [
       'JavaScript',
-      'Express',
+      'TypeScript',
       'Node.js',
       'React.js',
-      'Axios',
-      'Twilio',
-      'Mixpanel',
-      'Docker',
+      'Apollo GraphQL',
+      'Jest',
+      'Styled Components',
+      'Storybook',
     ],
   },
   {
     date: 'Apr 2020 - Jun 2020',
     company: 'Errunds',
-    role: 'Full-stack Developer Intern',
     description:
-      'Contributed to the client-facing side of the online community marketplace app.',
+      'An online community marketplace connecting the user to local brick and mortars.',
+    role: 'Full-stack Developer Intern',
+    details:
+      'Implemented cart screen features through the full-stack – Contributed to new user signup and authentication - Contributed to the past orders screen',
     website: 'https://tyca.nyc/',
     tags: [
       'JavaScript',
-      'Express',
       'Node.js',
-      'React.js',
-      'Axios',
-      'Twilio',
-      'Mixpanel',
-      'Docker',
+      'React-Redux',
+      'React Native',
+      'Apollo GraphQL',
+      'PostgreSQL',
+      'Express.js',
+      'Sequelize',
     ],
   },
 ];
