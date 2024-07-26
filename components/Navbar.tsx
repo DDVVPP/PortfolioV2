@@ -57,6 +57,7 @@ const Navbar = () => {
               key={item.route}
               href={item.route}
               className={`${isSelected ? 'rounded-xl rounded-r-none bg-dark-800 px-6 py-4 font-normal text-red-400 duration-300' : 'px-6 py-4 duration-300 hover:text-red-400'}`}
+              prefetch={false}
             >
               {item.title}
             </Link>
