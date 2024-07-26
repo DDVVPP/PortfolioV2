@@ -26,13 +26,15 @@ const About = () => {
         <p className="text-center font-light text-slate-300">
           Hi! I am an Architectural Designer turned{' '}
           <span className="text-red-400">Software Developer</span> who lives in
-          Los Angeles, California and likes to eat delicious food, workout,
-          hike, and dance Brazilian Zouk (a latin partner dance). <br />
+          Los Angeles, California and likes to eat delicious food, dabble in
+          art, workout, hike, and dance Brazilian Zouk (a latin partner dance).{' '}
+          <br />
           <br />I have experience building applications in{' '}
           <span className="text-red-400">
-            Typescript, Javascript, React, Next.js, PosGreSQL, and GraphQL using
-            agile methodologies.
-          </span>
+            Typescript, Javascript, React, Next.js, PosGreSQL,
+          </span>{' '}
+          and <span className="text-red-400">GraphQL</span> using{' '}
+          <span className="text-red-400">agile methodologies.</span>
           <br />
           <br />
           My previous career in{' '}
@@ -42,9 +44,14 @@ const About = () => {
           and problem solving, which I have carried with me into my software
           engineer career.
           <br />
-          <br />I enjoy coding on the frontend - natural capacity for - visuals
-          testing- immediate- design. Enjoy backend - manage and be aware of
-          entire process debuggin easier
+          <br />I am passionate about and strive to write{' '}
+          <span className="text-red-400">clean code</span>. I have a natural
+          inclination towards visual design and details, and appreciate the
+          immediate visual feedback on the{' '}
+          <span className="text-red-400">frontend</span>. I value having
+          read/write access to the <span className="text-red-400">backend</span>{' '}
+          which provides a holistic view of the app, and allows for more
+          efficient debugging and consistency within the codebase.
         </p>
       </div>
     </motion.section>
