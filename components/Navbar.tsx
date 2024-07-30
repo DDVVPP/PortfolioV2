@@ -25,10 +25,15 @@ const Navbar = () => {
           <a
             href="https://www.linkedin.com/in/DarshinVanParijs/"
             target="_blank"
+            className="hover:animate-[wiggle_0.3s_ease-in-out_infinite]"
           >
             <Image priority src={linkedInLogo} alt="LogoLight" width={22} />
           </a>
-          <a href="https://github.com/DDVVPP" target="_blank">
+          <a
+            href="https://github.com/DDVVPP"
+            target="_blank"
+            className="hover:animate-[wiggle_0.3s_ease-in-out_infinite]"
+          >
             <Image priority src={githubLogo} alt="LogoLight" width={19} />
           </a>
           <a

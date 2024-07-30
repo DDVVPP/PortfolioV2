@@ -31,6 +31,7 @@ const config = {
           800: '#182335',
         },
         corral: '#ff9292',
+        'red-400': '#ff7474',
       },
       keyframes: {
         'accordion-down': {
@@ -40,6 +41,10 @@ const config = {
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
+        },
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-10deg)' },
+          '50%': { transform: 'rotate(10deg)' },
         },
       },
       animation: {
