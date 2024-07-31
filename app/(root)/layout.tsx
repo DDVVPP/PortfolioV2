@@ -1,20 +1,17 @@
-import Navbar from '@/components/Navbar';
-import NavbarMobile from '@/components/NavbarMobile';
 import React from 'react';
+import Navbar from '@/components/Navbar';
+import Children from '@/components/Children';
 
 const Layout = async ({ children }: { children: React.ReactNode }) => {
   return (
-    <main className="flex min-h-screen bg-slate-900 max-md:flex-col">
-      <div className="sticky ml-10 mt-[190px] w-1/4 rounded-xl max-md:hidden">
+    <main className="flex min-h-fit bg-slate-900 max-md:flex-col">
+      <div className="sticky ml-10 mt-[190px] rounded-xl max-md:mx-8 max-md:mt-10 md:w-1/4">
         <Navbar />
       </div>
-      <div className="sticky mx-8 mt-8 rounded-xl md:hidden">
-        <NavbarMobile />
-      </div>
-      <div className="mr-10 mt-14 flex h-fit max-w-[1600px] justify-center rounded-2xl bg-dark-800 max-md:mx-8 max-md:mt-0 max-md:rounded-t-none md:w-full">
-        {' '}
-        {children}
-      </div>
+
+      {/* Created Children component in order to access usePathname hook for custom rounded corners of background */}
+      <Children>{children}</Children>
+
       {/* <a target="_blank" href="https://icons8.com/icon/8808/linkedin">
         LinkedIn
       </a>{' '}
