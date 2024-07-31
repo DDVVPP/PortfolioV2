@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
-import NavbarMobile from '@/components/NavbarMobile';
 import Children from '@/components/Children';
 
 const Layout = async ({ children }: { children: React.ReactNode }) => {
