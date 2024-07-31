@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { architectureWorkItems } from '@/lib/constants';
 import Tag from './shared/Tag';
+import AngledArrow from './shared/AngledArrow';
 
 const Architecture = () => {
   return (
@@ -24,9 +25,15 @@ const Architecture = () => {
               <div className="flex gap-x-4 text-sm text-slate-300 max-md:flex-col max-md:gap-x-0">
                 <p className="min-w-44 uppercase text-slate-300">{item.date}</p>
                 <div className="flex flex-col">
-                  <h6 className="mb-1 font-medium uppercase text-slate-100">
-                    {item.company}
-                  </h6>
+                  <div className="mb-1 flex gap-x-0.5">
+                    <h6 className="flex items-center font-medium uppercase text-slate-100">
+                      {item.company}
+                    </h6>
+                    <AngledArrow
+                      alt="arrow-up-right"
+                      className="flex stroke-slate-400 duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                    />
+                  </div>
                   <h6 className="mb-1 font-normal text-slate-100 duration-300 group-hover:text-corral">
                     {item.role}
                   </h6>
