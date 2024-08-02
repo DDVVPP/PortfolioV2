@@ -38,20 +38,14 @@ const DevToday = () => {
           <a
             href="https://dev-today-v2.vercel.app/posts"
             target="_blank"
-            className="text-xs text-slate-300"
+            className="w-fit text-sm font-light text-slate-300"
           >
             https://dev-today-v2.vercel.app/
           </a>
         </div>
         <div className="flex flex-col gap-y-2">
           <h4>Overview</h4>
-          <p className="text-xs text-slate-300">
-            Morrent, our cutting-edge car rental application developed using the
-            robust MERN stack, is revolutionizing the car rental industry. With
-            a dynamic homepage showcasing featured vehicles, convenient pickup
-            and drop-off locations, and a comprehensive list of available cars,
-            It ensures a seamless and visually appealing experience for users.
-          </p>
+          <p className="text-sm font-light text-slate-300">DevToday</p>
         </div>
         <div className="flex flex-col gap-y-2">
           <h4>Tech Stack</h4>
@@ -63,7 +57,7 @@ const DevToday = () => {
         </div>
         <div className="flex flex-col gap-y-2">
           <h4>Reflection</h4>
-          <p className="text-xs text-slate-300">
+          <p className="text-sm font-light text-slate-300">
             The journey of developing Morrent has been both challenging and
             rewarding. We addressed a prevalent problem of finding a reliable
             and user-friendly platform for car rentals, offering a solution that
@@ -78,37 +72,37 @@ const DevToday = () => {
         </div>
         <div className="flex flex-col gap-y-2">
           <h4>Learning</h4>
-          <p className="text-xs text-slate-300">
+          <p className="text-sm font-light text-slate-300">
             1. Gained extensive knowledge of full authentication & authorization
             implementation, including the use of industry-standard security
             protocols such as JWT
           </p>
-          <p className="text-xs text-slate-300">
+          <p className="text-sm font-light text-slate-300">
             2. Sharpened my backend skills, specifically in optimizing database
             queries, improving performance, and handling server-side logic.
           </p>
-          <p className="text-xs text-slate-300">
+          <p className="text-sm font-light text-slate-300">
             3. Learned how to properly handle files, including file upload,
             storage, and retrieval, ensuring that the apps data is organized &
             easily accessible while keeping it secure.
           </p>
-          <p className="text-xs text-slate-300">
+          <p className="text-sm font-light text-slate-300">
             4. Acquired proficiency in NextJS and implemented various features
             utilizing industry-standard best practices.
           </p>
         </div>
         <div className="flex flex-col gap-y-2">
           <h4>Challenges</h4>
-          <p className="text-xs text-slate-300">
+          <p className="text-sm font-light text-slate-300">
             1. Gained extensive knowledge of full authentication & authorization
             implementation, including the use of industry-standard security
             protocols such as JWT
           </p>
-          <p className="text-xs text-slate-300">
+          <p className="text-sm font-light text-slate-300">
             2. Sharpened my backend skills, specifically in optimizing database
             queries, improving performance, and handling server-side logic.
           </p>
-          <p className="text-xs text-slate-300">
+          <p className="text-sm font-light text-slate-300">
             3. Learned how to properly handle files, including file upload,
             storage, and retrieval, ensuring that the apps data is organized &
             easily accessible while keeping it secure.
@@ -116,7 +110,7 @@ const DevToday = () => {
         </div>
         <div className="flex flex-col gap-y-2">
           <h4>Future</h4>
-          <p className="text-xs text-slate-300">
+          <p className="text-sm font-light text-slate-300">
             As we move forward, I am excited about the possibilities for
             Morrent. It is more than just a car rental application; it is a
             transformative force in an industry that often faces hurdles. Our

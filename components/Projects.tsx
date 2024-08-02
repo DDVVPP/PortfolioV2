@@ -6,6 +6,7 @@ import Link from 'next/link';
 
 import { projects } from '@/lib/constants';
 import Tag from './shared/Tag';
+import AngledArrow from './shared/AngledArrow';
 
 const Projects = () => {
   return (
@@ -31,10 +32,16 @@ const Projects = () => {
                 />
               </div>
               <div className="mb-3 flex w-3/4 max-w-[1000px] flex-col justify-between max-md:-order-1 max-md:mb-2 max-md:w-full">
-                <h1 className="text-wrap text-sm font-medium uppercase text-slate-100 duration-300 group-hover:text-corral">
-                  {project.title}
-                </h1>
-                <h3 className="text-xs font-light text-slate-300 ">
+                <div className="flex gap-x-0.5">
+                  <h1 className="text-wrap text-sm font-medium uppercase text-slate-100 duration-300 group-hover:text-corral">
+                    {project.title}
+                  </h1>
+                  <AngledArrow
+                    alt="arrow-up-right"
+                    className="flex stroke-slate-400 duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                  />
+                </div>
+                <h3 className="text-sm font-light text-slate-300 ">
                   {project.description}
                 </h3>
                 <div className="mt-4 flex flex-wrap gap-x-3 gap-y-2">
