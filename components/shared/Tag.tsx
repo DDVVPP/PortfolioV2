@@ -9,7 +9,7 @@ const Tag = ({
 }) => {
   return (
     <p
-      className={`text-nowrap rounded-2xl border ${borderColor} px-2 py-0.5 text-[12px] ${textColor} duration-300 group-hover:border-red-400 max-sm:text-[10px]`}
+      className={`text-nowrap rounded-2xl border ${borderColor} px-2 py-0.5 text-[12px] ${textColor} h-fit duration-300 group-hover:border-red-400 max-sm:text-[10px]`}
     >
       {text}
     </p>
