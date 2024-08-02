@@ -49,7 +49,7 @@ const Art = () => {
                   placeholder="blur"
                 />
               </div>
-              <div className="flex flex-wrap justify-center gap-2">
+              <div className="flex flex-wrap justify-center gap-x-2 gap-y-1">
                 {image.tags.map((tag) => (
                   <Tag
                     key={image.id}
