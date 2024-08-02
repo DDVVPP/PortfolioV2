@@ -23,7 +23,7 @@ const Art = () => {
       {artImages.map((image) => {
         return (
           <Dialog key={image.id}>
-            <DialogTrigger className="relative size-28 grow cursor-pointer max-md:size-28">
+            <DialogTrigger className="relative size-28 grow cursor-pointer duration-300 hover:opacity-50 max-md:size-28">
               <Image
                 alt={image.altText}
                 src={image.src}
@@ -35,7 +35,7 @@ const Art = () => {
               />
             </DialogTrigger>
 
-            <DialogContent className="size-fit rounded-xl bg-white">
+            <DialogContent className="scrollbar-hide size-fit max-h-[90%] overflow-y-scroll rounded-xl bg-white">
               <DialogHeader>
                 <DialogTitle className="text-center text-slate-800">
                   {image.title}

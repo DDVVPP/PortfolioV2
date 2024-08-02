@@ -42,4 +42,15 @@ body {
   .navbar-mobile-tabs {
     @apply max-md:flex-row max-md:justify-between max-sm:text-sm;
   }
+
+  /* For Webkit-based browsers (Chrome, Safari and Opera) */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* For IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
