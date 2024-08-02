@@ -6,6 +6,7 @@ const nextConfig = {
         source: '/',
         destination: '/about',
         permanent: true,
+        basePath: false,
       },
     ];
   },
