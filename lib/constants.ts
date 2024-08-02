@@ -258,7 +258,7 @@ export const projects = [
   {
     title: 'Git Note',
     description:
-      'A comprehensive knowledge repository for developers to document, track, and retrieve learnings, set learning goals, and visualize progress.',
+      'A Javascript Mastery project of a knowledge and progress tracker for developers',
     image: DevTodayImage,
     altText: 'git-note',
     route: '/projects/dev-today',
@@ -269,6 +269,7 @@ export const projects = [
       'PostgreSQL',
       'Prisma ORM',
       'Supabase',
+      'Zod',
       'Tailwind CSS',
       'Shadcn',
       'TinyMCE',
@@ -277,7 +278,7 @@ export const projects = [
   {
     title: 'Dev Today',
     description:
-      'A comprehensive content creation platform tailored for developers, featuring a feed of dev news, podcasts, and events, fostering community engagement and knowledge sharing',
+      'A Javascript Mastery project of a content creation platform tailored for developers',
     image: DevTodayImage,
     route: '/projects/dev-today',
     altText: 'dev-today',
@@ -288,9 +289,11 @@ export const projects = [
       'PostgreSQL',
       'Prisma ORM',
       'Supabase',
+      'Zod',
       'Tailwind CSS',
       'Shadcn',
       'TinyMCE',
+      'Framer Motion',
     ],
   },
 ];
