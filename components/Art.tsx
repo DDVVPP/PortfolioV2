@@ -35,7 +35,7 @@ const Art = () => {
               />
             </DialogTrigger>
 
-            <DialogContent className="scrollbar-hide size-fit max-h-[90%] overflow-y-scroll rounded-xl bg-white">
+            <DialogContent className="scrollbar-hide flex size-fit flex-col justify-center overflow-y-scroll rounded-xl bg-white max-md:max-h-[90%] max-md:max-w-[90%]">
               <DialogHeader>
                 <DialogTitle className="text-center text-slate-800">
                   {image.title}
@@ -49,7 +49,7 @@ const Art = () => {
                   placeholder="blur"
                 />
               </div>
-              <div className="flex flex-wrap justify-center gap-x-2 gap-y-1">
+              <div className="flex flex-wrap justify-center gap-2">
                 {image.tags.map((tag) => (
                   <Tag
                     key={image.id}
