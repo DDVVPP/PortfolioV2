@@ -26,9 +26,9 @@ const About = () => {
         <p className="text-center font-light text-slate-300">
           Hi! I am an Architectural Designer turned{' '}
           <span className="text-red-300">Software Developer</span> who lives in
-          Los Angeles, California and likes to dabble in art, workout, hike,
-          dance Brazilian Zouk (a latin partner dance), and eat delicious food.{' '}
-          <br />
+          Los Angeles, California and likes to workout, hike, dance Brazilian
+          Zouk (a latin partner dance), paint, draw, sculpt, and eat delicious
+          food. <br />
           <br />I have experience building applications in{' '}
           <span className="text-red-300">
             Typescript, Javascript, React, Next.js, PosGreSQL,
