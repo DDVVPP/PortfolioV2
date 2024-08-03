@@ -16,9 +16,9 @@ const DevToday = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <header className="mb-8 text-center ">
-        <h1 className="text-2xl font-bold">{project.title}</h1>
-        <h3 className="text-sm font-light text-slate-300">
+      <header className="mb-9 text-center ">
+        <h1 className="text-3xl font-bold">{project.title}</h1>
+        <h3 className="mt-2 text-sm font-light text-slate-300">
           {project.description}
         </h3>
       </header>
@@ -34,21 +34,42 @@ const DevToday = () => {
 
       <section className="flex flex-col gap-y-6">
         <div className="flex flex-col gap-y-2">
-          <h4>Deployed Site</h4>
-          <a
-            href="https://dev-today-v2.vercel.app/posts"
-            target="_blank"
-            className="w-fit text-sm font-light text-slate-300"
-          >
-            https://dev-today-v2.vercel.app/
-          </a>
+          <h4 className="text-base font-medium">Deployed Sites</h4>
+
+          <div className="flex flex-col text-sm text-slate-100">
+            <p>Version 2 (with updates) - Solo developer</p>
+            <a
+              href="https://dev-today-v2.vercel.app/posts"
+              target="_blank"
+              className="w-fit font-light text-slate-300 duration-300 hover:text-red-400"
+            >
+              https://dev-today-v2.vercel.app
+            </a>
+          </div>
+          <div className="flex flex-col text-sm text-slate-100">
+            <p>Version 1 - Two person team</p>
+            <a
+              href="https://dev-today-v2.vercel.app/posts"
+              target="_blank"
+              className="w-fit font-light text-slate-300 duration-300 hover:text-red-400"
+            >
+              https://capstone-darshin-adam.vercel.app
+            </a>
+          </div>
         </div>
         <div className="flex flex-col gap-y-2">
-          <h4>Overview</h4>
-          <p className="text-sm font-light text-slate-300">DevToday</p>
+          <h4 className="text-base font-medium">Overview</h4>
+          <p className="text-sm font-light text-slate-300">
+            DevToday features Clerk authorization for sign-up and login, a post
+            and podcast feed, a list of groups and meetups, users with profiles,
+            user specific actions including but not limited to, following other
+            users, liking posts, podcasts, and comments, commenting on posts and
+            podcasts, editing, creating, and deleting posts, groups, meetups,
+            podcasts, and comments, a cmdK fuzzy search, and notifications.
+          </p>
         </div>
         <div className="flex flex-col gap-y-2">
-          <h4>Tech Stack</h4>
+          <h4 className="text-base font-medium">Tech Stack</h4>
           <div className="flex flex-wrap gap-x-3 gap-y-2">
             {project.tags.map((tag) => {
               return <Tag key={tag} text={tag} />;
@@ -56,22 +77,7 @@ const DevToday = () => {
           </div>
         </div>
         <div className="flex flex-col gap-y-2">
-          <h4>Reflection</h4>
-          <p className="text-sm font-light text-slate-300">
-            The journey of developing Morrent has been both challenging and
-            rewarding. We addressed a prevalent problem of finding a reliable
-            and user-friendly platform for car rentals, offering a solution that
-            caters to the needs of both renters and car owners. <br />
-            <br />
-            The dynamic homepage and user-friendly listing and details pages
-            reflect our commitment to creating an application that is not only
-            functional but also visually engaging. Working with the MERN stack
-            allowed us to integrate seamlessly, resulting in a robust and
-            responsive platform.
-          </p>
-        </div>
-        <div className="flex flex-col gap-y-2">
-          <h4>Learning</h4>
+          <h4 className="text-base font-medium">Learning</h4>
           <p className="text-sm font-light text-slate-300">
             1. Gained extensive knowledge of full authentication & authorization
             implementation, including the use of industry-standard security
@@ -92,7 +98,7 @@ const DevToday = () => {
           </p>
         </div>
         <div className="flex flex-col gap-y-2">
-          <h4>Challenges</h4>
+          <h4 className="text-base font-medium">Challenges</h4>
           <p className="text-sm font-light text-slate-300">
             1. Gained extensive knowledge of full authentication & authorization
             implementation, including the use of industry-standard security
