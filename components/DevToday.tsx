@@ -58,15 +58,32 @@ const DevToday = () => {
           </div>
         </div>
         <div className="flex flex-col gap-y-2">
-          <h4 className="text-base font-medium">Overview</h4>
-          <p className="text-sm font-light text-slate-300">
-            DevToday features Clerk authorization for sign-up and login, a post
-            and podcast feed, a list of groups and meetups, users with profiles,
-            user specific actions including but not limited to, following other
-            users, liking posts, podcasts, and comments, commenting on posts and
-            podcasts, editing, creating, and deleting posts, groups, meetups,
-            podcasts, and comments, a cmdK fuzzy search, and notifications.
-          </p>
+          <h4 className="text-base font-medium">Features</h4>
+          <ul className="text-sm font-light text-slate-300">
+            <li>- Clerk authorization for sign-up and login</li>
+            <li>- Post and podcast feeds</li>
+            <li>- List of groups and meetups</li>
+            <li>- Users with profiles</li>
+            <li>
+              - User specific actions such as:
+              <ul className="ml-3">
+                <li>- Following other users</li>
+                <li>- Liking posts, podcasts, and comments</li>
+                <li>- Commenting on posts and podcasts</li>
+                <li>
+                  - Editing, creating, and deleting posts, groups, meetups,
+                  podcasts, and comments
+                </li>
+                <li>- Joining and leaving groups</li>
+              </ul>
+            </li>
+            <li>- CmdK fuzzy search</li>
+            <li>- Notifications</li>
+            <li>
+              - Use of Git and Github with an Asana board of tickets for
+              efficient team collaboration.
+            </li>
+          </ul>
         </div>
         <div className="flex flex-col gap-y-2">
           <h4 className="text-base font-medium">Tech Stack</h4>
@@ -77,32 +94,46 @@ const DevToday = () => {
           </div>
         </div>
         <div className="flex flex-col gap-y-2">
-          <h4 className="text-base font-medium">Learning</h4>
+          <h4 className="text-base font-medium">Learnings</h4>
           <p className="text-sm font-light text-slate-300">
-            1. Gained extensive knowledge of full authentication & authorization
-            implementation, including the use of industry-standard security
-            protocols such as JWT
+            1. Acquired proficiency in NextJS: File based routing, server side
+            and client side components, data fetching, caching and revalidation
           </p>
           <p className="text-sm font-light text-slate-300">
-            2. Sharpened my backend skills, specifically in optimizing database
-            queries, improving performance, and handling server-side logic.
+            2. Sharpened my backend skills: Prisma and Supabase, CRUD operations
+            SQL queries, and the creation of a seed file using prisma and
+            faker.js.
           </p>
           <p className="text-sm font-light text-slate-300">
-            3. Learned how to properly handle files, including file upload,
-            storage, and retrieval, ensuring that the apps data is organized &
-            easily accessible while keeping it secure.
+            3. Successfully incorporated 3rd party libraries and frameworks:
+            TinyMCE, Framer Motion, Shadcn, Upload Dropzone, Google Maps Api,
+            React Datepicker, Tailwind CSS
           </p>
           <p className="text-sm font-light text-slate-300">
-            4. Acquired proficiency in NextJS and implemented various features
-            utilizing industry-standard best practices.
+            4. Gained a better understanding of form generation and zod
+            validation
+          </p>
+          <p className="text-sm font-light text-slate-300">
+            5. Advanced my knowledge of styling: Custom styling for 3rd party
+            libraries and frameworks such as Clerk Authentication, TinyMCE,
+            React Datepicker, and Google Maps Api, mobile responsiveness, light
+            and dark modes, and flex
           </p>
         </div>
         <div className="flex flex-col gap-y-2">
           <h4 className="text-base font-medium">Challenges</h4>
           <p className="text-sm font-light text-slate-300">
-            1. Gained extensive knowledge of full authentication & authorization
-            implementation, including the use of industry-standard security
-            protocols such as JWT
+            {/* As a user I want to be able to select a range of dates and times for
+            my meetup. a) My start date should start on today @ the current time
+            b) My end date and time should never be before my start date and
+            time If I select a "start date" that extends past (After) my "end
+            date", my "end date" should automatically reset to the current start
+            date. If I select a new "start date" that's before my "end date",
+            the "end date" does not have to reset. */}
+            1. React Datepicker: Start and end date and time custom logic
+            selection - disable irrelevant dates and times and auto-select
+            relavant date and time according to user selected start date and
+            time
           </p>
           <p className="text-sm font-light text-slate-300">
             2. Sharpened my backend skills, specifically in optimizing database
@@ -115,7 +146,11 @@ const DevToday = () => {
           </p>
         </div>
         <div className="flex flex-col gap-y-2">
-          <h4>Future</h4>
+          <h4>Updates to Version 1</h4>
+          <p className="text-sm font-light text-slate-300">....</p>
+        </div>
+        <div className="flex flex-col gap-y-2">
+          <h4>Future Updates</h4>
           <p className="text-sm font-light text-slate-300">
             As we move forward, I am excited about the possibilities for
             Morrent. It is more than just a car rental application; it is a
