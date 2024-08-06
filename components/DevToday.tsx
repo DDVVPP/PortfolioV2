@@ -102,9 +102,9 @@ const DevToday = () => {
               revalidation
             </li>
             <li className="text-sm font-light text-slate-300">
-              Sharpened my backend skills: Prisma and Supabase, CRUD operations
-              SQL queries, and the creation of a seed file using prisma and
-              faker.js.
+              Sharpened my backend skills: Prisma and Supabase, creating schemas
+              with relations, CRUD operations SQL queries, and the creation of a
+              seed file using prisma and faker.js.
             </li>
             <li className="text-sm font-light text-slate-300">
               Successfully incorporated 3rd party libraries and frameworks:
@@ -134,19 +134,19 @@ const DevToday = () => {
             date", my "end date" should automatically reset to the current start
             date. If I select a new "start date" that's before my "end date",
             the "end date" does not have to reset. */}
-              React Datepicker: Start and end date and time custom logic
-              selection - disable irrelevant dates and times and auto-select
-              relavant date and time according to user selected start date and
-              time
+              Create Meetup - React Datepicker: Start and end date and time
+              custom logic selection - disable irrelevant dates and times and
+              auto-select relavant date and time according to user selection.
             </li>
             <li className="text-sm font-light text-slate-300">
-              Sharpened my backend skills, specifically in optimizing database
-              queries, improving performance, and handling server-side logic.
+              {/* Adding a member to members input shouldn't make them show in admins box, and vice versa */}
+              Create Group - Search and add members and/or admins: Adding a user
+              to one input removes user from search in other input - ensure that
+              there are no duplicates in either field or search.
             </li>
             <li className="text-sm font-light text-slate-300">
-              Learned how to properly handle files, including file upload,
-              storage, and retrieval, ensuring that the apps data is organized &
-              easily accessible while keeping it secure.
+              Notifications: Deciding how to order notifications depending on
+              recent vs read/unread status & inifinte scroll
             </li>
           </ol>
         </div>
@@ -155,8 +155,20 @@ const DevToday = () => {
           <p className="text-sm font-light text-slate-300">....</p>
         </div>
         <div className="flex flex-col gap-y-2">
-          <h4>Future Updates</h4>
-          <p className="text-sm font-light text-slate-300">...</p>
+          <h4>Future Updates to Version 2</h4>
+          <ul className="ml-3 flex list-['-_'] flex-col gap-y-1 text-sm font-light text-slate-300">
+            <li>Connecting notifications to user actions</li>
+            <li>Group Details:</li>
+            <ul className="ml-3 flex list-['-_'] flex-col gap-y-1">
+              <li>Delete group</li>
+              <li>View all members and admins</li>
+              <li>Remove a user or assign a user the admin role</li>
+            </ul>
+            <li>Tags to be clickable and linked to content</li>
+            <li>Share post</li>
+            <li>Live values for number of views</li>
+            <li>Create an admin panel</li>
+          </ul>
         </div>
       </section>
     </motion.section>
