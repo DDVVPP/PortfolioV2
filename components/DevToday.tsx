@@ -59,29 +59,29 @@ const DevToday = () => {
         </div>
         <div className="flex flex-col gap-y-2">
           <h4 className="text-base font-medium">Features</h4>
-          <ul className="text-sm font-light text-slate-300">
-            <li>- Clerk authorization for sign-up and login</li>
-            <li>- Post and podcast feeds</li>
-            <li>- List of groups and meetups</li>
-            <li>- Users with profiles</li>
+          <ul className="ml-3 flex list-['-_'] flex-col gap-y-1 text-sm font-light text-slate-300">
+            <li>Clerk authorization for sign-up and login</li>
+            <li>Post and podcast feeds</li>
+            <li>List of groups and meetups</li>
+            <li>Users with profiles</li>
             <li>
-              - User specific actions such as:
-              <ul className="ml-3">
-                <li>- Following other users</li>
-                <li>- Liking posts, podcasts, and comments</li>
-                <li>- Commenting on posts and podcasts</li>
+              User specific actions such as:
+              <ul className="ml-3 flex list-['-_'] flex-col gap-y-1">
+                <li>Following other users</li>
+                <li>Liking posts, podcasts, and comments</li>
+                <li>Commenting on posts and podcasts</li>
                 <li>
-                  - Editing, creating, and deleting posts, groups, meetups,
+                  Editing, creating, and deleting posts, groups, meetups,
                   podcasts, and comments
                 </li>
-                <li>- Joining and leaving groups</li>
+                <li>Joining and leaving groups</li>
               </ul>
             </li>
-            <li>- CmdK fuzzy search</li>
-            <li>- Notifications</li>
+            <li>CmdK fuzzy search</li>
+            <li>Notifications</li>
             <li>
-              - Use of Git and Github with an Asana board of tickets for
-              efficient team collaboration.
+              Use of Git and Github with an Asana board of tickets for efficient
+              team collaboration.
             </li>
           </ul>
         </div>
@@ -95,55 +95,60 @@ const DevToday = () => {
         </div>
         <div className="flex flex-col gap-y-2">
           <h4 className="text-base font-medium">Learnings</h4>
-          <p className="text-sm font-light text-slate-300">
-            1. Acquired proficiency in NextJS: File based routing, server side
-            and client side components, data fetching, caching and revalidation
-          </p>
-          <p className="text-sm font-light text-slate-300">
-            2. Sharpened my backend skills: Prisma and Supabase, CRUD operations
-            SQL queries, and the creation of a seed file using prisma and
-            faker.js.
-          </p>
-          <p className="text-sm font-light text-slate-300">
-            3. Successfully incorporated 3rd party libraries and frameworks:
-            TinyMCE, Framer Motion, Shadcn, Upload Dropzone, Google Maps Api,
-            React Datepicker, Tailwind CSS
-          </p>
-          <p className="text-sm font-light text-slate-300">
-            4. Gained a better understanding of form generation and zod
-            validation
-          </p>
-          <p className="text-sm font-light text-slate-300">
-            5. Advanced my knowledge of styling: Custom styling for 3rd party
-            libraries and frameworks such as Clerk Authentication, TinyMCE,
-            React Datepicker, and Google Maps Api, mobile responsiveness, light
-            and dark modes, and flex
-          </p>
+          <ol className="ml-4 flex list-decimal flex-col gap-y-1">
+            <li className="text-sm font-light text-slate-300">
+              Acquired proficiency in NextJS: File based routing, server side
+              and client side components, data fetching, caching and
+              revalidation
+            </li>
+            <li className="text-sm font-light text-slate-300">
+              Sharpened my backend skills: Prisma and Supabase, CRUD operations
+              SQL queries, and the creation of a seed file using prisma and
+              faker.js.
+            </li>
+            <li className="text-sm font-light text-slate-300">
+              Successfully incorporated 3rd party libraries and frameworks:
+              TinyMCE, Framer Motion, Shadcn, Upload Dropzone, Google Maps Api,
+              React Datepicker, Tailwind CSS
+            </li>
+            <li className="text-sm font-light text-slate-300">
+              Gained a better understanding of form generation and zod
+              validation
+            </li>
+            <li className="text-sm font-light text-slate-300">
+              Advanced my knowledge of styling: Custom styling for 3rd party
+              libraries and frameworks such as Clerk Authentication, TinyMCE,
+              React Datepicker, and Google Maps Api, mobile responsiveness,
+              light and dark modes, and flex
+            </li>
+          </ol>
         </div>
         <div className="flex flex-col gap-y-2">
           <h4 className="text-base font-medium">Challenges</h4>
-          <p className="text-sm font-light text-slate-300">
-            {/* As a user I want to be able to select a range of dates and times for
+          <ol className="ml-4 flex list-decimal flex-col gap-y-1">
+            <li className="text-sm font-light text-slate-300">
+              {/* As a user I want to be able to select a range of dates and times for
             my meetup. a) My start date should start on today @ the current time
             b) My end date and time should never be before my start date and
             time If I select a "start date" that extends past (After) my "end
             date", my "end date" should automatically reset to the current start
             date. If I select a new "start date" that's before my "end date",
             the "end date" does not have to reset. */}
-            1. React Datepicker: Start and end date and time custom logic
-            selection - disable irrelevant dates and times and auto-select
-            relavant date and time according to user selected start date and
-            time
-          </p>
-          <p className="text-sm font-light text-slate-300">
-            2. Sharpened my backend skills, specifically in optimizing database
-            queries, improving performance, and handling server-side logic.
-          </p>
-          <p className="text-sm font-light text-slate-300">
-            3. Learned how to properly handle files, including file upload,
-            storage, and retrieval, ensuring that the apps data is organized &
-            easily accessible while keeping it secure.
-          </p>
+              React Datepicker: Start and end date and time custom logic
+              selection - disable irrelevant dates and times and auto-select
+              relavant date and time according to user selected start date and
+              time
+            </li>
+            <li className="text-sm font-light text-slate-300">
+              Sharpened my backend skills, specifically in optimizing database
+              queries, improving performance, and handling server-side logic.
+            </li>
+            <li className="text-sm font-light text-slate-300">
+              Learned how to properly handle files, including file upload,
+              storage, and retrieval, ensuring that the apps data is organized &
+              easily accessible while keeping it secure.
+            </li>
+          </ol>
         </div>
         <div className="flex flex-col gap-y-2">
           <h4>Updates to Version 1</h4>
@@ -151,18 +156,7 @@ const DevToday = () => {
         </div>
         <div className="flex flex-col gap-y-2">
           <h4>Future Updates</h4>
-          <p className="text-sm font-light text-slate-300">
-            As we move forward, I am excited about the possibilities for
-            Morrent. It is more than just a car rental application; it is a
-            transformative force in an industry that often faces hurdles. Our
-            journey doesnt end here. We are committed to refining and expanding{' '}
-            <br />
-            <br />A sincere thank you to the entire team for their dedication
-            and hard work. Morrent represents the collective effort and passion
-            we put into creating a product that redefines the car rental
-            experience. I look forward to the journey ahead as we continue to
-            elevate Morrent to new heights.
-          </p>
+          <p className="text-sm font-light text-slate-300">...</p>
         </div>
       </section>
     </motion.section>
