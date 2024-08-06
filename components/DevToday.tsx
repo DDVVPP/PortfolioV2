@@ -152,13 +152,17 @@ const DevToday = () => {
         </div>
         <div className="flex flex-col gap-y-2">
           <h4>Updates to Version 1</h4>
-          <ul className="text-sm font-light text-slate-300">
-            Style updates:
+          <ul className="ml-3 flex list-['-_'] flex-col gap-y-1 text-sm font-light text-slate-300">
             <li>
-              Updated hover states throughout app: post cards, hearts, buttons,
-              the sort & filter menu
+              Style updates:
+              <ul className="ml-3 flex list-['-_'] flex-col gap-y-1">
+                <li>
+                  Updated hover states throughout app: post cards, hearts,
+                  buttons, the sort & filter menu
+                </li>
+                <li>Removed arrow icons throughout if no content available</li>
+              </ul>
             </li>
-            <li>Removed arrow icons throughout if no content available</li>
           </ul>
         </div>
         <div className="flex flex-col gap-y-2">
