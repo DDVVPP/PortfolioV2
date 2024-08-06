@@ -152,7 +152,14 @@ const DevToday = () => {
         </div>
         <div className="flex flex-col gap-y-2">
           <h4>Updates to Version 1</h4>
-          <p className="text-sm font-light text-slate-300">....</p>
+          <ul className="text-sm font-light text-slate-300">
+            Style updates:
+            <li>
+              Updated hover states throughout app: post cards, hearts, buttons,
+              the sort & filter menu
+            </li>
+            <li>Removed arrow icons throughout if no content available</li>
+          </ul>
         </div>
         <div className="flex flex-col gap-y-2">
           <h4>Future Updates to Version 2</h4>
@@ -164,7 +171,9 @@ const DevToday = () => {
               <li>View all members and admins</li>
               <li>Remove a user or assign a user the admin role</li>
             </ul>
+            <li>Add missing loading states between route changes</li>
             <li>Tags to be clickable and linked to content</li>
+            <li>Pull light/dark mode out of Clerk menu</li>
             <li>Share post</li>
             <li>Live values for number of views</li>
             <li>Create an admin panel</li>
