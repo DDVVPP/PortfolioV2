@@ -1,3 +1,4 @@
+import GitNoteImage from '@/public/git-note.png';
 import DevTodayImage from '@/public/dev-today.png';
 
 import {
@@ -256,26 +257,6 @@ export const architectureWorkItems = [
 
 export const projects = [
   {
-    title: 'Git Note',
-    description:
-      'A Javascript Mastery project of a knowledge and progress tracker for developers',
-    image: DevTodayImage,
-    altText: 'git-note',
-    route: '/projects/dev-today',
-    tags: [
-      'Next.js',
-      'TypeScript',
-      'Auth',
-      'PostgreSQL',
-      'Prisma ORM',
-      'Supabase',
-      'Zod',
-      'Tailwind CSS',
-      'Shadcn',
-      'TinyMCE',
-    ],
-  },
-  {
     title: 'Dev Today',
     description:
       'A Javascript Mastery project of a content creation platform tailored for developers',
@@ -295,6 +276,28 @@ export const projects = [
       'TinyMCE',
       'Framer Motion',
     ],
+    isDisabled: false,
+  },
+  {
+    title: 'Git Note',
+    description:
+      'A Javascript Mastery project of a knowledge and progress tracker for developers',
+    image: GitNoteImage,
+    altText: 'git-note',
+    route: '/projects/dev-today',
+    tags: [
+      'Next.js',
+      'TypeScript',
+      'Auth',
+      'PostgreSQL',
+      'Prisma ORM',
+      'Supabase',
+      'Zod',
+      'Tailwind CSS',
+      'Shadcn',
+      'TinyMCE',
+    ],
+    isDisabled: true,
   },
 ];
 
