@@ -205,16 +205,32 @@ const DevToday = () => {
             <AccordionContent>
               <ul className="ml-3 flex list-['-_'] flex-col gap-y-1 text-sm font-light text-slate-300">
                 <li>Connecting notifications to user actions</li>
-                <li>Group Details:</li>
+                <li>Group Details Page:</li>
                 <ul className="ml-3 flex list-['-_'] flex-col gap-y-1">
                   <li>Delete group</li>
                   <li>View all members and admins</li>
                   <li>Remove a user or assign a user the admin role</li>
                 </ul>
+                <li>Profile Page:</li>
+                <ul className="ml-3 flex list-['-_'] flex-col gap-y-1">
+                  <li>
+                    No content text for content tabs, performance, and recent
+                    posts
+                  </li>
+                  <li>Hover effect on Edit Profile button</li>
+                </ul>
+                <li>Edit Profile Page:</li>
+                <ul className="ml-3 flex list-['-_'] flex-col gap-y-1">
+                  <li>
+                    &ldquo;Cancel&ldquo; button triggers a profile update and a
+                    loading state on the &ldquo;Update Profile&ldquo; button
+                  </li>
+                  <li>Hover effect on Edit Profile button</li>
+                </ul>
                 <li>Add missing loading states between route changes</li>
                 <li>Tags to be clickable and linked to content</li>
-                <li>Pull light/dark mode out of Clerk menu</li>
-                <li>Share post</li>
+                <li>Pull out light/dark mode from Clerk menu</li>
+                <li>Share post functionality</li>
                 <li>Live values for number of views</li>
                 <li>Create an admin panel</li>
               </ul>
