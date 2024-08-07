@@ -31,7 +31,7 @@ const About = () => {
           food. <br />
           <br />I have experience building applications in{' '}
           <span className="text-red-300">
-            Typescript, Javascript, React, Next.js, PosGreSQL,
+            Typescript, Javascript, React, Next.js, PostgreSQL,
           </span>{' '}
           and <span className="text-red-300">GraphQL</span> using{' '}
           <span className="text-red-300">agile methodologies.</span>
