@@ -59,6 +59,13 @@ const DevToday = () => {
                 >
                   https://dev-today-v2.vercel.app
                 </a>
+                <a
+                  href="placeholder"
+                  target="_blank"
+                  className="w-fit font-light text-slate-300 duration-300 hover:text-red-400"
+                >
+                  https://githubplaceholder.com
+                </a>
               </div>
 
               <div className="flex flex-col text-sm text-slate-100">
@@ -70,6 +77,19 @@ const DevToday = () => {
                 >
                   https://capstone-darshin-adam.vercel.app
                 </a>
+              </div>
+              <div className="mt-2">
+                <p className="text-sm text-slate-100">
+                  *{' '}
+                  <a
+                    href="mailto:darshinvp@gmail.com"
+                    className=" text-slate-300 duration-300 hover:text-red-400"
+                  >
+                    Contact me
+                  </a>{' '}
+                  for <span className="text-red-300">Demo User</span>{' '}
+                  credentials
+                </p>
               </div>
             </AccordionContent>
           </AccordionItem>
