@@ -37,7 +37,7 @@ const DevToday = () => {
       <div className="relative mb-7 ">
         <Image
           alt="dev-today"
-          src={project.image}
+          src={project.mainImage}
           className="shrink-0 rounded-xl"
           placeholder="blur"
         />
@@ -53,7 +53,7 @@ const DevToday = () => {
               <div className="flex flex-col text-sm text-slate-100">
                 <p>Version 2 (with updates) - Solo developer</p>
                 <a
-                  href="https://dev-today-v2.vercel.app/posts"
+                  href="https://dev-today-v2.vercel.app"
                   target="_blank"
                   className="w-fit font-light text-slate-300 duration-300 hover:text-red-400"
                 >
@@ -71,7 +71,7 @@ const DevToday = () => {
               <div className="flex flex-col text-sm text-slate-100">
                 <p>Version 1 - Two person team</p>
                 <a
-                  href="https://dev-today-v2.vercel.app/posts"
+                  href="https://capstone-darshin-adam.vercel.app"
                   target="_blank"
                   className="w-fit font-light text-slate-300 duration-300 hover:text-red-400"
                 >
