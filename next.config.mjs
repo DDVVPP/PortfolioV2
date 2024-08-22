@@ -7,6 +7,11 @@ const nextConfig = {
         destination: '/about',
         permanent: true,
       },
+      {
+        source: '/projects/dev-today',
+        destination: '/projects',
+        permanent: true,
+      },
     ];
   },
 };

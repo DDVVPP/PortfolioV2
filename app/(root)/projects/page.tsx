@@ -1,9 +1,7 @@
-const Projects = async () => {
-  return (
-    <div className="flex h-[750px] animate-pulse items-center text-base text-slate-400 max-md:h-[500px]">
-      Projects Page Coming Soon!
-    </div>
-  );
+import Projects from '@/components/Projects';
+
+const ProjectsWrapper = async () => {
+  return <Projects />;
 };
 
-export default Projects;
+export default ProjectsWrapper;
