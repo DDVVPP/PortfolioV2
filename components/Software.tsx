@@ -8,7 +8,6 @@ import AngledArrow from './shared/AngledArrow';
 const Software = () => {
   return (
     <motion.section
-      className=""
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
