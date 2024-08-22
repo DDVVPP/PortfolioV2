@@ -25,7 +25,7 @@ const Projects = () => {
               <div className="relative w-80 min-w-20 opacity-40 max-md:w-full">
                 <Image
                   alt={project.altText}
-                  src={project.image}
+                  src={project.coverImage}
                   className="rounded-lg"
                   placeholder="blur"
                 />
@@ -55,7 +55,7 @@ const Projects = () => {
               <div className="relative w-80 min-w-20 cursor-pointer max-md:w-full">
                 <Image
                   alt={project.altText}
-                  src={project.image}
+                  src={project.coverImage}
                   className="rounded-lg"
                   placeholder="blur"
                 />

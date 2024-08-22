@@ -1,5 +1,7 @@
-import GitNoteImage from '@/public/git-note.png';
-import DevTodayImage from '@/public/dev-today.png';
+import GitNoteLaptop from '@/public/GitNote-Laptop.png';
+import GitNoteFigma from '@/public/GitNote-Figma.png';
+import DevTodayLaptop from '@/public/DevToday-Laptop.png';
+import DevTodayFigma from '@/public/DevToday-Figma.png';
 
 import {
   AbstractFlower,
@@ -260,7 +262,8 @@ export const projects = [
     title: 'Dev Today',
     description:
       'A Javascript Mastery project of a content creation platform tailored for developers',
-    image: DevTodayImage,
+    coverImage: DevTodayLaptop,
+    mainImage: DevTodayFigma,
     route: '/projects/dev-today',
     altText: 'dev-today',
     tags: [
@@ -282,7 +285,8 @@ export const projects = [
     title: 'Git Note',
     description:
       'A Javascript Mastery project of a knowledge and progress tracker for developers',
-    image: GitNoteImage,
+    coverImage: GitNoteLaptop,
+    mainImage: GitNoteFigma,
     altText: 'git-note',
     route: '/projects/dev-today',
     tags: [
