@@ -13,7 +13,7 @@ const Projects = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="mx-10 my-32 flex flex-col gap-y-8 max-md:my-14 max-md:gap-y-12">
+      <div className="mx-10 my-32 flex flex-col gap-y-8 max-md:my-14">
         {projects.map((project) => {
           return (
             <div
