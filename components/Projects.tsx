@@ -18,7 +18,7 @@ const Projects = () => {
           return (
             <div
               key={project.title}
-              className="flex animate-pulse gap-x-8 rounded-lg  p-4 pl-3  max-md:flex-col max-md:gap-y-4 max-md:px-3"
+              className="flex animate-pulse gap-x-8 rounded-lg p-4 pl-3 max-md:flex-col max-md:gap-y-4 max-md:px-3"
             >
               <div className="relative w-80 min-w-20 max-md:w-full">
                 <Image
@@ -28,9 +28,9 @@ const Projects = () => {
                   placeholder="blur"
                 />
               </div>
-              <div className="mb-3 flex w-3/4 max-w-[1000px] flex-col justify-between max-md:-order-1 max-md:mb-2 max-md:w-full ">
+              <div className="mb-3 flex w-3/4 max-w-[1000px] flex-col justify-between max-md:-order-1 max-md:mb-2 max-md:w-full">
                 <div className="flex gap-x-0.5 max-md:justify-center">
-                  <h1 className="text-wrap text-sm font-medium uppercase text-slate-100 ">
+                  <h1 className="text-wrap text-sm font-medium uppercase text-slate-100">
                     {project.title} - COMING SOON!
                   </h1>
                 </div>
