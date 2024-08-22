@@ -1,3 +1,8 @@
+import GitNoteLaptop from '@/public/GitNote-Laptop.png';
+import GitNoteFigma from '@/public/GitNote-Figma.png';
+import DevTodayLaptop from '@/public/DevToday-Laptop.png';
+import DevTodayFigma from '@/public/DevToday-Figma.png';
+
 import {
   AbstractFlower,
   ArmadilloTails,
@@ -249,6 +254,54 @@ export const architectureWorkItems = [
       'Vray',
       'Maxwell Render',
     ],
+  },
+];
+
+export const projects = [
+  {
+    title: 'Dev Today',
+    description:
+      'A Javascript Mastery project of a content creation platform tailored for developers',
+    coverImage: DevTodayLaptop,
+    mainImage: DevTodayFigma,
+    route: '/projects/dev-today',
+    altText: 'dev-today',
+    tags: [
+      'Next.js',
+      'TypeScript',
+      'Clerk',
+      'PostgreSQL',
+      'Prisma ORM',
+      'Supabase',
+      'Zod',
+      'Tailwind CSS',
+      'Shadcn',
+      'TinyMCE',
+      'Framer Motion',
+    ],
+    isDisabled: false,
+  },
+  {
+    title: 'Git Note',
+    description:
+      'A Javascript Mastery project of a knowledge and progress tracker for developers',
+    coverImage: GitNoteLaptop,
+    mainImage: GitNoteFigma,
+    altText: 'git-note',
+    route: '/projects/dev-today',
+    tags: [
+      'Next.js',
+      'TypeScript',
+      'Auth',
+      'PostgreSQL',
+      'Prisma ORM',
+      'Supabase',
+      'Zod',
+      'Tailwind CSS',
+      'Shadcn',
+      'TinyMCE',
+    ],
+    isDisabled: true,
   },
 ];
 
