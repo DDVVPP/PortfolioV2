@@ -12,13 +12,10 @@ const Contact = () => {
           href="/about"
           className="group flex h-80 min-w-20 cursor-pointer flex-col justify-center  rounded-xl bg-[#172337] duration-300 hover:scale-110 hover:bg-[#1d2739] max-md:w-full"
         >
-          <Link
-            href="/"
-            className="cursor-pointer text-center text-4xl font-bold text-slate-400 duration-300 hover:text-red-300 group-hover:text-slate-200 group-hover:duration-300 max-sm:text-xl"
-          >
+          <div className="text-center text-4xl font-bold text-slate-400 duration-300 hover:text-red-300 group-hover:text-slate-200 group-hover:duration-300 max-sm:text-xl">
             <h1>Darshin</h1>
             <h1>Van Parijs</h1>
-          </Link>
+          </div>
 
           <div className="mt-0 flex flex-col gap-y-1">
             <div className="mb-0.5 mt-2 flex items-center justify-center gap-x-4 text-sm font-light text-slate-300">
