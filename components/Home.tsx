@@ -12,17 +12,17 @@ import Contact from '@/components/Contact';
 const Home = () => {
   return (
     <motion.section
-      className="flex min-h-[800px] w-full flex-col gap-8 p-12"
+      className="flex w-full flex-col gap-8 p-12 max-md:p-6"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <section className="flex gap-6">
-        <div className="w-1/2">
+      <section className="flex gap-8  max-md:flex-col">
+        <div className="w-1/2 max-md:w-full">
           <Contact />
         </div>
 
-        <div className="flex w-1/2 flex-col">
+        <div className="flex w-1/2 flex-col max-md:w-full">
           <Link
             href="/work"
             className="relative h-80 min-w-20 overflow-hidden rounded-xl max-md:w-full"
@@ -44,8 +44,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex gap-6">
-        <div className="flex w-1/2 flex-col">
+      <section className="flex gap-8 max-md:flex-col">
+        <div className="flex w-1/2 flex-col max-md:w-full">
           <Link
             href="/art"
             className="relative h-80 min-w-20 overflow-hidden rounded-xl max-md:w-full"
@@ -66,7 +66,7 @@ const Home = () => {
           </h3>
         </div>
 
-        <div className="flex w-1/2 flex-col">
+        <div className="flex w-1/2 flex-col max-md:-order-1 max-md:w-full">
           <Link
             href="/projects"
             className="relative h-80 min-w-20 overflow-hidden rounded-xl max-md:w-full"
