@@ -1,12 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 
-import githubLogo from '@/public/github-mark.svg';
-import linkedInLogo from '@/public/linkedin.svg';
 import { navbarItems } from '@/lib/constants';
+import Socials from './shared/Socials';
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -22,39 +20,7 @@ const Navbar = () => {
           <h1>Van Parijs</h1>
         </Link>
 
-        <div className="mt-0 flex flex-col gap-y-1">
-          <div className="navbar-mobile-info-links mb-0.5 mt-2 flex items-center justify-end gap-x-4 text-sm font-light text-slate-300">
-            <a
-              href="https://www.linkedin.com/in/DarshinVanParijs/"
-              target="_blank"
-              className="hover:animate-[wiggle_0.3s_ease-in-out_infinite]"
-            >
-              <Image priority src={linkedInLogo} alt="LogoLight" width={22} />
-            </a>
-            <a
-              href="https://github.com/DDVVPP"
-              target="_blank"
-              className="hover:animate-[wiggle_0.3s_ease-in-out_infinite]"
-            >
-              <Image priority src={githubLogo} alt="LogoLight" width={19} />
-            </a>
-            <a
-              href="/resume-2024.pdf"
-              target="_blank"
-              className="rounded-md border border-slate-500 p-1 duration-300 hover:border-red-400 hover:text-slate-300"
-            >
-              <p>Resume</p>
-            </a>
-          </div>
-          <div className="flex justify-end">
-            <a
-              href="mailto:darshinvp@gmail.com"
-              className="rounded-md border border-slate-500 p-1 text-end text-sm font-light text-slate-300 duration-300 hover:border-red-400 hover:text-slate-300 max-sm:text-xs"
-            >
-              darshinvp@gmail.com
-            </a>
-          </div>
-        </div>
+        <Socials isHomePage={false} />
       </section>
 
       <section className="navbar-mobile-tabs flex flex-col items-end text-base font-light text-slate-400">
