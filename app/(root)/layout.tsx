@@ -13,8 +13,8 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
         {/* Created Children component in order to access usePathname hook for custom rounded corners of background */}
         <Children>{children}</Children>
       </main>
-      <footer className="flex w-full justify-end pb-10 pr-[51px] pt-5 align-bottom text-xs font-light text-slate-400 max-md:justify-center max-md:text-wrap max-md:px-12 max-md:text-center">
-        Designed & Built by Darshin Van Parijs & Deployed with Vercel
+      <footer className="flex w-full justify-end py-5 pr-[51px] align-bottom text-xs font-light text-slate-400 max-md:justify-center max-md:text-wrap max-md:px-12 max-md:text-center">
+        © Designed & Built by Darshin Van Parijs & Deployed with Vercel
       </footer>
     </div>
   );
