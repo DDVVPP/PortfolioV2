@@ -15,9 +15,6 @@ const Layout = async ({ children }: { children: React.ReactNode }) => {
         <Children>{children}</Children>
       </main>
       <Footer isHomePage={false} />
-      {/* <footer className="flex w-full  py-5 pr-[51px] align-bottom text-xs font-light text-slate-400 max-md:justify-center max-md:text-wrap max-md:px-12 max-md:text-center">
-        © Designed & Built by Darshin Van Parijs & Deployed with Vercel
-      </footer> */}
     </div>
   );
 };
