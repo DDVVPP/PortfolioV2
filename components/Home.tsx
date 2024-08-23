@@ -38,7 +38,7 @@ const Home = () => {
           <h1 className="mt-3 text-wrap text-center text-sm font-medium uppercase text-slate-100">
             Work
           </h1>
-          <h3 className="text-center text-sm font-light text-slate-300 opacity-40">
+          <h3 className="text-center text-sm font-light text-slate-300 opacity-80">
             Professional work experience
           </h3>
         </div>
@@ -61,7 +61,7 @@ const Home = () => {
           <h1 className="mt-3 text-wrap text-center text-sm font-medium uppercase text-slate-100">
             Art
           </h1>
-          <h3 className="text-center text-sm font-light text-slate-300 opacity-40">
+          <h3 className="text-center text-sm font-light text-slate-300 opacity-80">
             Ceramics, sketches, and paintings
           </h3>
         </div>
@@ -82,7 +82,7 @@ const Home = () => {
           <h1 className="mt-3 text-wrap text-center text-sm font-medium uppercase text-slate-100">
             Projects
           </h1>
-          <h3 className="text-center text-sm font-light text-slate-300 opacity-40">
+          <h3 className="text-center text-sm font-light text-slate-300 opacity-80">
             Personal software engineering projects
           </h3>
         </div>
