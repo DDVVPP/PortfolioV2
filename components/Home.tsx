@@ -1,26 +1,91 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import ArtImages from '@/public/Art-Images-Tiled.png';
+import WorkImages from '@/public/Work-Images-Tiled.png';
+import ProjectImages from '@/public/Project-Images-Tiled.png';
+import Contact from '@/components/Contact';
 
 const Home = () => {
   return (
     <motion.section
-      className="m-12 flex min-h-[800px] w-full flex-col gap-4"
+      className="flex min-h-[800px] w-full flex-col gap-8 p-12"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <section className="flex gap-4">
-        <div className="flex w-1/2 flex-col">
-          <div className="h-96 rounded-md bg-slate-100"></div>
-          <h6 className="mt-2 text-center text-base font-medium uppercase text-slate-100">
-            Dev Today
-          </h6>
-          <p className="text-center text-sm font-light text-slate-300 opacity-60">
-            Description laalal{' '}
-          </p>
+      <section className="flex gap-6">
+        <div className="w-1/2">
+          <Contact />
         </div>
-        <div className="h-96 w-1/2 rounded-md bg-slate-100"></div>
+
+        <div className="flex w-1/2 flex-col">
+          <Link
+            href="/work"
+            className="relative h-80 min-w-20 overflow-hidden rounded-xl max-md:w-full"
+          >
+            <Image
+              alt="tiled-art-images"
+              src={WorkImages}
+              className="rounded-xl object-cover duration-300 hover:scale-110"
+              placeholder="blur"
+              fill
+            />
+          </Link>
+          <h1 className="mt-3 text-wrap text-center text-sm font-medium uppercase text-slate-100">
+            Work
+          </h1>
+          <h3 className="text-center text-sm font-light text-slate-300 opacity-40">
+            Professional work experience
+          </h3>
+        </div>
+      </section>
+
+      <section className="flex gap-6">
+        <div className="flex w-1/2 flex-col">
+          <Link
+            href="/art"
+            className="relative h-80 min-w-20 overflow-hidden rounded-xl max-md:w-full"
+          >
+            <Image
+              alt="tiled-art-images"
+              src={ArtImages}
+              className="rounded-xl object-cover duration-300 hover:scale-110"
+              placeholder="blur"
+              fill
+            />
+          </Link>
+          <h1 className="mt-3 text-wrap text-center text-sm font-medium uppercase text-slate-100">
+            Art
+          </h1>
+          <h3 className="text-center text-sm font-light text-slate-300 opacity-40">
+            Ceramics, sketches, and paintings
+          </h3>
+        </div>
+
+        <div className="flex w-1/2 flex-col">
+          <Link
+            href="/projects"
+            className="relative h-80 min-w-20 overflow-hidden rounded-xl max-md:w-full"
+          >
+            <Image
+              alt="tiled-art-images"
+              src={ProjectImages}
+              className="rounded-xl object-cover duration-300 hover:scale-110"
+              placeholder="blur"
+              fill
+            />
+          </Link>
+          <h1 className="mt-3 text-wrap text-center text-sm font-medium uppercase text-slate-100">
+            Projects
+          </h1>
+          <h3 className="text-center text-sm font-light text-slate-300 opacity-40">
+            Personal software engineering projects
+          </h3>
+        </div>
       </section>
     </motion.section>
   );
