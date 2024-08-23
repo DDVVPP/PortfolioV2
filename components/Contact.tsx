@@ -1,18 +1,23 @@
+'use client';
+
 import Image from 'next/image';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 import githubLogo from '@/public/github-mark.svg';
 import linkedInLogo from '@/public/linkedin.svg';
 
 const Contact = () => {
+  const router = useRouter();
+
   return (
     <>
-      <div className="overflow-hidden rounded-xl">
-        <Link
-          href="/about"
-          className="group flex h-80 min-w-20 cursor-pointer flex-col justify-center  rounded-xl bg-[#172337] duration-300 hover:scale-110 hover:bg-[#1d2739] max-md:w-full"
+      <section className="overflow-hidden rounded-xl">
+        {/* Used div with onClick instead of Link to fix hydration error - using a button requires an outer div for styling */}
+        <div
+          className="group flex h-80 cursor-pointer flex-col justify-center  rounded-xl bg-[#172337] duration-300 hover:scale-110 hover:bg-[#1d2739] max-md:w-full"
+          onClick={() => router.push('/about')}
         >
-          <div className="text-center text-4xl font-bold text-slate-400 duration-300 hover:text-red-300 group-hover:text-slate-200 group-hover:duration-300 max-sm:text-xl">
+          <div className="flex flex-col text-center text-4xl font-bold text-slate-400 duration-300 hover:text-red-300 group-hover:text-slate-200 group-hover:duration-300 max-sm:text-xl">
             <h1>Darshin</h1>
             <h1>Van Parijs</h1>
           </div>
@@ -51,8 +56,8 @@ const Contact = () => {
               </a>
             </div>
           </div>
-        </Link>
-      </div>
+        </div>
+      </section>
 
       <h1 className="mt-3 text-wrap text-center text-sm font-medium uppercase text-slate-100">
         About
