@@ -12,12 +12,12 @@ import Contact from '@/components/Contact';
 const Home = () => {
   return (
     <motion.section
-      className="flex w-full flex-col gap-8 p-12 max-md:p-6"
+      className="flex h-[90vh] min-h-[600px] w-full flex-col gap-8 p-12 max-md:h-full max-md:p-6"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <section className="flex gap-8  max-md:flex-col">
+      <section className="flex h-1/2 gap-8 max-md:flex-col">
         <div className="w-1/2 max-md:w-full">
           <Contact />
         </div>
@@ -25,7 +25,7 @@ const Home = () => {
         <div className="flex w-1/2 flex-col max-md:w-full">
           <Link
             href="/work"
-            className="relative h-80 min-w-20 overflow-hidden rounded-xl max-md:w-full"
+            className="relative h-full min-w-20 overflow-hidden rounded-xl max-md:h-80 max-md:w-full"
           >
             <Image
               alt="tiled-art-images"
@@ -44,11 +44,11 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="flex gap-8 max-md:flex-col">
+      <section className="flex h-1/2 gap-8 max-md:flex-col">
         <div className="flex w-1/2 flex-col max-md:w-full">
           <Link
             href="/art"
-            className="relative h-80 min-w-20 overflow-hidden rounded-xl max-md:w-full"
+            className="relative h-full min-w-20 overflow-hidden rounded-xl max-md:h-80 max-md:w-full"
           >
             <Image
               alt="tiled-art-images"
@@ -69,7 +69,7 @@ const Home = () => {
         <div className="flex w-1/2 flex-col max-md:-order-1 max-md:w-full">
           <Link
             href="/projects"
-            className="relative h-80 min-w-20 overflow-hidden rounded-xl max-md:w-full"
+            className="relative h-full min-w-20 overflow-hidden rounded-xl max-md:h-80 max-md:w-full"
           >
             <Image
               alt="tiled-art-images"
