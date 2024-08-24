@@ -5,7 +5,7 @@ import Footer from '@/components/shared/Footer';
 
 const Layout = async ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="bg-slate-900">
+    <div>
       <main className="flex min-h-fit max-md:flex-col">
         <div className="sticky ml-10 mt-[190px] rounded-xl max-md:mx-8 max-md:mt-10 md:w-1/4">
           <Navbar />

@@ -18,7 +18,7 @@ const Children = ({ children }: { children: React.ReactNode }) => {
 
   return (
     <div
-      className={`mr-10 mt-12 flex h-fit max-w-[1600px] justify-center rounded-2xl bg-dark-800 max-md:mx-8 max-md:mt-0 md:w-full ${isRounded()}`}
+      className={`mr-10 mt-12 flex h-fit max-w-[1600px] justify-center rounded-2xl bg-dark-800/65 max-md:mx-8 max-md:mt-0 md:w-full ${isRounded()}`}
     >
       {' '}
       {children}

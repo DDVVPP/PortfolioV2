@@ -3,7 +3,7 @@ import Footer from '@/components/shared/Footer';
 
 const HomeWrapper = () => {
   return (
-    <div className="w-full bg-slate-900">
+    <div className="w-full">
       <Home />
       <Footer isHomePage={true} />
     </div>
