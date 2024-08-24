@@ -19,7 +19,7 @@ const Software = () => {
               key={item.company}
               href={item.website}
               target="_blank"
-              className="group rounded-lg p-4 pl-3 duration-300 hover:bg-slate-900 max-md:px-3"
+              className="group rounded-lg p-4 pl-3 duration-300 hover:bg-slate-900/80 max-md:px-3"
             >
               <div className="flex gap-x-4 text-sm text-slate-300 max-md:flex-col max-md:gap-x-0">
                 <p className="min-w-44 uppercase text-slate-300">{item.date}</p>

@@ -16,7 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-slate-900">
+    <html
+      lang="en"
+      className="h-screen bg-gradient-radial from-slate-900 via-sky-950 to-slate-950"
+    >
       <body className={inter.className}>
         <div>{children}</div>
       </body>

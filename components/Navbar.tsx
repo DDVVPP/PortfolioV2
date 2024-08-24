@@ -30,7 +30,7 @@ const Navbar = () => {
             <Link
               key={item.route}
               href={item.route}
-              className={`${isSelected ? 'rounded-xl bg-dark-800 px-6 py-4 font-normal text-red-400 duration-300 max-md:rounded-b-none max-md:p-3 md:rounded-r-none' : 'px-6 py-4 duration-300 hover:text-red-400 max-md:p-3'}`}
+              className={`${isSelected ? 'rounded-xl bg-dark-800/65 px-6 py-4 font-normal text-red-400 duration-300 max-md:rounded-b-none max-md:p-3 md:rounded-r-none' : 'px-6 py-4 duration-300 hover:text-red-400 max-md:p-3'}`}
               prefetch={false}
             >
               {item.title}
