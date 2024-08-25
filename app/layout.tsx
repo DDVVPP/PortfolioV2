@@ -16,10 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className="bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-slate-950 via-slate-900 to-[#0a3955]"
-    >
+    <html lang="en">
       <body className={inter.className}>
         <div>{children}</div>
       </body>
