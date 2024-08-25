@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    @apply bg-slate-800;
+  }
+
+  html {
+    @apply bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-slate-950 via-slate-900 to-[#0a3955];
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
