@@ -11,10 +11,10 @@ const Navbar = () => {
 
   return (
     <section className="sticky flex flex-col gap-y-16 max-md:gap-y-10">
-      <section className="navbar-mobile-header mr-6 flex flex-col gap-y-1">
+      <section className="navbar-mobile-header mr-6 flex flex-col items-end gap-y-1">
         <Link
           href="/"
-          className="cursor-pointer text-4xl font-bold text-slate-400 duration-300 hover:text-red-300 max-sm:text-xl md:text-right"
+          className="w-fit cursor-pointer text-4xl font-bold text-slate-300/80 duration-300 hover:text-red-300 max-sm:text-xl md:text-right"
         >
           <h1>Darshin</h1>
           <h1>Van Parijs</h1>
@@ -30,7 +30,7 @@ const Navbar = () => {
             <Link
               key={item.route}
               href={item.route}
-              className={`${isSelected ? 'rounded-xl bg-dark-800 px-6 py-4 font-normal text-red-400 duration-300 max-md:rounded-b-none max-md:p-3 md:rounded-r-none' : 'px-6 py-4 duration-300 hover:text-red-400 max-md:p-3'}`}
+              className={`${isSelected ? 'rounded-xl bg-dark-800/65 px-6 py-4 font-normal text-red-400 duration-300 max-md:rounded-b-none max-md:p-3 md:rounded-r-none' : 'px-6 py-4 duration-300 hover:text-red-400 max-md:p-3'}`}
               prefetch={false}
             >
               {item.title}
