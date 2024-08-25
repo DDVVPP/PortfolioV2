@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="h-screen bg-gradient-radial from-slate-900 via-sky-950 to-slate-950"
+      className="bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-slate-950 via-slate-900 to-[#0a3955]"
     >
       <body className={inter.className}>
         <div>{children}</div>
