@@ -817,3 +817,27 @@ export const artImages = [
     ],
   },
 ];
+
+export const projectDetails = [
+  {
+    title: 'Dev Today',
+    overview:
+      'DevToday is a content creation platform for developers. It offers developer related post, podcast, and event feeds, keeping the user up-to-date with the latest tech. The app encourages engagement through likes, follows, and comments, and allows users to create groups of like-minded individuals, professionals, and enthusiasts in the tech space.',
+    learnings: [
+      'Acquired proficiency in NextJS: File based routing, server side and client side components, data fetching, caching and revalidation',
+      'Sharpened my backend skills: Prisma and Supabase, creating schemas with relations, CRUD operations SQL queries, and the creation of a seed file using prisma and faker.js.',
+      'Successfully incorporated 3rd party libraries and frameworks: TinyMCE, Framer Motion, Shadcn, Upload Dropzone, Google Maps Api, React Datepicker, Tailwind CSS',
+      'Gained a better understanding of form generation and zod validation',
+      'Advanced my knowledge of styling: Custom styling for 3rd party libraries and frameworks such as Clerk Authentication, TinyMCE, React Datepicker, and Google Maps Api, mobile responsiveness, light and dark modes, and flex',
+    ],
+    challenges: [
+      /* As a user I want to be able to select a range of dates and times for my meetup. a) My start date should start on today @ the current time b) My end date and time should never be before my start date and time If I select a "start date" that extends past (After) my "end date", my "end date" should automatically reset to the current start date. If I select a new "start date" that's before my "end date", the "end date" does not have to reset. */
+      'Create Meetup - React Datepicker: Start and end date and time custom logic selection - disable irrelevant dates and times and auto-select relavant date and time according to user selection.',
+      /* Adding a member to members input shouldn't make them show in admins box, and vice versa */
+      'Create Group - Search and add members and/or admins: Adding a user to one input removes user from search in other input - ensure that there are no duplicates in either field or search.',
+      'Notifications: Ordering notifications, indicating unread notifications in decided order, marking all notifications as read while maintaining the order, and infinite scroll',
+    ],
+  },
+];
+
+/* As a user I want to be able to select a range of dates and times for my meetup. a) My start date should start on today @ the current time b) My end date and time should never be before my start date and time If I select a "start date" that extends past (After) my "end date", my "end date" should automatically reset to the current start date. If I select a new "start date" that's before my "end date", the "end date" does not have to reset. */
