@@ -11,6 +11,7 @@ import {
 } from '@/components/ui/accordion';
 import { projects } from '@/lib/constants';
 import Tag from './shared/Tag';
+import LinkWithIcon from './shared/LinkWithIcon';
 
 const DevToday = () => {
   const project = projects[0];
@@ -22,16 +23,38 @@ const DevToday = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <header className="mb-7 flex flex-col gap-y-5 text-center">
-        <h1 className="text-3xl font-bold">{project.title}</h1>
-        <h3 className="text-sm font-light text-slate-300">
+      <header className="mb-7 flex flex-col text-center">
+        <h1 className="text-3xl font-bold text-slate-200">{project.title}</h1>
+        <p className="text-sm font-light text-slate-300">
           {project.description}
-        </h3>
-        <div className="flex flex-wrap justify-center gap-x-3 gap-y-2">
-          {project.tags.map((tag) => {
-            return <Tag key={tag} text={tag} />;
-          })}
+        </p>
+
+        <div className="mt-3 flex justify-center gap-x-2">
+          <LinkWithIcon
+            label="Version Two Site"
+            href="https://dev-today-v2.vercel.app"
+          />
+          <LinkWithIcon
+            label="Version Two Source"
+            href="https://dev-today-v2.vercel.app"
+          />
         </div>
+        <div className="mt-2 flex justify-center gap-x-2">
+          <LinkWithIcon
+            label="Version One Site"
+            href="https://capstone-darshin-adam.vercel.app"
+          />
+        </div>
+        <p className="mt-2 text-xs text-slate-300">
+          *{' '}
+          <a
+            href="mailto:darshinvp@gmail.com"
+            className=" duration-300 hover:text-red-400"
+          >
+            Contact me
+          </a>{' '}
+          for <span className="text-red-300">Demo User</span> credentials
+        </p>
       </header>
 
       <div className="relative mb-7 ">
@@ -43,57 +66,14 @@ const DevToday = () => {
         />
       </div>
 
+      <div className="mt-4 flex flex-wrap justify-center gap-x-3 gap-y-2">
+        {project.tags.map((tag) => {
+          return <Tag key={tag} text={tag} />;
+        })}
+      </div>
+
       <section className="flex flex-col gap-y-6">
         <Accordion type="single" collapsible>
-          <AccordionItem value="item-1">
-            <AccordionTrigger className="text-base font-medium">
-              Deployed Sites
-            </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-y-2">
-              <div className="flex flex-col text-sm text-slate-100">
-                <p>Version 2 (with updates) - Solo developer</p>
-                <a
-                  href="https://dev-today-v2.vercel.app"
-                  target="_blank"
-                  className="w-fit font-light text-slate-300 duration-300 hover:text-red-400"
-                >
-                  https://dev-today-v2.vercel.app
-                </a>
-                <a
-                  href="placeholder"
-                  target="_blank"
-                  className="w-fit font-light text-slate-300 duration-300 hover:text-red-400"
-                >
-                  https://githubplaceholder.com
-                </a>
-              </div>
-
-              <div className="flex flex-col text-sm text-slate-100">
-                <p>Version 1 - Two person team</p>
-                <a
-                  href="https://capstone-darshin-adam.vercel.app"
-                  target="_blank"
-                  className="w-fit font-light text-slate-300 duration-300 hover:text-red-400"
-                >
-                  https://capstone-darshin-adam.vercel.app
-                </a>
-              </div>
-              <div className="mt-2">
-                <p className="text-sm text-slate-100">
-                  *{' '}
-                  <a
-                    href="mailto:darshinvp@gmail.com"
-                    className=" text-slate-300 duration-300 hover:text-red-400"
-                  >
-                    Contact me
-                  </a>{' '}
-                  for <span className="text-red-300">Demo User</span>{' '}
-                  credentials
-                </p>
-              </div>
-            </AccordionContent>
-          </AccordionItem>
-
           <AccordionItem value="item-2">
             <AccordionTrigger className="text-base font-medium">
               Features
