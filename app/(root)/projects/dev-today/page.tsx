@@ -1,6 +1,6 @@
 import DevToday from '@/components/DevToday';
 
-const DevTodayWrapper = async () => {
+const DevTodayWrapper = () => {
   return <DevToday />;
 };
 
