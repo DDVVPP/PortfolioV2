@@ -27,20 +27,11 @@ const DevToday = () => {
         </p>
 
         <div className="mt-3 flex justify-center gap-x-2 max-sm:flex-col max-sm:items-center max-sm:gap-y-2">
-          <LinkWithIcon
-            label="v2.0 Demo Site"
-            href="https://dev-today-v2.vercel.app"
-          />
-          <LinkWithIcon
-            label="v2.0 Source Code"
-            href="https://dev-today-v2.vercel.app"
-          />
+          <LinkWithIcon label="v2.0 Demo Site" href={project.demoLinkV2} />
+          <LinkWithIcon label="v2.0 Source Code" href={project.githubLink} />
         </div>
         <div className="mt-2 flex justify-center gap-x-2">
-          <LinkWithIcon
-            label="v1.0 Demo Site"
-            href="https://capstone-darshin-adam.vercel.app"
-          />
+          <LinkWithIcon label="v1.0 Demo Site" href={project.demoLinkV1} />
         </div>
         <p className="mt-2 text-xs text-slate-300 max-sm:text-[11px]">
           *{' '}
