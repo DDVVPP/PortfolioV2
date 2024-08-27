@@ -1,7 +1,7 @@
-import GitNoteLaptop from '@/public/GitNote-Laptop.png';
+import GitNoteLaptopMobile from '@/public/GitNoteLaptopMobile.png';
 import GitNoteFigma from '@/public/GitNote-Figma.png';
-import DevTodayLaptop from '@/public/DevToday-Laptop.png';
 import DevTodayFigma from '@/public/DevToday-Figma.png';
+import DevTodayLaptopMobile from '@/public/DevTodayLaptopMobile.png';
 
 import {
   AbstractFlower,
@@ -262,7 +262,7 @@ export const projects = [
     title: 'Dev Today',
     description:
       'A Javascript Mastery project of a content creation platform tailored for developers',
-    coverImage: DevTodayLaptop,
+    coverImage: DevTodayLaptopMobile,
     mainImage: DevTodayFigma,
     route: '/projects/dev-today',
     altText: 'dev-today',
@@ -285,7 +285,7 @@ export const projects = [
     title: 'Git Note',
     description:
       'A Javascript Mastery project of a knowledge and progress tracker for developers',
-    coverImage: GitNoteLaptop,
+    coverImage: GitNoteLaptopMobile,
     mainImage: GitNoteFigma,
     altText: 'git-note',
     route: '/projects/dev-today',
@@ -822,7 +822,7 @@ export const projectDetails = [
   {
     title: 'Dev Today',
     overview:
-      'DevToday is a content creation platform for developers. It offers developer related post, podcast, and event feeds, keeping the user up-to-date with the latest tech. The app encourages engagement through likes, follows, and comments, and allows users to create groups of like-minded individuals, professionals, and enthusiasts in the tech space.',
+      'DevToday provides users with an array of tools and resources to effortlessly create and share content, enabling the exchange of knowledge and ideas within the community. The platform features developer-focused posts, podcasts, and event feeds, ensuring users stay informed on the latest in tech. The app encourages engagement through likes, follows, and comments, and allows users to create groups of like-minded individuals, professionals, and enthusiasts in the tech space.',
     learnings: [
       'Acquired proficiency in NextJS: File based routing, server side and client side components, data fetching, caching and revalidation',
       'Sharpened my backend skills: Prisma and Supabase, creating schemas with relations, CRUD operations SQL queries, and the creation of a seed file using prisma and faker.js.',
