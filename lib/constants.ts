@@ -264,11 +264,11 @@ export const projects = [
       'A Javascript Mastery project of a content creation platform tailored for developers',
     coverImage: DevTodayLaptopMobile,
     mainImage: DevTodayFigma,
+    altText: 'dev-today',
     route: '/projects/dev-today',
     demoLinkV1: 'https://capstone-darshin-adam.vercel.app',
     demoLinkV2: 'https://dev-today-v2.vercel.app',
     githubLink: 'https://github.com/DDVVPP/PortfolioV2',
-    altText: 'dev-today',
     tags: [
       'Next.js',
       'TypeScript',
@@ -282,6 +282,22 @@ export const projects = [
       'TinyMCE',
       'Framer Motion',
     ],
+    overview:
+      'DevToday provides users with an array of tools and resources to effortlessly create and share content, enabling the exchange of knowledge and ideas within the community. The platform features developer-focused posts, podcasts, and event feeds, ensuring users stay informed on the latest in tech. The app encourages engagement through likes, follows, and comments, and allows users to create groups of like-minded individuals, professionals, and enthusiasts in the tech space.',
+    learnings: [
+      'Acquired proficiency in NextJS: File based routing, server side and client side components, data fetching, caching and revalidation',
+      'Sharpened my backend skills: Prisma and Supabase, creating schemas with relations, CRUD operations SQL queries, and the creation of a seed file using prisma and faker.js.',
+      'Successfully incorporated 3rd party libraries and frameworks: TinyMCE, Framer Motion, Shadcn, Upload Dropzone, Google Maps Api, React Datepicker, Tailwind CSS',
+      'Gained a better understanding of form generation and zod validation',
+      'Advanced my knowledge of styling: Custom styling for 3rd party libraries and frameworks such as Clerk Authentication, TinyMCE, React Datepicker, and Google Maps Api, mobile responsiveness, light and dark modes, and flex',
+    ],
+    challenges: [
+      /* As a user I want to be able to select a range of dates and times for my meetup. a) My start date should start on today @ the current time b) My end date and time should never be before my start date and time If I select a "start date" that extends past (After) my "end date", my "end date" should automatically reset to the current start date. If I select a new "start date" that's before my "end date", the "end date" does not have to reset. */
+      'Create Meetup - React Datepicker: Start and end date and time custom logic selection - disable irrelevant dates and times and auto-select relavant date and time according to user selection.',
+      /* Adding a member to members input shouldn't make them show in admins box, and vice versa */
+      'Create Group - Search and add members and/or admins: Adding a user to one input removes user from search in other input - ensure that there are no duplicates in either field or search.',
+      'Notifications: Ordering notifications, indicating unread notifications in decided order, marking all notifications as read while maintaining the order, and infinite scroll',
+    ],
     isDisabled: false,
   },
   {
@@ -291,9 +307,8 @@ export const projects = [
     coverImage: GitNoteLaptopMobile,
     mainImage: GitNoteFigma,
     altText: 'git-note',
-    route: '/projects/dev-today',
+    route: '/projects/git-note',
     demoLinkV1: 'https://capstone-darshin-adam.vercel.app',
-    demoLinkV2: 'https://dev-today-v2.vercel.app',
     githubLink: 'https://github.com/DDVVPP/PortfolioV2',
     tags: [
       'Next.js',
@@ -306,6 +321,19 @@ export const projects = [
       'Tailwind CSS',
       'Shadcn',
       'TinyMCE',
+    ],
+    overview: 'Git Note text',
+    learnings: [
+      'Acquired proficiency in NextJS: File based routing, server side and client side components, data fetching, caching and revalidation',
+      'Sharpened my backend skills: Prisma and Supabase, creating schemas with relations, CRUD operations SQL queries, and the creation of a seed file using prisma and faker.js.',
+      'Successfully incorporated 3rd party libraries and frameworks: TinyMCE, Framer Motion, Shadcn, Upload Dropzone, Google Maps Api, React Datepicker, Tailwind CSS',
+      'Gained a better understanding of form generation and zod validation',
+      'Advanced my knowledge of styling: Custom styling for 3rd party libraries and frameworks such as Clerk Authentication, TinyMCE, React Datepicker, and Google Maps Api, mobile responsiveness, light and dark modes, and flex',
+    ],
+    challenges: [
+      'Create Meetup - React Datepicker: Start and end date and time custom logic selection - disable irrelevant dates and times and auto-select relavant date and time according to user selection.',
+      'Create Group - Search and add members and/or admins: Adding a user to one input removes user from search in other input - ensure that there are no duplicates in either field or search.',
+      'Notifications: Ordering notifications, indicating unread notifications in decided order, marking all notifications as read while maintaining the order, and infinite scroll',
     ],
     isDisabled: true,
   },
@@ -824,50 +852,4 @@ export const artImages = [
   },
 ];
 
-export const projectDetails = [
-  {
-    title: 'Dev Today',
-    overview:
-      'DevToday provides users with an array of tools and resources to effortlessly create and share content, enabling the exchange of knowledge and ideas within the community. The platform features developer-focused posts, podcasts, and event feeds, ensuring users stay informed on the latest in tech. The app encourages engagement through likes, follows, and comments, and allows users to create groups of like-minded individuals, professionals, and enthusiasts in the tech space.',
-    learnings: [
-      'Acquired proficiency in NextJS: File based routing, server side and client side components, data fetching, caching and revalidation',
-      'Sharpened my backend skills: Prisma and Supabase, creating schemas with relations, CRUD operations SQL queries, and the creation of a seed file using prisma and faker.js.',
-      'Successfully incorporated 3rd party libraries and frameworks: TinyMCE, Framer Motion, Shadcn, Upload Dropzone, Google Maps Api, React Datepicker, Tailwind CSS',
-      'Gained a better understanding of form generation and zod validation',
-      'Advanced my knowledge of styling: Custom styling for 3rd party libraries and frameworks such as Clerk Authentication, TinyMCE, React Datepicker, and Google Maps Api, mobile responsiveness, light and dark modes, and flex',
-    ],
-    challenges: [
-      /* As a user I want to be able to select a range of dates and times for my meetup. a) My start date should start on today @ the current time b) My end date and time should never be before my start date and time If I select a "start date" that extends past (After) my "end date", my "end date" should automatically reset to the current start date. If I select a new "start date" that's before my "end date", the "end date" does not have to reset. */
-      'Create Meetup - React Datepicker: Start and end date and time custom logic selection - disable irrelevant dates and times and auto-select relavant date and time according to user selection.',
-      /* Adding a member to members input shouldn't make them show in admins box, and vice versa */
-      'Create Group - Search and add members and/or admins: Adding a user to one input removes user from search in other input - ensure that there are no duplicates in either field or search.',
-      'Notifications: Ordering notifications, indicating unread notifications in decided order, marking all notifications as read while maintaining the order, and infinite scroll',
-    ],
-    v1Updates: {
-      'Style Updates': [
-        'Updated hover states throughout app: post cards, hearts, buttons, the sort & filter menu',
-        'Removed arrow icons throughout if no content available',
-      ],
-    },
-    v2Updates: [
-      'Connecting notifications to user actions',
-      'Group Details Page',
-      [
-        'Delete group',
-        'View all members and admins',
-        'Remove a user or assign a user the admin role',
-      ],
-
-      'Profile Page',
-      [
-        'No content text for content tabs, performance, and recent posts',
-        'Hover effect on Edit Profile button',
-      ],
-      'Edit Profile Page',
-      [
-        '&ldquo;Cancel&ldquo; button triggers a profile update and a loading state on the &ldquo;Update Profile&ldquo; button',
-        'Hover effect on Edit Profile button',
-      ],
-    ],
-  },
-];
+export const projectDetails = [{}];

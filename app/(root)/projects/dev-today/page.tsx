@@ -1,7 +1,8 @@
-import DevToday from '@/components/DevToday';
+import ProjectDetails from '@/components/ProjectDetails';
+import { projects } from '@/lib/constants';
 
 const DevTodayWrapper = () => {
-  return <DevToday />;
+  return <ProjectDetails project={projects[0]} />;
 };
 
 export default DevTodayWrapper;
