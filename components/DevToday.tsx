@@ -26,13 +26,13 @@ const DevToday = () => {
           {project.description}
         </p>
 
-        <div className="mt-3 flex justify-center gap-x-2">
+        <div className="mt-3 flex justify-center gap-x-2 max-sm:flex-col max-sm:items-center max-sm:gap-y-2">
           <LinkWithIcon
             label="v2.0 Demo Site"
             href="https://dev-today-v2.vercel.app"
           />
           <LinkWithIcon
-            label="v2.0 Source"
+            label="v2.0 Source Code"
             href="https://dev-today-v2.vercel.app"
           />
         </div>
@@ -55,7 +55,7 @@ const DevToday = () => {
       </header>
 
       <section className="flex flex-col items-center justify-center max-md:w-full">
-        <div className="relative mb-6">
+        <div className="relative mb-6 max-sm:mb-3">
           <Image
             alt="dev-today"
             src={project.mainImage}
@@ -71,7 +71,7 @@ const DevToday = () => {
         </div>
       </section>
 
-      <section className="mt-4 flex w-full flex-col gap-y-4">
+      <section className="mt-8 flex w-full flex-col gap-y-4">
         {projectDetails.map((project) => (
           <ProjectDetailsCard
             key={project.title}
