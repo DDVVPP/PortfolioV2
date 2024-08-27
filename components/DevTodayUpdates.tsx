@@ -1,57 +1,6 @@
-const ProjectDetailsCard = ({
-  overview,
-  learnings,
-  challenges,
-}: {
-  overview: string;
-  learnings: string[];
-  challenges: string[];
-}) => {
+const DevTodayUpdates = () => {
   return (
     <>
-      <div className="rounded-md bg-slate-800/70 p-6 text-slate-300">
-        <p className="mb-3 text-base font-semibold text-slate-200 max-sm:text-sm">
-          Overview
-        </p>
-        <p className="text-sm font-light max-sm:text-xs">{overview}</p>
-      </div>
-
-      <div className="rounded-md bg-slate-800/70 p-6 text-slate-300">
-        <p className="mb-3 text-base font-semibold text-slate-200 max-sm:text-sm">
-          Learnings
-        </p>
-        <ol className="ml-4 flex list-decimal flex-col gap-y-1">
-          {learnings.map((item, idx) => {
-            return (
-              <li
-                key={idx}
-                className="text-sm font-light text-slate-300 max-sm:text-xs"
-              >
-                {item}
-              </li>
-            );
-          })}
-        </ol>
-      </div>
-
-      <div className="rounded-md bg-slate-800/70 p-6 text-slate-300">
-        <p className="mb-3 text-base font-semibold text-slate-200 max-sm:text-sm">
-          Challenges
-        </p>
-        <ol className="ml-4 flex list-decimal flex-col gap-y-1 ">
-          {challenges.map((item, idx) => {
-            return (
-              <li
-                key={idx}
-                className="text-sm font-light text-slate-300 max-sm:text-xs"
-              >
-                {item}
-              </li>
-            );
-          })}
-        </ol>
-      </div>
-
       <section className="max-md: flex gap-4 max-lg:flex-col">
         <div className="w-1/2 rounded-md bg-slate-800/70 p-6 text-slate-300 max-lg:w-full">
           <p className="mb-3 text-base font-semibold text-slate-200 max-sm:text-sm">
@@ -111,4 +60,4 @@ const ProjectDetailsCard = ({
   );
 };
 
-export default ProjectDetailsCard;
+export default DevTodayUpdates;
