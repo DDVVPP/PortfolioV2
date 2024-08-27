@@ -265,6 +265,9 @@ export const projects = [
     coverImage: DevTodayLaptopMobile,
     mainImage: DevTodayFigma,
     route: '/projects/dev-today',
+    demoLinkV1: 'https://capstone-darshin-adam.vercel.app',
+    demoLinkV2: 'https://dev-today-v2.vercel.app',
+    githubLink: 'https://github.com/DDVVPP/PortfolioV2',
     altText: 'dev-today',
     tags: [
       'Next.js',
@@ -289,6 +292,9 @@ export const projects = [
     mainImage: GitNoteFigma,
     altText: 'git-note',
     route: '/projects/dev-today',
+    demoLinkV1: 'https://capstone-darshin-adam.vercel.app',
+    demoLinkV2: 'https://dev-today-v2.vercel.app',
+    githubLink: 'https://github.com/DDVVPP/PortfolioV2',
     tags: [
       'Next.js',
       'TypeScript',
