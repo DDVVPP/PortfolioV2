@@ -10,16 +10,23 @@ const ProjectDetailsCard = ({
   return (
     <>
       <div className="rounded-md bg-slate-800/70 p-6 text-slate-300">
-        <p className="mb-3 text-base font-semibold text-slate-200">Overview</p>
-        <p className="text-sm font-light">{overview}</p>
+        <p className="mb-3 text-base font-semibold text-slate-200 max-sm:text-sm">
+          Overview
+        </p>
+        <p className="text-sm font-light max-sm:text-xs">{overview}</p>
       </div>
 
       <div className="rounded-md bg-slate-800/70 p-6 text-slate-300">
-        <p className="mb-3 text-base font-semibold text-slate-200">Learnings</p>
-        <ol className="ml-4 flex list-decimal flex-col gap-y-1 ">
+        <p className="mb-3 text-base font-semibold text-slate-200 max-sm:text-sm">
+          Learnings
+        </p>
+        <ol className="ml-4 flex list-decimal flex-col gap-y-1">
           {learnings.map((item, idx) => {
             return (
-              <li key={idx} className="text-sm font-light text-slate-300">
+              <li
+                key={idx}
+                className="text-sm font-light text-slate-300 max-sm:text-xs"
+              >
                 {item}
               </li>
             );
@@ -28,13 +35,16 @@ const ProjectDetailsCard = ({
       </div>
 
       <div className="rounded-md bg-slate-800/70 p-6 text-slate-300">
-        <p className="mb-3 text-base font-semibold text-slate-200">
+        <p className="mb-3 text-base font-semibold text-slate-200 max-sm:text-sm">
           Challenges
         </p>
         <ol className="ml-4 flex list-decimal flex-col gap-y-1 ">
           {challenges.map((item, idx) => {
             return (
-              <li key={idx} className="text-sm font-light text-slate-300">
+              <li
+                key={idx}
+                className="text-sm font-light text-slate-300 max-sm:text-xs"
+              >
                 {item}
               </li>
             );
@@ -42,12 +52,12 @@ const ProjectDetailsCard = ({
         </ol>
       </div>
 
-      <section className="flex gap-x-4">
-        <div className="w-1/2 rounded-md bg-slate-800/70 p-6 text-slate-300">
-          <p className="mb-3 text-base font-semibold text-slate-200">
+      <section className="max-md: flex gap-4 max-lg:flex-col">
+        <div className="w-1/2 rounded-md bg-slate-800/70 p-6 text-slate-300 max-lg:w-full">
+          <p className="mb-3 text-base font-semibold text-slate-200 max-sm:text-sm">
             Updates from v1.0 to v2.0
           </p>
-          <ul className="ml-3 flex list-['-_'] flex-col gap-y-1 text-sm font-light text-slate-300">
+          <ul className="ml-3 flex list-['-_'] flex-col gap-y-1 text-sm font-light text-slate-300 max-sm:text-xs">
             <li>
               Style updates:
               <ul className="ml-3 flex list-['-_'] flex-col gap-y-1">
@@ -61,11 +71,11 @@ const ProjectDetailsCard = ({
           </ul>
         </div>
 
-        <div className="w-1/2 rounded-md bg-slate-800/70 p-6 text-slate-300">
-          <p className="mb-3 text-base font-semibold text-slate-200">
+        <div className="w-1/2 rounded-md bg-slate-800/70 p-6 text-slate-300 max-lg:w-full">
+          <p className="mb-3 text-base font-semibold text-slate-200 max-sm:text-sm">
             Future Updates to v2.0
           </p>
-          <ul className="ml-3 flex list-['-_'] flex-col gap-y-1 text-sm font-light text-slate-300">
+          <ul className="ml-3 flex list-['-_'] flex-col gap-y-1 text-sm font-light text-slate-300 max-sm:text-xs">
             <li>Connecting notifications to user actions</li>
             <li>Group Details Page:</li>
             <ul className="ml-3 flex list-['-_'] flex-col gap-y-1">

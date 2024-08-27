@@ -19,8 +19,10 @@ const DevToday = () => {
       transition={{ duration: 0.8 }}
     >
       <header className="mb-7 flex flex-col text-center">
-        <h1 className="text-3xl font-bold text-slate-200">{project.title}</h1>
-        <p className="text-sm font-light text-slate-300">
+        <h1 className="text-3xl font-bold text-slate-200 max-sm:text-xl">
+          {project.title}
+        </h1>
+        <p className="text-sm font-light text-slate-300 max-sm:text-xs">
           {project.description}
         </p>
 
@@ -40,7 +42,7 @@ const DevToday = () => {
             href="https://capstone-darshin-adam.vercel.app"
           />
         </div>
-        <p className="mt-2 text-xs text-slate-300">
+        <p className="mt-2 text-xs text-slate-300 max-sm:text-[11px]">
           *{' '}
           <a
             href="mailto:darshinvp@gmail.com"
@@ -52,7 +54,7 @@ const DevToday = () => {
         </p>
       </header>
 
-      <section className="m-8 flex flex-col items-center justify-center">
+      <section className="flex flex-col items-center justify-center max-md:w-full">
         <div className="relative mb-6">
           <Image
             alt="dev-today"
