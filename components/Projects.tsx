@@ -18,7 +18,7 @@ const Projects = () => {
           return (
             <div
               key={project.title}
-              className="flex animate-pulse gap-x-8 rounded-lg p-4 pl-3 max-md:flex-col max-md:gap-y-4 max-md:px-3"
+              className="flex animate-pulse gap-x-9 rounded-lg p-4 pl-3 max-md:flex-col max-md:gap-y-4 max-md:px-3"
             >
               <div className="relative w-80 min-w-20 max-md:w-full">
                 <Image
