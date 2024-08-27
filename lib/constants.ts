@@ -837,7 +837,31 @@ export const projectDetails = [
       'Create Group - Search and add members and/or admins: Adding a user to one input removes user from search in other input - ensure that there are no duplicates in either field or search.',
       'Notifications: Ordering notifications, indicating unread notifications in decided order, marking all notifications as read while maintaining the order, and infinite scroll',
     ],
+    v1Updates: {
+      'Style Updates': [
+        'Updated hover states throughout app: post cards, hearts, buttons, the sort & filter menu',
+        'Removed arrow icons throughout if no content available',
+      ],
+    },
+    v2Updates: [
+      'Connecting notifications to user actions',
+      'Group Details Page',
+      [
+        'Delete group',
+        'View all members and admins',
+        'Remove a user or assign a user the admin role',
+      ],
+
+      'Profile Page',
+      [
+        'No content text for content tabs, performance, and recent posts',
+        'Hover effect on Edit Profile button',
+      ],
+      'Edit Profile Page',
+      [
+        '&ldquo;Cancel&ldquo; button triggers a profile update and a loading state on the &ldquo;Update Profile&ldquo; button',
+        'Hover effect on Edit Profile button',
+      ],
+    ],
   },
 ];
-
-/* As a user I want to be able to select a range of dates and times for my meetup. a) My start date should start on today @ the current time b) My end date and time should never be before my start date and time If I select a "start date" that extends past (After) my "end date", my "end date" should automatically reset to the current start date. If I select a new "start date" that's before my "end date", the "end date" does not have to reset. */
