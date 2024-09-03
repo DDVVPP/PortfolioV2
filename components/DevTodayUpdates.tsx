@@ -72,7 +72,8 @@ const DevTodayUpdates = () => {
             </ul>
 
             <li className="text-slate-200">
-              Updated seed file to non lorem-ipsum text
+              Updated seed file to non lorem-ipsum text and added demo user
+              content
             </li>
             <li className="text-slate-200">
               Removed fill prop from the IconWrapper component and updated all
@@ -91,30 +92,96 @@ const DevTodayUpdates = () => {
             Future Updates to v2.0
           </p>
           <ul className="ml-3 flex list-disc flex-col gap-y-1 text-sm font-light text-slate-300 max-sm:text-xs">
-            <li className="text-slate-200">
-              Connecting notifications to user actions
-            </li>
+            <li className="text-slate-200">Header</li>
+            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+              <li>
+                Clicking on a dropdown item in the &ldquo;Create Content&ldquo;
+                button should close the menu
+              </li>
+              <li>
+                Notification profile images should be cropped to a perfect
+                circle
+              </li>
+            </ul>
+
+            <li className="text-slate-200">Home Page</li>
+            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+              <li>
+                Groups Tab: Fix each card height to include icons in the bottom
+              </li>
+            </ul>
+
             <li className="text-slate-200">Group Details Page</li>
             <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
-              <li>Delete group</li>
-              <li>View all members and admins</li>
+              <li>Add &ldquo;Delete group&ldquo; functionality</li>
+              <li>
+                Add &ldquo;View all&ldquo; members and admins link and page
+              </li>
               <li>Remove a user or assign a user the admin role</li>
             </ul>
+
             <li className="text-slate-200">Profile Page</li>
             <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
               <li>
-                No content text for content tabs, performance, and recent posts
+                Add no content text for content tabs, performance, and recent
+                posts
               </li>
-              <li>Hover effect on Edit Profile button</li>
+              <li>
+                Add hover effect on &ldquo;Edit Profile&ldquo; and
+                &ldquo;Follow&ldquo; buttons, links in the
+                &ldquo;Performance&ldquo; section, and &ldquo;Posts&ldquo;,
+                &ldquo;Meetups&ldquo;, &ldquo;Podcasts&ldquo;, and
+                &ldquo;Groups&ldquo; tabs
+              </li>
+              <li>
+                Add hover effect links in &ldquo;Performance&ldquo; section
+              </li>
+              <li>
+                Fix &ldquo;Posts&ldquo; tab width to shrink with changing screen
+                sizes
+              </li>
             </ul>
+
+            <li className="text-slate-200">Create Pages</li>
+            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+              <li>
+                Add hover effect on &ldquo;Cancel&ldquo; and &ldquo;Publish
+                Meetup&ldquo; buttons
+              </li>
+              <li>
+                Add infinite scroll to &ldquo;Select Group&ldquo; dropdown and
+                fix group hover styles
+              </li>
+              <li>
+                Create Group: Add hover effect on &ldquo;Set a Profile
+                Photo&ldquo; and &ldquo;Upload a cover image&ldquo; buttons
+              </li>
+              <li>
+                Create Podcast: Fix light mode input style on &ldquo;Podcast
+                Audio File&ldquo; input
+              </li>
+              <li>
+                Add &ldquo;cursor: pointer&ldquo; style update to &ldquo;Drag &
+                Drop or upload png or jpeg up to 16MB&ldquo;
+              </li>
+            </ul>
+
             <li className="text-slate-200">Edit Profile Page</li>
             <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
               <li>
-                &ldquo;Cancel&ldquo; button triggers a profile update and a
-                loading state on the &ldquo;Update Profile&ldquo; button
+                &ldquo;Cancel&ldquo; button should not trigger a profile update
+                and a loading state on the &ldquo;Update Profile&ldquo; button
               </li>
-              <li>Hover effect on Edit Profile button</li>
+              <li>Add hover effect on Edit Profile button</li>
+              <li>
+                Fix &ldquo;Interested Tech&ldquo; input width - wrap tech tags
+                and fix spacing of icon and text within tag
+              </li>
             </ul>
+
+            <li className="text-slate-200">
+              Connect notifications to user actions
+            </li>
             <li className="text-slate-200">
               Add missing loading states between route changes
             </li>
@@ -124,8 +191,18 @@ const DevTodayUpdates = () => {
             <li className="text-slate-200">
               Pull out light/dark mode from Clerk menu
             </li>
-            <li className="text-slate-200">Share post functionality</li>
-            <li className="text-slate-200">Live values for number of views</li>
+            <li className="text-slate-200">
+              Link to the profile of the author of each comment
+            </li>
+            <li className="text-slate-200">
+              Refactor code to eliminate duplication throughout
+            </li>
+            <li className="text-slate-200">
+              Add &ldquo;Share post&ldquo; functionality
+            </li>
+            <li className="text-slate-200">
+              Add live values for number of views
+            </li>
             <li className="text-slate-200">Create an admin panel</li>
           </ul>
         </div>
