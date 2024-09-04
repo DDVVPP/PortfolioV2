@@ -120,6 +120,14 @@ const DevTodayUpdates = () => {
               <li>Remove a user or assign a user the admin role</li>
             </ul>
 
+            <li className="text-slate-200">Post Details Page</li>
+            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+              <li>
+                Add same hover effect to &ldquo;More from ...&ldquo; as other
+                detail pages
+              </li>
+            </ul>
+
             <li className="text-slate-200">Profile Page</li>
             <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
               <li>
