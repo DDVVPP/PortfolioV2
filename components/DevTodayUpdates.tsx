@@ -9,81 +9,96 @@ const DevTodayUpdates = () => {
           <ul className="ml-3 flex list-disc flex-col gap-y-1 text-sm font-light text-slate-300 max-sm:text-xs">
             <li className="text-slate-200">Header</li>
             <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
-              <li>Added tooltip on hover</li>
-              <li>Updated hover states on Search and Notification icons</li>
               <li>
-                Updated DevToday logo (light and dark modes) to be clickable and
-                directed to Home Page
+                Added tooltips on hover for sticky header navbar items, and made
+                DevToday logo (with light and dark modes) clickable to Home Page
               </li>
               <li>
-                Added Create Group to Create dropdown and removed it from the
-                All Groups Page
+                Moved &ldquo;Create Group&ldquo; to the Create dropdown menu and
+                removed it from the &ldquo;All Groups&ldquo; Page
               </li>
-              <li>Fixed Sign In button when not signed in</li>
-              <li>Updated Clerk dropdown menu style</li>
+              <li>
+                Fixed &ldquo;Sign In&ldquo; button and updated Clerk dropdown
+                menu style
+              </li>
             </ul>
 
-            <li className="text-slate-200">Home Page</li>
+            <li className="text-slate-200">
+              Home Pages (Post, Meetup, Podcast, Group)
+            </li>
             <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
               <li>
-                Left Sidebar: Updated hover states on Popular Groups, Sort &
-                Filter
+                Left Sidebar: Updated hover states on sections (Popular Groups,
+                Sort & Filter)
               </li>
               <li>
-                Right Sidebar: Added no content text, fixed origin point of
-                scaling on hover, and removed arrow icons from card titles
+                Right Sidebar: Added &ldquo;no content&ldquo; placeholder,
+                corrected origin point of scaling on hover, and removed arrow
+                icons from card titles
               </li>
               <li>
                 Middle Section: Updated hover states on cards, hearts, and
-                pagination buttons, removed title for each section for
-                consistency, fixed width of profile link, and added profile
-                placeholder image to group cards
+                pagination buttons, removed section titles for consistency,
+                adjusted profile link width, and added placeholder profile
+                images on group cards
               </li>
-              <li>Added Loading states</li>
+              <li>Added skeleton loading states for route changes</li>
             </ul>
 
             <li className="text-slate-200">Group Details Page</li>
             <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
               <li>
-                Updated hover state on hearts, each content card, and tooltip
-                location and delay on member avatars
+                Improved hover states on hearts and content cards, changed
+                tooltip location and removed tooltip delay on member avatars
               </li>
-              <li>Updated profile placeholder image</li>
-              <li>Fixed width of profile link</li>
-              <li>Added no content text for tabs with no content</li>
-              <li>Included missing podcasts in getGroupById db action</li>
+              <li>Updated profile image placeholders</li>
+              <li>Fixed profile link width</li>
+              <li>
+                Included &ldquo;no content&ldquo; placeholder for empty tabs
+              </li>
+              <li>
+                Added missing podcasts in &ldquo;getGroupById&ldquo; db action
+              </li>
             </ul>
 
             <li className="text-slate-200">
-              Post, Meetup, and Podcast Detail Pages
+              Detail Pages (Post, Meetup, Podcast)
             </li>
             <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+              <li>Removed arrow icon at &ldquo;More from&ldquo; cards</li>
               <li>
-                Temporarily removed arrow icon at &ldquo;More from&ldquo; cards
+                Added missing hover states on buttons (Follow, Visit Profile,
+                Share Post), and on links (Profile, More Posts)
               </li>
-              <li>
-                Added missing hover states on Follow, Visit Profile, and Share
-                Post buttons, on Profile and More Posts link
-              </li>
-              <li>Grouped comment card like button hover state</li>
-              <li>Added unfollow and follow revalidate tags to db actions</li>
+              <li>Grouped hover state in Comment card like button</li>
+              <li>Added unfollow/follow revalidate tags to db actions</li>
               <li>Podcast Details: Fixed order issue when liking a comment</li>
               <li>Podcast Details: Updated hover state on heart</li>
             </ul>
 
-            <li className="text-slate-200">
-              Updated seed file to non lorem-ipsum text and added demo user
-              content
-            </li>
-            <li className="text-slate-200">
-              Removed fill prop from the IconWrapper component and updated all
-              components using the IconWrapper
-            </li>
+            <li className="text-slate-200">Create Pages</li>
+            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+              <li className="text-slate-200">
+                Added default &ldquo;dark&ldquo; theme to ThemeProvider to
+                trigger update on 3rd party library style overrides on page load
+              </li>
+              <li>
+                Added &ldquo;cursor: pointer&ldquo; style update to &ldquo;Drag
+                & Drop or upload png or jpeg up to 16MB&ldquo; text
+              </li>
+            </ul>
 
-            <li className="text-slate-200">
-              Added default &ldquo;dark&ldquo; theme to ThemeProvider to update
-              3rd party library style overrides on page load
-            </li>
+            <li className="text-slate-200">Miscellaneous Updates</li>
+            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+              <li className="text-slate-200">
+                Updated seed file with demo user content and non-lorem-ipsum
+                text
+              </li>
+              <li className="text-slate-200">
+                Removed fill prop from IconWrapper component and updated usage
+                throughout code
+              </li>
+            </ul>
           </ul>
         </div>
 
@@ -95,19 +110,22 @@ const DevTodayUpdates = () => {
             <li className="text-slate-200">Header</li>
             <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
               <li>
-                Clicking on a dropdown item in the &ldquo;Create Content&ldquo;
-                button should close the menu
+                Close menu when a selection is made from &ldquo;Create
+                Content&ldquo; dropdown
               </li>
-              <li>
-                Notification profile images should be cropped to a perfect
-                circle
-              </li>
+              <li>Crop notification profile images to a circle</li>
             </ul>
 
-            <li className="text-slate-200">Home Page</li>
+            <li className="text-slate-200">
+              Home Pages (Post, Meetup, Podcast, Group)
+            </li>
             <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
               <li>
-                Groups Tab: Fix each card height to include icons in the bottom
+                Fix sticky footer jumps and scrollbar between route changes on
+                small screens
+              </li>
+              <li>
+                Ensure &ldquo;Posts&ldquo; content width adjusts to screen size
               </li>
             </ul>
 
@@ -117,60 +135,56 @@ const DevTodayUpdates = () => {
               <li>
                 Add &ldquo;View all&ldquo; members and admins link and page
               </li>
-              <li>Remove a user or assign a user the admin role</li>
+              <li>Add user removal or admin assignment functionality</li>
             </ul>
 
             <li className="text-slate-200">Post Details Page</li>
             <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
               <li>
-                Add same hover effect to &ldquo;More from ...&ldquo; as other
-                detail pages
+                Match hover effect on &ldquo;More from ...&ldquo; cards with
+                other detail pages
               </li>
             </ul>
 
             <li className="text-slate-200">Profile Page</li>
             <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
               <li>
-                Add no content text for content tabs, performance, and recent
-                posts
+                Add &ldquo;no content&ldquo; placeholder for tabs (Posts,
+                Meetups, Podcasts, Groups), &ldquo;Performance&ldquo;, and
+                &ldquo;Recent Posts&ldquo; sections
               </li>
               <li>
-                Add hover effect on &ldquo;Edit Profile&ldquo; and
-                &ldquo;Follow&ldquo; buttons, links in the
-                &ldquo;Performance&ldquo; section, and &ldquo;Posts&ldquo;,
-                &ldquo;Meetups&ldquo;, &ldquo;Podcasts&ldquo;, and
-                &ldquo;Groups&ldquo; tabs
+                Add missing hover states on buttons (Edit Profile, Follow) and
+                links in the &ldquo;Performance&ldquo; section, and tabs (Posts,
+                Meetups, Podcasts, Groups)
               </li>
               <li>
-                Add hover effect links in &ldquo;Performance&ldquo; section
-              </li>
-              <li>
-                Fix &ldquo;Posts&ldquo; tab width to shrink with changing screen
-                sizes
+                Ensure &ldquo;Posts&ldquo; tab width adjusts to screen size
               </li>
             </ul>
 
             <li className="text-slate-200">Create Pages</li>
             <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
               <li>
-                Add hover effect on &ldquo;Cancel&ldquo; and &ldquo;Publish
-                Meetup&ldquo; buttons
+                Add missing hover effects on buttons (Cancel, Publish Meetup)
               </li>
+              <li>
+                Resolve Upload Dropzone&apos;s re-opening of the finder window
+                on esc, when clicking on &ldquo;Drag & Drop or upload png or
+                jpeg up to 16MB&ldquo; area
+              </li>
+              <li>Add skeleton loading states for route changes</li>
               <li>
                 Add infinite scroll to &ldquo;Select Group&ldquo; dropdown and
                 fix group hover styles
               </li>
               <li>
-                Create Group: Add hover effect on &ldquo;Set a Profile
-                Photo&ldquo; and &ldquo;Upload a cover image&ldquo; buttons
+                Create Group: Add missing hover effects on buttons (Set a
+                Profile Photo, Upload a cover image)
               </li>
               <li>
                 Create Podcast: Fix light mode input style on &ldquo;Podcast
                 Audio File&ldquo; input
-              </li>
-              <li>
-                Add &ldquo;cursor: pointer&ldquo; style update to &ldquo;Drag &
-                Drop or upload png or jpeg up to 16MB&ldquo;
               </li>
             </ul>
 
@@ -180,38 +194,43 @@ const DevTodayUpdates = () => {
                 &ldquo;Cancel&ldquo; button should not trigger a profile update
                 and a loading state on the &ldquo;Update Profile&ldquo; button
               </li>
-              <li>Add hover effect on Edit Profile button</li>
               <li>
-                Fix &ldquo;Interested Tech&ldquo; input width - wrap tech tags
-                and fix spacing of icon and text within tag
+                Add missing hover effect on &ldquo;Edit Profile&ldquo; button
+              </li>
+              <li>
+                Fix &ldquo;Interested Tech&ldquo; input to wrap tags and space
+                content correctly
               </li>
             </ul>
 
-            <li className="text-slate-200">
-              Connect notifications to user actions
-            </li>
-            <li className="text-slate-200">
-              Add missing loading states between route changes
-            </li>
-            <li className="text-slate-200">
-              Tags to be clickable and linked to content
-            </li>
-            <li className="text-slate-200">
-              Pull out light/dark mode from Clerk menu
-            </li>
-            <li className="text-slate-200">
-              Link to the profile of the author of each comment
-            </li>
-            <li className="text-slate-200">
-              Refactor code to eliminate duplication throughout
-            </li>
-            <li className="text-slate-200">
-              Add &ldquo;Share post&ldquo; functionality
-            </li>
-            <li className="text-slate-200">
-              Add live values for number of views
-            </li>
-            <li className="text-slate-200">Create an admin panel</li>
+            <li className="text-slate-200">Miscellaneous Updates</li>
+            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+              <li className="text-slate-200">
+                Connect notifications to user actions
+              </li>
+              <li className="text-slate-200">
+                Resolve lag between a user click and the loading.tsx file
+              </li>
+              <li className="text-slate-200">
+                Make tags clickable and link to content
+              </li>
+              <li className="text-slate-200">
+                Move light/dark mode toggle out of Clerk menu
+              </li>
+              <li className="text-slate-200">
+                Link comment authors to their profiles
+              </li>
+              <li className="text-slate-200">
+                Refactor code to remove duplication
+              </li>
+              <li className="text-slate-200">
+                Add &ldquo;Share post&ldquo; functionality
+              </li>
+              <li className="text-slate-200">
+                Add live values for number of views
+              </li>
+              <li className="text-slate-200">Build an admin panel</li>
+            </ul>
           </ul>
         </div>
       </section>
