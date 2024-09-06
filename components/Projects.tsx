@@ -36,9 +36,9 @@ const Projects = () => {
                     {project.title} - COMING SOON!
                   </h1>
                 </div>
-                <h3 className="text-sm font-light text-slate-300 opacity-40 max-md:text-center">
+                <h2 className="text-sm font-light text-slate-300 opacity-40 max-md:text-center">
                   {project.description}
-                </h3>
+                </h2>
                 <div className="mt-4 flex flex-wrap gap-x-3 gap-y-2 opacity-40 max-md:justify-center">
                   {project.tags.map((tag) => {
                     return <Tag key={tag} text={tag} />;
@@ -70,9 +70,9 @@ const Projects = () => {
                     className="flex stroke-slate-400 duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                   />
                 </div>
-                <h3 className="text-sm font-light text-slate-300 max-md:text-center">
+                <h2 className="text-sm font-light text-slate-300 max-md:text-center">
                   {project.description}
-                </h3>
+                </h2>
                 <div className="mt-4 flex flex-wrap gap-x-3 gap-y-2 max-md:justify-center">
                   {project.tags.map((tag) => {
                     return <Tag key={tag} text={tag} />;
