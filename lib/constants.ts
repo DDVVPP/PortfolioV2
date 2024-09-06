@@ -259,7 +259,7 @@ export const architectureWorkItems = [
 
 export const projects = [
   {
-    title: 'Dev Today',
+    title: 'DevToday',
     description:
       'A Javascript Mastery project of a content creation platform tailored for developers',
     coverImage: DevTodayLaptopMobile,
@@ -268,7 +268,7 @@ export const projects = [
     route: '/projects/dev-today',
     demoLinkV1: 'https://capstone-darshin-adam.vercel.app',
     demoLinkV2: 'https://dev-today-v2.vercel.app',
-    githubLink: 'https://github.com/DDVVPP/PortfolioV2',
+    githubLink: 'https://github.com/DDVVPP/DevToday',
     tags: [
       'Next.js',
       'TypeScript',
@@ -289,7 +289,7 @@ export const projects = [
       'Sharpened my backend skills: Prisma and Supabase, creating schemas with relations, CRUD operations SQL queries, and the creation of a seed file using prisma and faker.js.',
       'Successfully incorporated 3rd party libraries and frameworks: TinyMCE, Framer Motion, Shadcn, Upload Dropzone, Google Maps Api, React Datepicker, Tailwind CSS',
       'Gained a better understanding of form generation and zod validation',
-      'Advanced my knowledge of styling: Custom styling for 3rd party libraries and frameworks such as Clerk Authentication, TinyMCE, React Datepicker, and Google Maps Api, mobile responsiveness, light and dark modes, and flex',
+      'Advanced my knowledge of styling: mobile responsiveness, light and dark modes, flex, and custom styling for 3rd party libraries and frameworks such as Clerk Authentication, TinyMCE, React Datepicker, and Google Maps Api',
     ],
     challenges: [
       /* As a user I want to be able to select a range of dates and times for my meetup. a) My start date should start on today @ the current time b) My end date and time should never be before my start date and time If I select a "start date" that extends past (After) my "end date", my "end date" should automatically reset to the current start date. If I select a new "start date" that's before my "end date", the "end date" does not have to reset. */
@@ -301,7 +301,7 @@ export const projects = [
     isDisabled: false,
   },
   {
-    title: 'Git Note',
+    title: 'GitNote',
     description:
       'A Javascript Mastery project of a knowledge and progress tracker for developers',
     coverImage: GitNoteLaptopMobile,
