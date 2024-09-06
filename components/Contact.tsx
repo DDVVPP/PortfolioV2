@@ -42,9 +42,9 @@ const Contact = () => {
         <h1 className="mt-3 text-wrap text-center text-sm font-medium uppercase text-slate-100">
           About
         </h1>
-        <h3 className="text-center text-sm font-light text-slate-300 opacity-80">
+        <h2 className="text-center text-sm font-light text-slate-300 opacity-80">
           Background and interests
-        </h3>
+        </h2>
       </div>
     </section>
   );

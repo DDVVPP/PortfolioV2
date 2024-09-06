@@ -38,9 +38,9 @@ const Home = () => {
           <h1 className="mt-3 text-wrap text-center text-sm font-medium uppercase text-slate-100">
             Work
           </h1>
-          <h3 className="text-center text-sm font-light text-slate-300 opacity-80">
+          <h2 className="text-center text-sm font-light text-slate-300 opacity-80">
             Professional work experience
-          </h3>
+          </h2>
         </div>
       </section>
 
@@ -61,9 +61,9 @@ const Home = () => {
           <h1 className="mt-3 text-wrap text-center text-sm font-medium uppercase text-slate-100">
             Art
           </h1>
-          <h3 className="text-center text-sm font-light text-slate-300 opacity-80">
+          <h2 className="text-center text-sm font-light text-slate-300 opacity-80">
             Ceramics, sketches, and paintings
-          </h3>
+          </h2>
         </div>
 
         <div className="flex w-1/2 flex-col max-md:-order-1 max-md:w-full">
@@ -82,9 +82,9 @@ const Home = () => {
           <h1 className="mt-3 text-wrap text-center text-sm font-medium uppercase text-slate-100">
             Projects
           </h1>
-          <h3 className="text-center text-sm font-light text-slate-300 opacity-80">
+          <h2 className="text-center text-sm font-light text-slate-300 opacity-80">
             Personal software engineering projects
-          </h3>
+          </h2>
         </div>
       </section>
     </motion.section>
