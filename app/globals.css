@@ -20,20 +20,33 @@
   .navbar-mobile-header {
     @apply max-md:flex-row max-md:items-center max-md:justify-between max-md:mr-0;
   }
-
   .navbar-mobile-info-links {
     @apply max-md:gap-x-[18px] max-sm:text-xs max-md:mb-0 max-md:mt-0;
   }
-
   .navbar-mobile-tabs {
     @apply max-md:flex-row max-md:justify-between max-sm:text-sm;
+  }
+
+  .updates-section {
+    @apply w-1/2 rounded-md bg-slate-800/70 p-6 text-slate-300 max-lg:w-full;
+  }
+  .updates-section-title {
+    @apply mb-3 text-base font-semibold text-slate-200 max-sm:text-sm;
+  }
+  .updates-list {
+    @apply ml-3 flex list-disc flex-col gap-y-1 text-sm font-light text-slate-300 max-sm:text-xs;
+  }
+  .updates-sublist {
+    @apply ml-3 flex list-[circle] flex-col gap-y-1;
+  }
+  .updates-sublist-title {
+    @apply text-slate-200;
   }
 
   /* For Webkit-based browsers (Chrome, Safari and Opera) */
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
-
   /* For IE, Edge and Firefox */
   .scrollbar-hide {
     -ms-overflow-style: none; /* IE and Edge */

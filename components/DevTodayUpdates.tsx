@@ -2,13 +2,11 @@ const DevTodayUpdates = () => {
   return (
     <>
       <section className="max-md: flex gap-4 max-lg:flex-col">
-        <div className="w-1/2 rounded-md bg-slate-800/70 p-6 text-slate-300 max-lg:w-full">
-          <p className="mb-3 text-base font-semibold text-slate-200 max-sm:text-sm">
-            Updates from v1.0 to v2.0
-          </p>
-          <ul className="ml-3 flex list-disc flex-col gap-y-1 text-sm font-light text-slate-300 max-sm:text-xs">
-            <li className="text-slate-200">Header</li>
-            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+        <div className="updates-section">
+          <p className="updates-section-title">Updates from v1.0 to v2.0</p>
+          <ul className="updates-list">
+            <li className="updates-sublist-title">Header</li>
+            <ul className="updates-sublist">
               <li>
                 Added tooltips on hover for sticky header navbar items, and made
                 DevToday logo (with light and dark modes) clickable to Home Page
@@ -23,10 +21,10 @@ const DevTodayUpdates = () => {
               </li>
             </ul>
 
-            <li className="text-slate-200">
+            <li className="updates-sublist-title">
               Home Pages (Post, Meetup, Podcast, Group)
             </li>
-            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+            <ul className="updates-sublist">
               <li>
                 Left Sidebar: Updated hover states on sections (Popular Groups,
                 Sort & Filter)
@@ -45,8 +43,8 @@ const DevTodayUpdates = () => {
               <li>Added skeleton loading states for route changes</li>
             </ul>
 
-            <li className="text-slate-200">Group Details Page</li>
-            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+            <li className="updates-sublist-title">Group Details Page</li>
+            <ul className="updates-sublist">
               <li>
                 Improved hover states on hearts and content cards, changed
                 tooltip location and removed tooltip delay on member avatars
@@ -61,10 +59,10 @@ const DevTodayUpdates = () => {
               </li>
             </ul>
 
-            <li className="text-slate-200">
+            <li className="updates-sublist-title">
               Detail Pages (Post, Meetup, Podcast)
             </li>
-            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+            <ul className="updates-sublist">
               <li>Removed arrow icon at &ldquo;More from&ldquo; cards</li>
               <li>
                 Added missing hover states on buttons (Follow, Visit Profile,
@@ -76,9 +74,9 @@ const DevTodayUpdates = () => {
               <li>Podcast Details: Updated hover state on heart</li>
             </ul>
 
-            <li className="text-slate-200">Create Pages</li>
-            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
-              <li className="text-slate-200">
+            <li className="updates-sublist-title">Create Pages</li>
+            <ul className="updates-sublist">
+              <li>
                 Added default &ldquo;dark&ldquo; theme to ThemeProvider to
                 trigger update on 3rd party library style overrides on page load
               </li>
@@ -88,13 +86,13 @@ const DevTodayUpdates = () => {
               </li>
             </ul>
 
-            <li className="text-slate-200">Miscellaneous Updates</li>
-            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
-              <li className="text-slate-200">
+            <li className="updates-sublist-title">Miscellaneous Updates</li>
+            <ul className="updates-sublist">
+              <li>
                 Updated seed file with demo user content and non-lorem-ipsum
                 text
               </li>
-              <li className="text-slate-200">
+              <li>
                 Removed fill prop from IconWrapper component and updated usage
                 throughout code
               </li>
@@ -102,13 +100,11 @@ const DevTodayUpdates = () => {
           </ul>
         </div>
 
-        <div className="w-1/2 rounded-md bg-slate-800/70 p-6 text-slate-300 max-lg:w-full">
-          <p className="mb-3 text-base font-semibold text-slate-200 max-sm:text-sm">
-            Future Updates to v2.0
-          </p>
-          <ul className="ml-3 flex list-disc flex-col gap-y-1 text-sm font-light text-slate-300 max-sm:text-xs">
-            <li className="text-slate-200">Header</li>
-            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+        <div className="updates-section">
+          <p className="updates-section-title">Future Updates to v2.0</p>
+          <ul className="updates-list">
+            <li className="updates-sublist-title">Header</li>
+            <ul className="updates-sublist">
               <li>
                 Close menu when a selection is made from &ldquo;Create
                 Content&ldquo; dropdown
@@ -116,10 +112,10 @@ const DevTodayUpdates = () => {
               <li>Crop notification profile images to a circle</li>
             </ul>
 
-            <li className="text-slate-200">
+            <li className="updates-sublist-title">
               Home Pages (Post, Meetup, Podcast, Group)
             </li>
-            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+            <ul className="updates-sublist">
               <li>
                 Fix sticky footer jumps and scrollbar between route changes on
                 small screens
@@ -129,8 +125,8 @@ const DevTodayUpdates = () => {
               </li>
             </ul>
 
-            <li className="text-slate-200">Group Details Page</li>
-            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+            <li className="updates-sublist-title">Group Details Page</li>
+            <ul className="updates-sublist">
               <li>Add &ldquo;Delete group&ldquo; functionality</li>
               <li>
                 Add &ldquo;View all&ldquo; members and admins link and page
@@ -138,16 +134,16 @@ const DevTodayUpdates = () => {
               <li>Add user removal or admin assignment functionality</li>
             </ul>
 
-            <li className="text-slate-200">Post Details Page</li>
-            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+            <li className="updates-sublist-title">Post Details Page</li>
+            <ul className="updates-sublist">
               <li>
                 Match hover effect on &ldquo;More from ...&ldquo; cards with
                 other detail pages
               </li>
             </ul>
 
-            <li className="text-slate-200">Profile Page</li>
-            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+            <li className="updates-sublist-title">Profile Page</li>
+            <ul className="updates-sublist">
               <li>
                 Add &ldquo;no content&ldquo; placeholder for tabs (Posts,
                 Meetups, Podcasts, Groups), &ldquo;Performance&ldquo;, and
@@ -163,8 +159,8 @@ const DevTodayUpdates = () => {
               </li>
             </ul>
 
-            <li className="text-slate-200">Create Pages</li>
-            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+            <li className="updates-sublist-title">Create Pages</li>
+            <ul className="updates-sublist">
               <li>
                 Add missing hover effects on buttons (Cancel, Publish Meetup)
               </li>
@@ -188,8 +184,8 @@ const DevTodayUpdates = () => {
               </li>
             </ul>
 
-            <li className="text-slate-200">Edit Profile Page</li>
-            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
+            <li className="updates-sublist-title">Edit Profile Page</li>
+            <ul className="updates-sublist">
               <li>
                 &ldquo;Cancel&ldquo; button should not trigger a profile update
                 and a loading state on the &ldquo;Update Profile&ldquo; button
@@ -203,33 +199,17 @@ const DevTodayUpdates = () => {
               </li>
             </ul>
 
-            <li className="text-slate-200">Miscellaneous Updates</li>
-            <ul className="ml-3 flex list-[circle] flex-col gap-y-1">
-              <li className="text-slate-200">
-                Connect notifications to user actions
-              </li>
-              <li className="text-slate-200">
-                Resolve lag between a user click and the loading.tsx file
-              </li>
-              <li className="text-slate-200">
-                Make tags clickable and link to content
-              </li>
-              <li className="text-slate-200">
-                Move light/dark mode toggle out of Clerk menu
-              </li>
-              <li className="text-slate-200">
-                Link comment authors to their profiles
-              </li>
-              <li className="text-slate-200">
-                Refactor code to remove duplication
-              </li>
-              <li className="text-slate-200">
-                Add &ldquo;Share post&ldquo; functionality
-              </li>
-              <li className="text-slate-200">
-                Add live values for number of views
-              </li>
-              <li className="text-slate-200">Build an admin panel</li>
+            <li className="updates-sublist-title">Miscellaneous Updates</li>
+            <ul className="updates-sublist">
+              <li>Connect notifications to user actions</li>
+              <li>Resolve lag between a user click and the loading.tsx file</li>
+              <li>Make tags clickable and link to content</li>
+              <li>Move light/dark mode toggle out of Clerk menu</li>
+              <li>Link comment authors to their profiles</li>
+              <li>Refactor code to remove duplication</li>
+              <li>Add &ldquo;Share post&ldquo; functionality</li>
+              <li>Add live values for number of views</li>
+              <li>Build an admin panel</li>
             </ul>
           </ul>
         </div>
