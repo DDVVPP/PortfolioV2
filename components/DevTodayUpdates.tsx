@@ -5,7 +5,7 @@ const DevTodayUpdates = () => {
         <div className="updates-section">
           <p className="updates-section-title">Updates from v1.0 to v2.0</p>
           <ul className="updates-list">
-            <li className="updates-sublist-title">Header</li>
+            <li className="updates-sublist-title">Header/Footer Nav</li>
             <ul className="updates-sublist">
               <li>
                 Added tooltips on hover for sticky header navbar items, and made
@@ -43,6 +43,21 @@ const DevTodayUpdates = () => {
               <li>Added skeleton loading states for route changes</li>
             </ul>
 
+            <li className="updates-sublist-title">
+              Detail Pages (Post, Meetup, Podcast)
+            </li>
+            <ul className="updates-sublist">
+              <li>Removed arrow icon at &ldquo;More from&ldquo; cards</li>
+              <li>
+                Added missing hover states on buttons (Follow, Visit Profile,
+                Share Post), and on links (Profile, More Posts)
+              </li>
+              <li>Grouped hover state in Comment card like button</li>
+              <li>Added unfollow/follow revalidate tags to db actions</li>
+              <li>Podcast Details: Fixed order issue when liking a comment</li>
+              <li>Podcast Details: Updated hover state on heart</li>
+            </ul>
+
             <li className="updates-sublist-title">Group Details Page</li>
             <ul className="updates-sublist">
               <li>
@@ -57,21 +72,6 @@ const DevTodayUpdates = () => {
               <li>
                 Added missing podcasts in &ldquo;getGroupById&ldquo; db action
               </li>
-            </ul>
-
-            <li className="updates-sublist-title">
-              Detail Pages (Post, Meetup, Podcast)
-            </li>
-            <ul className="updates-sublist">
-              <li>Removed arrow icon at &ldquo;More from&ldquo; cards</li>
-              <li>
-                Added missing hover states on buttons (Follow, Visit Profile,
-                Share Post), and on links (Profile, More Posts)
-              </li>
-              <li>Grouped hover state in Comment card like button</li>
-              <li>Added unfollow/follow revalidate tags to db actions</li>
-              <li>Podcast Details: Fixed order issue when liking a comment</li>
-              <li>Podcast Details: Updated hover state on heart</li>
             </ul>
 
             <li className="updates-sublist-title">Create Pages</li>
@@ -103,7 +103,7 @@ const DevTodayUpdates = () => {
         <div className="updates-section">
           <p className="updates-section-title">Future Updates to v2.0</p>
           <ul className="updates-list">
-            <li className="updates-sublist-title">Header</li>
+            <li className="updates-sublist-title">Header/Footer Nav</li>
             <ul className="updates-sublist">
               <li>
                 Close menu when a selection is made from &ldquo;Create
