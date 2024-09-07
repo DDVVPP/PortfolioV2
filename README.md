@@ -10,5 +10,3 @@ A place to showcase my professional work experience, my personal software engine
 - TypeScript
 - Tailwind CSS
 
-## <a name="performance">🚦 Lighthouse Report</a>
-![Screenshot 2024-09-06 at 1 40 43 PM](https://github.com/user-attachments/assets/65c23504-52ee-452c-8f07-2c7cf6e91a77)
