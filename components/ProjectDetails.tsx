@@ -41,23 +41,23 @@ const ProjectDetails = ({ project }: { project: ProjectProp }) => {
 
         <div className="mt-3 flex justify-center gap-x-2 max-sm:flex-col max-sm:items-center max-sm:gap-y-2">
           <LinkWithIcon
-            label="v2.0 Demo Site"
+            label="v.2.0 Demo Site"
             href={project.demoLinkV2 as string}
           />
-          <LinkWithIcon label="v2.0 Source Code" href={project.githubLink} />
+          <LinkWithIcon label="v.2.0 Source Code" href={project.githubLink} />
         </div>
         <div className="mt-2 flex justify-center gap-x-2">
-          <LinkWithIcon label="v1.0 Demo Site" href={project.demoLinkV1} />
+          <LinkWithIcon label="v.1.0 Demo Site" href={project.demoLinkV1} />
         </div>
         <p className="mt-2 text-xs text-slate-300 max-sm:text-[11px]">
           *{' '}
           <a
             href="mailto:darshinvp@gmail.com"
-            className=" duration-300 hover:text-red-400"
+            className=" font-bold duration-300 hover:text-red-400"
           >
             Contact me
           </a>{' '}
-          for <span className="text-red-300">Demo User</span> credentials
+          for demo credentials to explore an existing account
         </p>
       </header>
 

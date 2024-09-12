@@ -612,7 +612,7 @@ export const artImages = [
     id: 36,
     src: FlyingGecko,
     altText: 'flying-gecko',
-    title: 'Process: Winged Gecko',
+    title: 'Winged Gecko',
     tags: ['gouache'],
   },
   {
@@ -689,14 +689,14 @@ export const artImages = [
     id: 47,
     src: GlazedPlates,
     altText: 'glazed-plates',
-    title: 'Glazed Handmade Plates',
+    title: 'Handmade Plates',
     tags: ['ceramics', 'hand-built', 'glazed and fired'],
   },
   {
     id: 48,
     src: HatGlazeware2,
     altText: 'hat-glazeware-2',
-    title: 'Glazed Hat Bowl',
+    title: 'Hat Bowl',
     tags: ['ceramics', 'wheel-thrown', 'glazed and fired'],
   },
   {
@@ -710,14 +710,14 @@ export const artImages = [
     id: 50,
     src: RamenGlazeware1,
     altText: 'ramen-glazeware-1',
-    title: 'Bowl',
+    title: 'Ramen Bowl',
     tags: ['ceramics', 'wheel-thrown', 'glazed and fired'],
   },
   {
     id: 51,
     src: RamenGlazeware2,
     altText: 'ramen-glazeware-2',
-    title: 'Ramen Bowl',
+    title: 'Bowl',
     tags: ['ceramics', 'wheel-thrown', 'glazed and fired'],
   },
   {
@@ -749,7 +749,7 @@ export const artImages = [
     id: 54,
     src: QuizzicalFigure,
     altText: 'quizzical-figure',
-    title: 'Quizzical Figure',
+    title: 'Greenware: Quizzical Figure',
     tags: ['ceramics', 'hand-built', 'greenware', 'figurine'],
   },
   {
@@ -799,7 +799,7 @@ export const artImages = [
     id: 59,
     src: Agape,
     altText: 'agape',
-    title: 'Agape Figure',
+    title: 'Greenware: Agape Figure',
     tags: [
       'ceramics',
       'hand-built',

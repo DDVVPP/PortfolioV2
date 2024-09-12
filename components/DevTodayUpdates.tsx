@@ -3,7 +3,7 @@ const DevTodayUpdates = () => {
     <>
       <section className="max-md: flex gap-4 max-lg:flex-col">
         <div className="updates-section">
-          <p className="updates-section-title">Updates from v1.0 to v2.0</p>
+          <p className="updates-section-title">Updates from v.1.0 to v.2.0</p>
           <ul className="updates-list">
             <li className="updates-sublist-title">Header/Footer Nav</li>
             <ul className="updates-sublist">
@@ -101,7 +101,7 @@ const DevTodayUpdates = () => {
         </div>
 
         <div className="updates-section">
-          <p className="updates-section-title">Future Updates to v2.0</p>
+          <p className="updates-section-title">Future Updates to v.2.0</p>
           <ul className="updates-list">
             <li className="updates-sublist-title">Header/Footer Nav</li>
             <ul className="updates-sublist">
