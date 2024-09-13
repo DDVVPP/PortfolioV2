@@ -25,10 +25,12 @@ const About = () => {
       <div className="mt-7 w-4/5 justify-center max-md:w-full max-md:text-sm xl:mt-10 xl:w-3/4">
         <p className="text-center font-light text-slate-300">
           Hi! I am an Architectural Designer turned{' '}
-          <span className="text-red-300">Software Developer</span> who lives in
-          Los Angeles, California and likes to workout, hike, dance Brazilian
-          Zouk (a latin partner dance), paint, draw, sculpt, and eat delicious
-          food. <br />
+          <span className="text-red-300">Software Developer</span> based in Los
+          Angeles, California. Outside of programming, I dedicate my time to
+          working out, climbing, and dancing Brazilian Zouk — activities that
+          require significant technique and commitment. I also find fulfillment
+          in painting, drawing, and sculpting, which allows me to explore and
+          refine my creative skills. <br />
           <br />I have experience building applications in{' '}
           <span className="text-red-300">
             Typescript, Javascript, React, Next.js, PostgreSQL,
@@ -39,19 +41,22 @@ const About = () => {
           <br />
           My previous career in{' '}
           <span className="text-red-300">architecture</span> has provided me
-          with valuable skills, such as the implementation of the iterative
-          process of design, team collaboration and coordination, and analysis
-          and problem solving, which I have carried with me into my software
-          engineer career.
+          with valuable skills in iterative design, team collaboration and
+          coordination, and problem-solving. Architecture projects often involve
+          tight deadlines, budget constraints, and frequent changes, which have
+          honed my ability to adapt quickly and stay calm under pressure. I’ve
+          carried these skills into my software development career, allowing me
+          to address diverse project needs effectively.
           <br />
-          <br />I am passionate about and strive to write{' '}
-          <span className="text-red-300">clean code</span>. I have a natural
-          inclination towards visual design and details, and appreciate the
-          immediate visual feedback on the{' '}
-          <span className="text-red-300">frontend</span>. I value having
-          read/write access to the <span className="text-red-300">backend</span>{' '}
-          which provides a holistic view of the app, and allows for more
-          efficient debugging and consistency within the codebase.
+          <br />I am passionate about writing{' '}
+          <span className="text-red-300">clean code</span> and have a natural
+          inclination towards visual design and attention to details. I
+          particularly enjoy the immediate visual feedback that{' '}
+          <span className="text-red-300">frontend</span> development provides. I
+          also value having read/write access to the{' '}
+          <span className="text-red-300">backend</span> which provides a
+          holistic view of the app, and allows for more efficient debugging and
+          consistency within the codebase.
         </p>
       </div>
     </motion.section>
