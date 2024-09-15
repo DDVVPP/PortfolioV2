@@ -51,7 +51,7 @@ const About = () => {
           <br />I am passionate about writing{' '}
           <span className="text-red-300">clean code</span> and have a natural
           inclination towards visual design and attention to details. I
-          particularly enjoy the immediate visual feedback that{' '}
+          especially enjoy the immediate visual feedback that the{' '}
           <span className="text-red-300">frontend</span> development provides. I
           also value having read/write access to the{' '}
           <span className="text-red-300">backend</span> which provides a
