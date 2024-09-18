@@ -260,8 +260,7 @@ export const architectureWorkItems = [
 export const projects = [
   {
     title: 'DevToday',
-    description:
-      'A Javascript Mastery project of a content creation platform tailored for developers',
+    description: 'A content creation platform tailored for developers',
     coverImage: DevTodayLaptopMobile,
     mainImage: DevTodayFigma,
     altText: 'dev-today',
@@ -306,8 +305,7 @@ export const projects = [
   },
   {
     title: 'GitNote',
-    description:
-      'A Javascript Mastery project of a knowledge and progress tracker for developers',
+    description: 'A knowledge and progress tracker for developers',
     coverImage: GitNoteLaptopMobile,
     mainImage: GitNoteFigma,
     altText: 'git-note',
