@@ -104,8 +104,7 @@ export const softwareWorkItems = [
     company: 'UStrive',
     description: 'An online career and college mentoring platform.',
     role: 'Full-stack Developer',
-    details:
-      'Developed and maintained mentor and student portals for an online mentoring platform – Debugged duplicate messages issue – Updated onboarding process in mixpanel to document user interaction ',
+    details: `Developed and maintained mentor and student portals –– Debugged a duplicate messages issue –– Updated onboarding process in Mixpanel to document user interactions.`,
     website: 'https://ustrive.com/',
     tags: [
       'JavaScript',
@@ -125,7 +124,7 @@ export const softwareWorkItems = [
       'An Environmental, Health, and Safety compliance SaaS platform and an early stage startup.',
     role: 'Full-stack Developer',
     details:
-      'Contributed to the fullstack of the application around dynamic form generation for internal and external use – Implemented the migration of the existing functionality of the app to the new site using updated UX/UI designs and a new tech stack, while maintaining the functionality of the existing site – Implemented Jest unit tests on the front end and Mocha unit tests on the BE to ensure code quality',
+      'Contributed to dynamic form generation for internal and external use –– Successfully migrated existing app functionalities to a new site with updated UX/UI designs while maintaining the functionality of the old site –– Implemented Jest unit tests on the frontend and Mocha unit tests on the backend to ensure code quality',
     website: 'https://www.mapistry.com/',
     tags: [
       'JavaScript',
@@ -146,7 +145,7 @@ export const softwareWorkItems = [
       "A healthcare startup that provides more easily accessible non-emergency healthcare by sending responders to a patient's home.",
     role: 'Front-end Software Engineer',
     details:
-      'Implemented new features in the client facing side of the app used by responders, supervisors, and clinicians – Assisted in interviewing and evaluating 15+ candidates on technical screens – Implemented jest unit tests for new features – Transitioned the app on the front end from the original tech stack to a new tech stack',
+      'Implemented new features for the client-facing app used by responders, supervisors, and clinicians –– Assisted in interviewing and evaluating 15+ candidates –– Implemented Jest unit tests for new features –– Transitioned the app on the frontend to a new tech stack',
     website: 'https://www.mylaurelhealth.com/',
     tags: [
       'JavaScript',
@@ -166,7 +165,7 @@ export const softwareWorkItems = [
       'An online community marketplace connecting the user to local brick and mortars.',
     role: 'Full-stack Developer Intern',
     details:
-      'Implemented cart screen features through the full-stack – Contributed to new user signup and authentication - Contributed to the past orders screen',
+      'Implemented cart screen features through the full stack –– Contributed to new user signup and authentication processes –– Worked on the past orders screen',
     website: 'https://tyca.nyc/',
     tags: [
       'JavaScript',
@@ -186,7 +185,7 @@ export const architectureWorkItems = [
     date: 'Sept 2017 - Dec 2018',
     company: 'Bade Stageberg Cox Architecture',
     role: 'Project Architect / Architectural Designer',
-    description: `Supervised multiple construction phases for the relocation of Artists Space, an iconic NYC art gallery – Managed the renovation of a summer kitchen highly tailored to high-profile client’s requirements – Implemented diagrams, detailed sketches, and revised shop drawings – Illustrated concepts as 3D models and renderings – Involved in contractor, client, and consultant correspondence and coordination.`,
+    description: `Supervised multiple phases for the relocation of Artists Space, an iconic NYC art gallery –– Managed the renovation of a summer kitchen highly tailored to high-profile client’s requirements –– Implemented diagrams, detailed sketches, and revised shop drawings –– Illustrated concepts as 3D models and renderings –– Managed correspondence with contractors, clients, and consultants, ensuring effective communication and coordination.`,
     website: 'https://www.bscarchitecture.com/',
     tags: [
       'AutoCad',
@@ -201,7 +200,7 @@ export const architectureWorkItems = [
     date: 'Oct 2015 - Sept 2017',
     company: "O'Neill Rose Architects",
     role: 'Project Architect / Architectural Designer',
-    description: `Managed multiple phases of single-family NYC residences – Developed and generated detailed drawings and sketches – Revised shop drawings – Generated 3D models, diagrams, and renderings – Involved in contractor, client, and consultant correspondence and coordination.`,
+    description: `Managed multiple phases of single-family NYC residences –– Developed and generated detailed construction drawings and sketches –– Revised shop drawings –– Created 3D models, diagrams, and renderings –– Managed correspondence with contractors, clients, and consultants, ensuring effective communication and coordination.`,
     website: 'https://www.oneillrosearchitects.com/',
     tags: [
       'AutoCad',
@@ -217,7 +216,7 @@ export const architectureWorkItems = [
     company: 'Audrey Matlock Architect',
     role: 'Project Architect / Architectural Designer',
     description: `Managed the Construction Administration phase for a single-family NYC apartment
-– Organized and coordinated interior design work of an award-winning Hamptons residence – Developed design drawings and detailed drawings – Generated 3D models and renderings.`,
+–– Organized and coordinated interior design work of an award-winning Hamptons residence –– Developed design drawings and detailed construction drawings –– Generated 3D models and renderings`,
     website: 'http://www.audreymatlock.com/',
     tags: ['Vectorworks', 'Illustrator', 'Photoshop', 'Vray', 'Rhinoceros'],
   },
@@ -225,8 +224,8 @@ export const architectureWorkItems = [
     date: 'Nov 2011 - Apr 2013',
     company: 'Lauren Rubin Architecture',
     role: 'Architectural Designer',
-    description: `Assisted in the construction administration phase of multiple single family residences
-– Organized and coordinated interior design work for an advertising company and a single-family residence – Generated drawings for furniture placement – Generated 3D concept renderings of each room with – Created all phases of document sets for two single-family residences.`,
+    description: `Assisted in the Construction Administration phase of multiple single family residences
+–– Organized and coordinated interior design work for an advertising company and a single-family residence –– Generated drawings for furniture placement –– Created 3D concept renderings for each room –– Developed all phases of document sets for two single-family residences.`,
     website: 'https://laurenrubinarchitecture.com/',
     tags: ['AutoCad', 'Photoshop', 'Sketchup'],
   },
@@ -235,7 +234,7 @@ export const architectureWorkItems = [
     company: 'Brillembourg Architects',
     role: 'Junior Architectural Designer',
     description:
-      'Assisted in the development of a design proposal for a housing complex/hotel in Venezuela with 3D models, renderings, and 2D drawings – Assisted in all phases of design, development, and construction for a one bedroom Manhattan residential renovation, including the custom design of a dining table and lamp – Revised shop drawings and implemented detailed sketches.',
+      'Assisted in the development of a design proposal for a housing complex/hotel in Venezuela with 3D models, renderings, and 2D drawings –– Assisted in all phases of design, development, and construction for a one-bedroom Manhattan residential renovation –– Revised shop drawings and implemented detailed construction sketches.',
     website: 'https://www.carlosbrillembourgarchitects.com/',
     tags: ['AutoCad', 'Photoshop', 'Sketchup'],
   },
@@ -244,7 +243,7 @@ export const architectureWorkItems = [
     company: 'Garrison Architects',
     role: 'Junior Architectural Designer',
     description:
-      'Managed the Grand Army Plaza International Competition submission in Brooklyn, NY – Contributed to concept ideas, 3D models, renderings, and design drawings – Assisted in all phases of design and development for the US Consulate Residence in Samoa – Generated 3D Models, renderings, schematic design, design development, and construction documents',
+      'Managed the Grand Army Plaza International Competition submission in Brooklyn, NY –– Contributed to concept ideas, 3D models, renderings, and design drawings –– Assisted in all phases of design and development for the US Consulate Residence in Samoa –– Generated 3D Models, renderings, schematic design, design development, and construction documents',
     website: 'https://www.garrisonarchitects.com/',
     tags: [
       'AutoCad',
