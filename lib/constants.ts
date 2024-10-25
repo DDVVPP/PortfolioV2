@@ -114,7 +114,6 @@ export const softwareWorkItems = [
       'Axios',
       'Twilio',
       'Mixpanel',
-      'Docker',
     ],
   },
   {
@@ -122,7 +121,7 @@ export const softwareWorkItems = [
     company: 'Mapistry',
     description:
       'An Environmental, Health, and Safety compliance SaaS platform and an early stage startup.',
-    role: 'Full-stack Developer',
+    role: 'Full-stack / Front-end Developer',
     details:
       'Contributed to dynamic form generation for internal and external use –– Successfully migrated existing app functionalities to a new site with updated UX/UI designs while maintaining the functionality of the old site –– Implemented Jest unit tests on the frontend and Mocha unit tests on the backend to ensure code quality',
     website: 'https://www.mapistry.com/',
