@@ -33,6 +33,7 @@ import HatGlazeware2 from '@/public/art/HatGlazeware2.jpg';
 import HeartSplatters from '@/public/art/HeartSplatters.jpg';
 import HouseLines from '@/public/art/HouseLines.jpg';
 import IsItSafe from '@/public/art/IsItSafe.jpg';
+import JellyFishAbstract from '@/public/art/JellyFishAbstract.jpg';
 import Jellyfish2 from '@/public/art/Jellyfish2.jpg';
 import KingCrownDiamonds from '@/public/art/KingCrownDiamonds.jpg';
 import LandscapeHand from '@/public/art/LandscapeHand.jpg';
@@ -97,6 +98,7 @@ export {
   HeartSplatters,
   HouseLines,
   IsItSafe,
+  JellyFishAbstract,
   Jellyfish2,
   KingCrownDiamonds,
   LandscapeHand,

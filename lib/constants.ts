@@ -38,6 +38,7 @@ import {
   HeartSplatters,
   HouseLines,
   IsItSafe,
+  JellyFishAbstract,
   Jellyfish2,
   KingCrownDiamonds,
   LandscapeHand,
@@ -457,6 +458,13 @@ export const artImages = [
   },
   {
     id: 16,
+    src: JellyFishAbstract,
+    altText: 'jellyfish-abstract',
+    title: 'Abstract Jellyfish',
+    tags: ['photoshop', 'pen on paper', 'sketchbook sketch'],
+  },
+  {
+    id: 17,
     src: KingCrownDiamonds,
     altText: 'king-crown-diamonds',
     title: 'The King and his Diamonds',
@@ -468,14 +476,14 @@ export const artImages = [
     ],
   },
   {
-    id: 17,
+    id: 18,
     src: Flowers,
     altText: 'flowers',
     title: "Flowers for Mother's Day",
     tags: ['pen on paper', 'experiments in watercolors'],
   },
   {
-    id: 18,
+    id: 19,
     src: BleedingBlues,
     altText: 'bleeding-blues',
     title: 'Bleeding Blues',
