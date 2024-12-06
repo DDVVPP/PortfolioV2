@@ -99,6 +99,15 @@ export const workTabs = [
   },
 ];
 
+export const aboutMeTech = [
+  'JavaScript',
+  'TypeScript',
+  'React.js',
+  'Next.js',
+  'PostgreSQL',
+  'Node.js',
+];
+
 export const softwareWorkItems = [
   {
     date: 'Feb 2023 - May 2023',
