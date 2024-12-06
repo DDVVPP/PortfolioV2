@@ -33,9 +33,9 @@ const About = () => {
           refine my creative skills. <br />
           <br />I have experience building applications in{' '}
           <span className="text-red-300">
-            Typescript, Javascript, React, Next.js, PostgreSQL,
+            Javascript, Typescript, React.js, Next.js, PostgreSQL,
           </span>{' '}
-          and <span className="text-red-300">GraphQL</span> using{' '}
+          and <span className="text-red-300">Node.js</span> using{' '}
           <span className="text-red-300">agile methodologies.</span>
           <br />
           <br />
