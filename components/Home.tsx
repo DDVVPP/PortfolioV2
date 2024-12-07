@@ -12,7 +12,7 @@ import Contact from '@/components/Contact';
 const Home = () => {
   return (
     <motion.section
-      className="flex h-[90vh] min-h-[600px] w-full flex-col gap-8 px-12 pb-4 pt-12 max-md:h-full max-md:p-6"
+      className="flex h-[90vh] min-h-[700px] w-full flex-col gap-8 p-12 max-md:h-full max-md:p-6"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}

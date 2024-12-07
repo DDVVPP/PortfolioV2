@@ -7,7 +7,7 @@ const Socials = ({ isHomePage }: { isHomePage: boolean }) => {
   return (
     <div
       id="socials"
-      className={`mt-0 flex flex-col ${isHomePage ? 'mb-1 gap-y-2' : 'gap-y-1'}`}
+      className={`mt-0 flex flex-col ${isHomePage ? 'gap-y-2' : 'gap-y-1'}`}
     >
       <div
         className={`flex items-center gap-x-4 text-sm font-light text-slate-300 ${isHomePage ? 'justify-center' : 'navbar-mobile-info-links mt-2 justify-end'}`}
