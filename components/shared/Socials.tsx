@@ -5,9 +5,12 @@ import linkedInLogo from '@/public/linkedin.svg';
 
 const Socials = ({ isHomePage }: { isHomePage: boolean }) => {
   return (
-    <div id="socials" className="mt-0 flex flex-col gap-y-1">
+    <div
+      id="socials"
+      className={`mt-0 flex flex-col ${isHomePage ? 'gap-y-2' : 'gap-y-1'}`}
+    >
       <div
-        className={`mb-0.5 mt-2 flex items-center  gap-x-4 text-sm font-light text-slate-300 ${isHomePage ? 'justify-center' : 'navbar-mobile-info-links justify-end'}`}
+        className={`flex items-center gap-x-4 text-sm font-light text-slate-300 ${isHomePage ? 'justify-center' : 'navbar-mobile-info-links mt-2 justify-end'}`}
       >
         <a
           href="https://www.linkedin.com/in/DarshinVanParijs/"
