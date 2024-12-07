@@ -3,7 +3,9 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 
+import { aboutMeTech } from '@/lib/constants';
 import Socials from './shared/Socials';
+import Tag from './shared/Tag';
 
 const Contact = () => {
   const router = useRouter();
@@ -26,12 +28,41 @@ const Contact = () => {
         {/* Used div with onClick instead of Link to fix hydration error - using a button requires an outer div for styling - added an id for screen readers */}
         <div
           id="about-link"
-          className="group flex h-full cursor-pointer flex-col justify-center rounded-xl bg-[#172337]/80 duration-300 hover:scale-110 max-md:h-80 max-md:w-full"
+          className="group flex h-full cursor-pointer flex-col justify-center gap-y-3 rounded-xl bg-[#172337]/80 duration-300 hover:scale-110 max-md:h-80 max-md:w-full max-sm:gap-y-1"
           onClick={(event) => handleAboutClick(event)}
         >
-          <div className="flex flex-col text-center text-4xl font-bold text-slate-300/80 duration-300 hover:text-red-300 group-hover:text-slate-200 group-hover:duration-300 max-sm:text-3xl">
-            <h1>Darshin</h1>
-            <h1>Van Parijs</h1>
+          <div className="mb-2 flex flex-col text-center duration-300 group-hover:duration-300">
+            <h1 className="flex flex-col text-wrap text-center text-3xl font-bold text-slate-300/80 duration-300 hover:text-red-300 group-hover:text-slate-200 group-hover:duration-300 max-sm:text-2xl">
+              Darshin Van Parijs
+            </h1>
+            <h2 className="mb-1.5 text-lg text-slate-300/80 hover:text-red-300 group-hover:text-red-300 max-sm:text-base">
+              Software Developer
+            </h2>
+
+            <div className="flex flex-col gap-y-2">
+              <div className="flex flex-wrap justify-center gap-2">
+                {aboutMeTech.slice(0, 3).map((tech) => {
+                  return (
+                    <Tag
+                      key={tech}
+                      text={tech}
+                      pillWidth="w-[84px] max-sm:w-20"
+                    />
+                  );
+                })}
+              </div>
+              <div className="flex flex-wrap justify-center gap-2">
+                {aboutMeTech.slice(3).map((tech) => {
+                  return (
+                    <Tag
+                      key={tech}
+                      text={tech}
+                      pillWidth="w-[84px] max-sm:w-20"
+                    />
+                  );
+                })}
+              </div>
+            </div>
           </div>
 
           <Socials isHomePage={true} />
@@ -39,12 +70,12 @@ const Contact = () => {
       </div>
 
       <div className="flex flex-col">
-        <h1 className="mt-3 text-wrap text-center text-sm font-medium uppercase text-slate-100">
+        <h3 className="mt-3 text-wrap text-center text-sm font-medium uppercase text-slate-100">
           About
-        </h1>
-        <h2 className="text-center text-sm font-light text-slate-300 opacity-80">
+        </h3>
+        <h4 className="text-center text-sm font-light text-slate-300 opacity-80">
           Background and interests
-        </h2>
+        </h4>
       </div>
     </section>
   );
