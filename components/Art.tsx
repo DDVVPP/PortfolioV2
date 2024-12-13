@@ -30,7 +30,7 @@ const Art = () => {
                 key={image.id}
                 fill
                 className="rounded-xl object-cover"
-                placeholder="blur"
+                // placeholder="blur"
                 sizes="250px"
               />
             </DialogTrigger>
@@ -41,12 +41,14 @@ const Art = () => {
                   {image.title}
                 </DialogTitle>
               </DialogHeader>
-              <div className="relative size-fit">
+              <div className="relative">
                 <Image
                   alt={image.altText}
                   src={image.src}
                   className="rounded-lg border border-slate-200"
-                  placeholder="blur"
+                  width={500}
+                  height={500}
+                  // // placeholder="blur"
                 />
               </div>
               <div className="flex flex-wrap justify-center gap-2">

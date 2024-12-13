@@ -352,7 +352,7 @@ export const projects = [
 export const artImages = [
   {
     id: 1,
-    src: ArmadilloTails,
+    src: 'https://portfolio-v2-art.s3.us-west-1.amazonaws.com/public/art/ArmadilloTails.jpg',
     altText: 'armadillo-tails',
     title: 'Armadillo-esque',
     tags: ['black and white', 'pen on paper', 'sketchbook sketch'],
