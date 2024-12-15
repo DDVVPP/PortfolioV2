@@ -1,26 +1,24 @@
 'use server';
-import sharp from 'sharp';
+import 'dotenv/config';
 
-export const getBlurDataURL = async (
-  artImages: {
-    id: number;
-    src: string;
-    altText: string;
-    title: string;
-    tags: string[];
-  }[]
-) => {
-  const imagesWithBlur = await Promise.all(
-    artImages.map(async (image) => {
-      const buffer = await fetch(image.src).then((res) => res.arrayBuffer());
-      const imageBuffer = await sharp(buffer).resize(22, 22).webp().toBuffer();
-      const blurDataURL = `data:image/webp;base64,${imageBuffer.toString(
-        'base64'
-      )}`;
+export const getUpdatedImages = async () => {
+  try {
+    const authValues = `${process.env.CLOUDINARY_API_KEY}:${process.env.CLOUDINARY_API_SECRET}`;
+    const auth = Buffer.from(`${authValues}`).toString('base64');
 
-      return { ...image, blurDataURL };
-    })
-  );
+    const response = await fetch(
+      `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/resources/image`,
+      {
+        method: 'GET',
+        headers: {
+          Authorization: `Basic ${auth}`,
+        },
+      }
+    );
 
-  return imagesWithBlur;
+    const data = await response.json();
+    return data.resources;
+  } catch (error) {
+    console.error('Failed to fetch images from Cloudinary', error);
+  }
 };
