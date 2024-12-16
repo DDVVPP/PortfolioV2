@@ -1,13 +1,15 @@
 'use server';
 import Art from '@/components/Art';
-import { artImages } from '@/lib/constants';
-import { getBlurDataURL } from '@/lib/getUpdatedImages';
+import { getArtImages } from '@/lib/getArtImages';
+import { ArtImagesResponse } from '@/lib/types';
 
 const ArtWrapper = async () => {
-  const updatedImages = await getBlurDataURL(artImages);
-  console.log('blurdata', updatedImages);
+  const { artImages, error }: ArtImagesResponse = await getArtImages();
 
-  return <Art />;
+  if (!artImages) return <div>Images not found!</div>;
+  if (error) return <div>Error returning images: {error}</div>;
+
+  return <Art artImages={artImages} />;
 };
 
 export default ArtWrapper;
