@@ -9,10 +9,10 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
-import { artImages } from '@/lib/constants';
 import Tag from '@/components/shared/Tag';
+import { ArtImage } from '@/lib/types';
 
-const Art = () => {
+const Art = ({ artImages }: { artImages: ArtImage[] }) => {
   return (
     <motion.section
       className="flex flex-wrap gap-2 p-6"
@@ -20,41 +20,43 @@ const Art = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      {artImages.map((image) => {
+      {artImages.map(({ id, title, src, altText, tags, blurDataURL }) => {
         return (
-          <Dialog key={image.id}>
+          <Dialog key={id}>
             <DialogTrigger className="relative size-28 grow cursor-pointer duration-300 hover:opacity-50 max-md:size-28">
               <Image
-                alt={image.altText}
-                src={image.src}
-                key={image.id}
+                alt={altText}
+                src={src}
+                key={id}
                 fill
                 className="rounded-xl object-cover"
-                // placeholder="blur"
+                placeholder="blur"
                 sizes="250px"
+                blurDataURL={blurDataURL}
               />
             </DialogTrigger>
 
             <DialogContent className="scrollbar-hide flex size-fit flex-col justify-center overflow-y-scroll rounded-xl bg-white max-md:max-h-[90%] max-md:max-w-[90%]">
               <DialogHeader>
                 <DialogTitle className="text-center text-slate-800">
-                  {image.title}
+                  {title}
                 </DialogTitle>
               </DialogHeader>
               <div className="relative">
                 <Image
-                  alt={image.altText}
-                  src={image.src}
+                  alt={altText}
+                  src={src}
                   className="rounded-lg border border-slate-200"
                   width={500}
                   height={500}
-                  // // placeholder="blur"
+                  placeholder="blur"
+                  blurDataURL={blurDataURL}
                 />
               </div>
               <div className="flex flex-wrap justify-center gap-2">
-                {image.tags.map((tag) => (
+                {tags.map((tag) => (
                   <Tag
-                    key={image.id}
+                    key={tag}
                     text={tag}
                     textColor={'text-slate-500'}
                     borderColor={'border-slate-500'}
