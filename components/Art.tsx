@@ -12,7 +12,7 @@ import {
 import Tag from '@/components/shared/Tag';
 import { ArtImage } from '@/lib/types';
 
-const Art = ({ artImages }: { artImages: ArtImage[] }) => {
+const Art = ({ sortedArtImages }: { sortedArtImages: ArtImage[] }) => {
   return (
     <motion.section
       className="flex flex-wrap gap-2 p-6"
@@ -20,7 +20,7 @@ const Art = ({ artImages }: { artImages: ArtImage[] }) => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      {artImages.map(({ id, title, src, altText, tags, blurDataURL }) => {
+      {sortedArtImages.map(({ id, title, src, altText, tags, blurDataURL }) => {
         return (
           <Dialog key={id}>
             <DialogTrigger className="relative size-28 grow cursor-pointer duration-300 hover:opacity-50 max-md:size-28">

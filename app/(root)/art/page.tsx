@@ -1,15 +1,16 @@
 'use server';
 import Art from '@/components/Art';
-import { getArtImages } from '@/lib/getArtImages';
+import { getUpdatedArtImages } from '@/lib/actions/getArtImages';
 import { ArtImagesResponse } from '@/lib/types';
 
 const ArtWrapper = async () => {
-  const { artImages, error }: ArtImagesResponse = await getArtImages();
+  const { sortedArtImages, error }: ArtImagesResponse =
+    await getUpdatedArtImages();
 
-  if (!artImages) return <div>Images not found!</div>;
+  if (!sortedArtImages) return <div>Images not found!</div>;
   if (error) return <div>Error returning images: {error}</div>;
 
-  return <Art artImages={artImages} />;
+  return <Art sortedArtImages={sortedArtImages} />;
 };
 
 export default ArtWrapper;
