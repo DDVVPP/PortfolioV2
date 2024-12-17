@@ -40,9 +40,9 @@ const sortImages = (images: ProcessedImage[]) => {
   });
 };
 
-const generateBlurDataURL = async (public_id: string) => {
+const generateBlurDataURL = async (publicId: string) => {
   const cloudinaryBaseURL = `https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload`;
-  const blurURL = `${cloudinaryBaseURL}/e_blur:300,w_22,h_22,c_scale/${public_id}.jpg`;
+  const blurURL = `${cloudinaryBaseURL}/e_blur:300,w_22,h_22,c_scale/${publicId}.jpg`;
   const blurBuffer = await fetch(blurURL).then((res) => res.arrayBuffer());
   return `data:image/webp;base64,${Buffer.from(blurBuffer).toString('base64')}`;
 };
@@ -50,24 +50,25 @@ const generateBlurDataURL = async (public_id: string) => {
 const formatImages = async (images: CloudinaryResource[]) => {
   return Promise.all(
     images.map(async (image: CloudinaryResource) => {
+      const { public_id: publicId, secure_url: secureUrl, tags } = image;
       try {
-        const blurDataURL = await generateBlurDataURL(image.public_id);
+        const blurDataURL = await generateBlurDataURL(publicId);
 
-        const title = image.public_id.split('_')[0].split('/').pop() ?? '';
+        const title = publicId.split('_')[0].split('/').pop() ?? '';
         const altText = title
           ?.replace(/(^[A-Z])/, (match: string) => match.toLowerCase())
           .replace(/([A-Z])/g, (match: string) => `-${match.toLowerCase()}`);
 
         return {
-          id: image.public_id,
-          src: image.secure_url,
+          id: publicId,
+          src: secureUrl,
           title,
           altText,
           blurDataURL,
-          tags: image.tags ?? [],
+          tags: tags ?? [],
         };
       } catch (error) {
-        console.error(`Error formatting image ${image.public_id}:`, error);
+        console.error(`Error formatting image ${publicId}:`, error);
       }
     })
   );
