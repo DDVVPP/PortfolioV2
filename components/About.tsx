@@ -26,17 +26,14 @@ const About = () => {
         <p className="text-center font-light text-slate-300">
           Hi! I am an Architectural Designer turned{' '}
           <span className="text-red-300">Software Developer</span> based in Los
-          Angeles, California. Outside of programming, I dedicate my time to
-          working out, climbing, and dancing Brazilian Zouk — activities that
-          require significant technique and commitment. I also find fulfillment
-          in painting, drawing, and sculpting, which allows me to explore and
-          refine my creative skills. <br />
-          <br />I have experience building applications in{' '}
+          Angeles, California. I have experience building applications in{' '}
           <span className="text-red-300">
             Javascript, Typescript, React.js, Next.js, PostgreSQL,
           </span>{' '}
-          and <span className="text-red-300">Node.js</span> using{' '}
-          <span className="text-red-300">agile methodologies.</span>
+          and <span className="text-red-300">Node.js.</span> I’m currently
+          refining my personal projects and deepening my knowledge of{' '}
+          <span className="text-red-300">backend</span> functionality, patterns,
+          and best practices.
           <br />
           <br />
           My previous career in{' '}
@@ -56,7 +53,13 @@ const About = () => {
           also value having read/write access to the{' '}
           <span className="text-red-300">backend</span> which provides a
           holistic view of the app, and allows for more efficient debugging and
-          consistency within the codebase.
+          consistency within the codebase. <br />
+          <br />
+          Outside of programming, I dedicate my time to working out, climbing,
+          and dancing Brazilian Zouk – activities that require significant
+          technique and commitment. I also find fulfillment in painting,
+          drawing, and sculpting, which allows me to explore and refine my
+          creative skills. <br />
         </p>
       </div>
     </motion.section>
