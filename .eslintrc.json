@@ -4,8 +4,5 @@
     "standard",
     "plugin:tailwindcss/recommended",
     "prettier"
-  ],
-  "globals": {
-    "google": "readonly"
-  }
+  ]
 }
