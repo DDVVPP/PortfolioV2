@@ -1,7 +1,30 @@
 'use server';
 import 'dotenv/config';
-import { artImageOrder } from '../constants';
+import { artImageOrderAndTitle } from '../constants';
 import { CloudinaryResource, ProcessedImage } from '../types';
+
+export const getUpdatedArtImages = async () => {
+  try {
+    // Fetch images from Cloudinary
+    const cloudinaryResources = await fetchCloudinaryResources();
+    // Format images to include necessary properties for rendering
+    const formattedImages = await formatImages(cloudinaryResources);
+    // Sort images using the artImageOrderAndTitle array
+    const sortedArtImages = sortImages(formattedImages as ProcessedImage[]);
+
+    return { sortedArtImages, error: null };
+  } catch (error) {
+    console.error('Error fetching images from Cloudinary:', error);
+    return { error: 'An unexpected error occurred while fetching images' };
+  }
+};
+
+const generateBlurDataURL = async (publicId: string) => {
+  const cloudinaryBaseURL = `https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload`;
+  const blurURL = `${cloudinaryBaseURL}/e_blur:300,w_22,h_22,c_scale/${publicId}.jpg`;
+  const blurBuffer = await fetch(blurURL).then((res) => res.arrayBuffer());
+  return `data:image/webp;base64,${Buffer.from(blurBuffer).toString('base64')}`;
+};
 
 const fetchCloudinaryResources = async () => {
   try {
@@ -32,32 +55,33 @@ const fetchCloudinaryResources = async () => {
   }
 };
 
-const sortImages = (images: ProcessedImage[]) => {
-  return images.sort((a, b) => {
-    const indexA = artImageOrder.indexOf(a.altText);
-    const indexB = artImageOrder.indexOf(b.altText);
-    return indexA - indexB;
-  });
-};
-
-const generateBlurDataURL = async (publicId: string) => {
-  const cloudinaryBaseURL = `https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload`;
-  const blurURL = `${cloudinaryBaseURL}/e_blur:300,w_22,h_22,c_scale/${publicId}.jpg`;
-  const blurBuffer = await fetch(blurURL).then((res) => res.arrayBuffer());
-  return `data:image/webp;base64,${Buffer.from(blurBuffer).toString('base64')}`;
-};
-
 const formatImages = async (images: CloudinaryResource[]) => {
   return Promise.all(
     images.map(async (image: CloudinaryResource) => {
       const { public_id: publicId, secure_url: secureUrl, tags } = image;
       try {
         const blurDataURL = await generateBlurDataURL(publicId);
+        const sanitizedPublicId = publicId.split('_')[0] ?? '';
 
-        const title = publicId.split('_')[0].split('/').pop() ?? '';
-        const altText = title
-          ?.replace(/(^[A-Z])/, (match: string) => match.toLowerCase())
-          .replace(/([A-Z])/g, (match: string) => `-${match.toLowerCase()}`);
+        let formattedCloudinaryTitle = sanitizedPublicId[0];
+        for (let i = 1; i < sanitizedPublicId.length; i++) {
+          const char = sanitizedPublicId[i];
+          if (char === char.toUpperCase()) {
+            formattedCloudinaryTitle += ' ' + char;
+          } else {
+            formattedCloudinaryTitle += char;
+          }
+        }
+
+        const altText = formattedCloudinaryTitle
+          .toLowerCase()
+          .split(' ')
+          .join('-');
+
+        const customTitles = artImageOrderAndTitle.find(
+          (item) => item.altText === altText
+        );
+        const title = customTitles?.customTitle ?? formattedCloudinaryTitle;
 
         return {
           id: publicId,
@@ -74,20 +98,17 @@ const formatImages = async (images: CloudinaryResource[]) => {
   );
 };
 
-export const getUpdatedArtImages = async () => {
-  try {
-    // Fetch images from Cloudinary
-    const cloudinaryResources = await fetchCloudinaryResources();
+const sortImages = (formattedImages: ProcessedImage[]) => {
+  const sortedAndUpdatedImages = artImageOrderAndTitle.map((orderedItem) => {
+    const matchedImage = formattedImages.find(
+      (image) => image.altText === orderedItem.altText
+    );
 
-    // Format images to include necessary properties for rendering
-    const formattedImages = await formatImages(cloudinaryResources);
+    return {
+      ...matchedImage,
+      title: orderedItem.customTitle ?? matchedImage?.title,
+    };
+  });
 
-    // Sort images using the artImages array
-    const sortedArtImages = sortImages(formattedImages as ProcessedImage[]);
-
-    return { sortedArtImages, error: null };
-  } catch (error) {
-    console.error('Error fetching images from Cloudinary:', error);
-    return { error: 'An unexpected error occurred while fetching images' };
-  }
+  return sortedAndUpdatedImages;
 };
