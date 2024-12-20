@@ -10,9 +10,9 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import Tag from '@/components/shared/Tag';
-import { ArtImage } from '@/lib/types';
+import { ProcessedImage } from '@/lib/types';
 
-const Art = ({ sortedArtImages }: { sortedArtImages: ArtImage[] }) => {
+const Art = ({ sortedArtImages }: { sortedArtImages: ProcessedImage[] }) => {
   return (
     <motion.section
       className="flex flex-wrap gap-2 p-6"
