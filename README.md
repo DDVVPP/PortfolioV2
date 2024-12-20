@@ -1,5 +1,5 @@
 # <a name="introduction">My Portfolio Website</a>
-A place to showcase my professional work experience, my personal software engineering projects, my artwork, and my background and interests.
+An app to showcase my professional work experience, my personal software engineering projects, my artwork, and my background and interests.
 
 ## <a name="tech-stack">🚀 Deployed Site</a>
 &nbsp;&nbsp;&nbsp;&nbsp;[darshin.me](darshin.me)\
@@ -9,4 +9,5 @@ A place to showcase my professional work experience, my personal software engine
 - Next.js
 - TypeScript
 - Tailwind CSS
+- Cloudinary
 
