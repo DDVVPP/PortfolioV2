@@ -110,5 +110,5 @@ const sortImages = (formattedImages: ProcessedImage[]) => {
     };
   });
 
-  return sortedAndUpdatedImages;
+  return sortedAndUpdatedImages as ProcessedImage[];
 };
