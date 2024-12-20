@@ -1,4 +1,4 @@
-export type ArtImage = {
+export type ProcessedImage = {
   id: string;
   src: string;
   title: string;
@@ -8,17 +8,8 @@ export type ArtImage = {
 };
 
 export type ArtImagesResponse = {
-  sortedArtImages?: ArtImage[];
+  sortedArtImages?: ProcessedImage[];
   error: string | null;
-};
-
-export type ProcessedImage = {
-  id: string;
-  src: string;
-  title: string;
-  altText: string;
-  blurDataURL: string;
-  tags: any;
 };
 
 export type CloudinaryResource = {
