@@ -1,6 +1,6 @@
 'use server';
 import 'dotenv/config';
-import { artImageOrderAndTitle } from '../constants';
+import { artImageOrder } from '../constants';
 import { CloudinaryResource, ProcessedImage } from '../types';
 
 export const getUpdatedArtImages = async () => {
@@ -58,30 +58,19 @@ const fetchCloudinaryResources = async () => {
 const formatImages = async (images: CloudinaryResource[]) => {
   return Promise.all(
     images.map(async (image: CloudinaryResource) => {
-      const { public_id: publicId, secure_url: secureUrl, tags } = image;
+      const {
+        public_id: publicId,
+        display_name: title,
+        secure_url: secureUrl,
+        tags,
+      } = image;
       try {
         const blurDataURL = await generateBlurDataURL(publicId);
-        const sanitizedPublicId = publicId.split('_')[0] ?? '';
-
-        let formattedCloudinaryTitle = sanitizedPublicId[0];
-        for (let i = 1; i < sanitizedPublicId.length; i++) {
-          const char = sanitizedPublicId[i];
-          if (char === char.toUpperCase()) {
-            formattedCloudinaryTitle += ' ' + char;
-          } else {
-            formattedCloudinaryTitle += char;
-          }
-        }
-
-        const altText = formattedCloudinaryTitle
+        const altText = title
           .toLowerCase()
           .split(' ')
-          .join('-');
-
-        const customTitles = artImageOrderAndTitle.find(
-          (item) => item.altText === altText
-        );
-        const title = customTitles?.customTitle ?? formattedCloudinaryTitle;
+          .join('-')
+          .replace(':', '');
 
         return {
           id: publicId,
@@ -99,16 +88,9 @@ const formatImages = async (images: CloudinaryResource[]) => {
 };
 
 const sortImages = (formattedImages: ProcessedImage[]) => {
-  const sortedAndUpdatedImages = artImageOrderAndTitle.map((orderedItem) => {
-    const matchedImage = formattedImages.find(
-      (image) => image.altText === orderedItem.altText
-    );
-
-    return {
-      ...matchedImage,
-      title: orderedItem.customTitle ?? matchedImage?.title,
-    };
-  });
+  const sortedAndUpdatedImages = artImageOrder.map((orderedItem) =>
+    formattedImages.find((image) => image.altText === orderedItem)
+  );
 
   return sortedAndUpdatedImages as ProcessedImage[];
 };

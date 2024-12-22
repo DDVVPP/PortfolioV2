@@ -14,6 +14,7 @@ export type ArtImagesResponse = {
 
 export type CloudinaryResource = {
   public_id: string;
+  display_name: string;
   secure_url: string;
   tags: string[];
 };
