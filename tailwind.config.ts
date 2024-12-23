@@ -25,6 +25,7 @@ const config = {
         'xs-362': '362px',
         md: '820px',
         '2xl': '1400px',
+        '3xl': '2000px',
       },
       colors: {
         dark: {
