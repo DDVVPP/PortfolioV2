@@ -24,9 +24,9 @@ export type CloudinaryResource = {
 
 export type Project = {
   title: string | JSXElement;
-  description: JSXElement;
+  description: JSXElement | string;
   coverImage: StaticImageData;
-  demoLink: string;
+  demoLink?: string;
   githubLink: string;
   altText: string;
   tags: string[];

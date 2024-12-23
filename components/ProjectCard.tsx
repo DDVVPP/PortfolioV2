@@ -20,7 +20,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
             {project.title}
           </h1>
           <div className="flex gap-x-4">
-            <LinkWithIcon label="Demo Site" href={project.demoLink} />
+            {project.demoLink && (
+              <LinkWithIcon label="Demo Site" href={project.demoLink} />
+            )}
             <LinkWithIcon label="Source Code" href={project.githubLink} />
           </div>
         </section>

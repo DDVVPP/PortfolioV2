@@ -1,7 +1,6 @@
 import GitNoteLaptopMobile from '@/public/GitNoteLaptopMobile.png';
-import GitNoteFigma from '@/public/GitNote-Figma.png';
-import DevTodayFigma from '@/public/DevToday-Figma.png';
 import DevTodayLaptopMobile from '@/public/DevTodayLaptopMobile.png';
+import MyPortfolioLaptopMobile from '@/public/MyPortfolioLaptopMobile.png';
 
 export const navbarItems = [
   {
@@ -216,7 +215,6 @@ export const projects = [
       </p>
     ),
     coverImage: DevTodayLaptopMobile,
-    mainImage: DevTodayFigma,
     altText: 'dev-today',
     demoLink: 'https://dev-today-v2.vercel.app',
     githubLink: 'https://github.com/DDVVPP/DevToday',
@@ -246,7 +244,6 @@ export const projects = [
       </p>
     ),
     coverImage: GitNoteLaptopMobile,
-    mainImage: GitNoteFigma,
     altText: 'git-note',
     demoLink: 'https://git-note-tracker.vercel.app/',
     githubLink: 'https://github.com/DDVVPP/GitNote',
@@ -262,7 +259,22 @@ export const projects = [
       'Shadcn',
       'TinyMCE',
     ],
-    overview: 'Git Note text',
+  },
+  {
+    title: 'MY PORTFOLIO',
+    description:
+      'This website, which you are currently exploring, is designed and built by me to showcase my professional experience, software engineering projects, art work, and personal background.',
+    coverImage: MyPortfolioLaptopMobile,
+    altText: 'dev-today',
+    githubLink: 'https://github.com/DDVVPP/PortfolioV2',
+    tags: [
+      'TypeScript',
+      'Next.js',
+      'Tailwind CSS',
+      'Shadcn',
+      'Cloudinary',
+      'Framer Motion',
+    ],
   },
 ];
 
