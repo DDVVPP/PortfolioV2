@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import Tag from './shared/Tag';
 import LinkWithIcon from './shared/LinkWithIcon';
+import { Project } from '@/lib/types';
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <section className="group flex gap-x-9 rounded-lg p-4 pl-3 duration-300 hover:bg-slate-900/50 max-md:flex-col max-md:gap-y-4 max-md:px-3">
       <div className="relative w-80 min-w-20 max-md:w-full pt-1">

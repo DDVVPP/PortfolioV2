@@ -18,3 +18,13 @@ export type CloudinaryResource = {
   secure_url: string;
   tags: string[];
 };
+
+export type Project = {
+  title: string;
+  description: string;
+  coverImage: StaticImageData;
+  demoLink: string;
+  githubLink: string;
+  altText: string;
+  tags: string[];
+};
