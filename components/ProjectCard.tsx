@@ -27,9 +27,23 @@ const ProjectCard = ({ project }: { project: Project }) => {
           </div>
         </section>
 
-        <h2 className="text-sm font-light text-slate-300 max-md:text-center max-sm:text-xs 3xl:text-base">
-          {project.description}
-        </h2>
+        <p className="text-sm font-light text-slate-300 max-md:text-center max-sm:text-xs 3xl:text-base">
+          {project.description}{' '}
+          {project.demoCredentials && (
+            <p className="mt-2">
+              <em className="font-normal">
+                <a
+                  className="font-medium duration-300 hover:text-red-400"
+                  href="mailto:darshinvp@gmail.com"
+                >
+                  *Contact me
+                </a>{' '}
+                for demo credentails to explore an existing account
+              </em>
+            </p>
+          )}
+        </p>
+
         <div className="flex flex-wrap gap-x-3 gap-y-2 max-md:justify-center">
           {project.tags.map((tag) => {
             return <Tag key={tag} text={tag} />;

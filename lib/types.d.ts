@@ -30,4 +30,5 @@ export type Project = {
   githubLink: string;
   altText: string;
   tags: string[];
+  demoCredentials?: boolean;
 };

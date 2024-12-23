@@ -231,6 +231,7 @@ export const projects = [
       'TinyMCE',
       'Framer Motion',
     ],
+    demoCredentials: true,
   },
   {
     title: <h1 className="animate-pulse">GITNOTE - Work In Progress</h1>,
@@ -259,13 +260,14 @@ export const projects = [
       'Shadcn',
       'TinyMCE',
     ],
+    demoCredentials: true,
   },
   {
     title: 'MY PORTFOLIO',
     description:
       'This website, which you are currently exploring, is designed and built by me to showcase my professional experience, software engineering projects, art work, and personal background.',
     coverImage: MyPortfolioLaptopMobile,
-    altText: 'dev-today',
+    altText: 'my-portfolio',
     githubLink: 'https://github.com/DDVVPP/PortfolioV2',
     tags: [
       'TypeScript',
