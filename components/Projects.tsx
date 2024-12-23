@@ -32,16 +32,16 @@ const Projects = () => {
               </div>
               <div className="mb-3 flex w-3/4 max-w-[1000px] flex-col justify-between max-md:-order-1 max-md:mb-2 max-md:w-full">
                 <div className="flex gap-x-0.5 max-md:justify-center">
-                  <h1 className="text-wrap text-sm font-medium uppercase text-slate-100">
+                  <h1 className="text-wrap text-sm font-medium uppercase text-slate-100 xl:text-base">
                     {project.title} - COMING SOON!
                   </h1>
                 </div>
-                <h2 className="text-sm font-light text-slate-300 opacity-40 max-md:text-center">
+                <h2 className="text-sm font-light text-slate-300 opacity-40 max-md:text-center xl:text-base">
                   {project.description}
                 </h2>
                 <div className="mt-4 flex flex-wrap gap-x-3 gap-y-2 opacity-40 max-md:justify-center">
                   {project.tags.map((tag) => {
-                    return <Tag key={tag} text={tag} />;
+                    return <Tag key={tag} text={tag} textSize="xl:text-sm" />;
                   })}
                 </div>
               </div>
@@ -62,7 +62,7 @@ const Projects = () => {
               </div>
               <div className="mb-3 flex w-3/4 max-w-[1000px] flex-col justify-between max-md:-order-1 max-md:mb-2 max-md:w-full">
                 <div className="flex gap-x-0.5 max-md:justify-center">
-                  <h1 className="text-wrap text-sm font-medium uppercase text-slate-100 duration-300 group-hover:text-corral">
+                  <h1 className="text-wrap text-sm font-medium uppercase text-slate-100 duration-300 group-hover:text-corral xl:text-base">
                     {project.title}
                   </h1>
                   <AngledArrow
@@ -70,12 +70,12 @@ const Projects = () => {
                     className="flex stroke-slate-400 duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                   />
                 </div>
-                <h2 className="text-sm font-light text-slate-300 max-md:text-center">
+                <h2 className="text-sm font-light text-slate-300 max-md:text-center xl:text-base">
                   {project.description}
                 </h2>
                 <div className="mt-4 flex flex-wrap gap-x-3 gap-y-2 max-md:justify-center">
                   {project.tags.map((tag) => {
-                    return <Tag key={tag} text={tag} />;
+                    return <Tag key={tag} text={tag} textSize="xl:text-sm" />;
                   })}
                 </div>
               </div>
