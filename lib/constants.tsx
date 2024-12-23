@@ -201,9 +201,9 @@ export const architectureWorkItems = [
 
 export const projects = [
   {
-    title: 'DevToday',
+    title: 'DEVTODAY',
     description:
-      'A content creation platform tailored for developers featuring posts, podcasts, groups, and event feeds.  The app encouages engagement through likes, follows, and comments. Additional features include authentication, onboarding, search, notifications, profile management, content management, light and dark modes, and mobile responsiveness.',
+      (<>A content creation platform tailored for developers featuring posts, podcasts, groups, and event feeds.  The app encourages engagement through likes, follows, and comments. Additional features include <span className="textHighlight">authentication</span>, onboarding, <span className="textHighlight">cmd+K search, notifications</span>, profile and content management using <span className="textHighlight">CRUD</span> operations, <span className="textHighlight">light and dark modes</span>, and <span className="textHighlight">mobile responsiveness</span>.</>),
     coverImage: DevTodayLaptopMobile,
     mainImage: DevTodayFigma,
     altText: 'dev-today',
@@ -224,9 +224,9 @@ export const projects = [
     ],
   },
   {
-    title: 'GitNote - WORK IN PROGRESS',
+    title: 'GITNOTE - Work In Progress',
     description:
-      'A knowledge and progress tracker for developers featuring  authentication, onboarding, searching and filtering, posts, post management, and profile management.',
+      (<>A knowledge and progress tracker for developers featuring  <span className="textHighlight">authentication</span>, onboarding, <span className="textHighlight">cmd+K search and filtering</span>, posts, post and profile management using <span className="textHighlight">CRUD</span> operations.</>),
     coverImage: GitNoteLaptopMobile,
     mainImage: GitNoteFigma,
     altText: 'git-note',
