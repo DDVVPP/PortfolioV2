@@ -27,7 +27,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           </div>
         </section>
 
-        <p className="text-sm font-light text-slate-300 max-md:text-center max-sm:text-xs 3xl:text-base">
+        <p className="text-sm font-light text-slate-300 max-md:text-center max-sm:text-sm 3xl:text-base">
           {project.description}{' '}
           {project.demoCredentials && (
             <p className="mt-2">

@@ -207,8 +207,10 @@ export const projects = [
         podcasts, groups, and event feeds. The app encourages engagement through
         likes, follows, and comments. Additional features include{' '}
         <span className="textHighlight">authentication</span>, onboarding,{' '}
-        <span className="textHighlight">cmd+K search, notifications</span>,
-        profile and content management using{' '}
+        <span className="textHighlight">
+          cmd+K search, notifications, 3rd party API integrations
+        </span>
+        , profile and content management using{' '}
         <span className="textHighlight">CRUD</span> operations,{' '}
         <span className="textHighlight">light and dark modes</span>, and{' '}
         <span className="textHighlight">mobile responsiveness</span>.
@@ -264,8 +266,15 @@ export const projects = [
   },
   {
     title: 'MY PORTFOLIO',
-    description:
-      'This website, which you are currently exploring, is designed and built by me to showcase my professional experience, software engineering projects, art work, and personal background.',
+    description: (
+      <p>
+        This website, which you are currently exploring, is designed and built
+        by me to showcase my professional experience, software engineering
+        projects, art work, and personal background, featuring{' '}
+        <span className="textHighlight">3rd party API integration</span> and{' '}
+        <span className="textHighlight">mobile responsiveness</span>.
+      </p>
+    ),
     coverImage: MyPortfolioLaptopMobile,
     altText: 'my-portfolio',
     githubLink: 'https://github.com/DDVVPP/PortfolioV2',

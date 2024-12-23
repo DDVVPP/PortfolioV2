@@ -1,7 +1,7 @@
 const Tag = ({
   text,
   textColor = 'text-slate-400',
-  textSize = 'text-[12px] max-sm:text-[10px] 3xl:text-sm',
+  textSize = 'text-[12px] 3xl:text-sm',
   borderColor = 'border-slate-400',
   pillWidth,
 }: {
