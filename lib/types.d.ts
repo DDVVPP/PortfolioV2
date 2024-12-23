@@ -23,7 +23,7 @@ export type CloudinaryResource = {
 };
 
 export type Project = {
-  title: string;
+  title: string | JSXElement;
   description: JSXElement;
   coverImage: StaticImageData;
   demoLink: string;

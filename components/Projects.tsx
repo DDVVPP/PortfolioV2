@@ -14,7 +14,7 @@ const Projects = () => {
       className='mx-7 my-32 flex flex-col gap-y-8 max-md:my-12 max-md:gap-y-10'
     >
         {projects.map((project) => (
-          <ProjectCard project={project} key={project.title} />
+          <ProjectCard project={project} key={project.altText} />
         ))}
     </motion.section>
   );
