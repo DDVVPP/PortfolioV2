@@ -27,20 +27,8 @@
     @apply max-md:flex-row max-md:justify-between max-sm:text-sm;
   }
 
-  .updates-section {
-    @apply w-1/2 rounded-md bg-slate-800/70 p-6 text-slate-300 max-lg:w-full;
-  }
-  .updates-section-title {
-    @apply mb-3 text-base font-semibold text-slate-200 max-sm:text-sm;
-  }
-  .updates-list {
-    @apply ml-3 flex list-disc flex-col gap-y-1 text-sm font-light text-slate-300 max-sm:text-xs;
-  }
-  .updates-sublist {
-    @apply ml-3 flex list-[circle] flex-col gap-y-1;
-  }
-  .updates-sublist-title {
-    @apply text-slate-200;
+  .textHighlight {
+    @apply text-red-300 font-normal
   }
 
   /* For Webkit-based browsers (Chrome, Safari and Opera) */

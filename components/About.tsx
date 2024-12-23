@@ -25,19 +25,19 @@ const About = () => {
       <div className="mt-7 w-4/5 justify-center max-md:w-full max-md:text-sm xl:mt-10 xl:w-3/4">
         <p className="text-center font-light text-slate-300">
           Hi! I am an Architectural Designer turned{' '}
-          <span className="text-red-300">Software Developer</span> based in Los
+          <span className="textHighlight">Software Developer</span> based in Los
           Angeles, California. I have experience building applications in{' '}
-          <span className="text-red-300">
+          <span className="textHighlight">
             Javascript, Typescript, React.js, Next.js, PostgreSQL,
           </span>{' '}
-          and <span className="text-red-300">Node.js.</span> I’m currently
+          and <span className="textHighlight">Node.js.</span> I’m currently
           refining my personal projects and deepening my knowledge of{' '}
-          <span className="text-red-300">backend</span> functionality, patterns,
+          <span className="textHighlight">backend</span> functionality, patterns,
           and best practices.
           <br />
           <br />
           My previous career in{' '}
-          <span className="text-red-300">architecture</span> has provided me
+          <span className="textHighlight">architecture</span> has provided me
           with valuable skills in iterative design, team collaboration and
           coordination, and problem-solving. Architecture projects often involve
           tight deadlines, budget constraints, and frequent changes, which have
@@ -46,12 +46,12 @@ const About = () => {
           to address diverse project needs effectively.
           <br />
           <br />I am passionate about writing{' '}
-          <span className="text-red-300">clean code</span> and have a natural
+          <span className="textHighlight">clean code</span> and have a natural
           inclination towards visual design and attention to details. I
           especially enjoy the immediate visual feedback that{' '}
-          <span className="text-red-300">frontend</span> development provides. I
+          <span className="textHighlight">frontend</span> development provides. I
           also value having read/write access to the{' '}
-          <span className="text-red-300">backend</span> which provides a
+          <span className="textHighlight">backend</span> which provides a
           holistic view of the app, and allows for more efficient debugging and
           consistency within the codebase. <br />
           <br />
