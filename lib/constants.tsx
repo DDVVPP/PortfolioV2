@@ -208,7 +208,7 @@ export const projects = [
         likes, follows, and comments. Additional features include{' '}
         <span className="textHighlight">authentication</span>, onboarding,{' '}
         <span className="textHighlight">
-          cmd+K search, notifications, 3rd party API integrations
+          cmdK search, notifications, 3rd party API integrations
         </span>
         , profile and content management using{' '}
         <span className="textHighlight">CRUD</span> operations,{' '}
@@ -241,8 +241,8 @@ export const projects = [
       <p>
         A knowledge and progress tracker for developers featuring{' '}
         <span className="textHighlight">authentication</span>, onboarding,{' '}
-        <span className="textHighlight">cmd+K search and filtering</span>,
-        posts, post and profile management using{' '}
+        <span className="textHighlight">cmdK search and filtering</span>, posts,
+        post and profile management using{' '}
         <span className="textHighlight">CRUD</span> operations.
       </p>
     ),

@@ -38,7 +38,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
                 >
                   *Contact me
                 </a>{' '}
-                for demo credentails to explore an existing account
+                for demo credentials to explore an existing account
               </em>
             </p>
           )}
