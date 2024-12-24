@@ -6,7 +6,7 @@ import { Project } from '@/lib/types';
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <section className="group flex gap-x-9 gap-y-4 rounded-lg bg-slate-900/50 p-6 pl-3 max-md:flex-col max-md:gap-y-3">
-      <div className="relative w-80 min-w-20 pt-1 max-md:mt-1 max-md:w-full">
+      <div className="relative ml-4 w-80 min-w-20 content-center pt-1 max-md:mx-0  max-md:mt-1 max-md:w-full">
         <Image
           alt={project.altText}
           src={project.coverImage}
