@@ -1,3 +1,6 @@
+import { StaticImageData } from 'next/image';
+import { JSXElement } from 'react';
+
 export type ProcessedImage = {
   id: string;
   src: string;
@@ -17,4 +20,15 @@ export type CloudinaryResource = {
   display_name: string;
   secure_url: string;
   tags: string[];
+};
+
+export type Project = {
+  title: string | JSXElement;
+  description: JSXElement | string;
+  coverImage: StaticImageData;
+  demoLink?: string;
+  githubLink: string;
+  altText: string;
+  tags: string[];
+  demoCredentials?: boolean;
 };

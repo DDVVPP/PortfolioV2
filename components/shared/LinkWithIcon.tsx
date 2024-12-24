@@ -1,15 +1,19 @@
-import { ExternalLinkIcon } from 'lucide-react';
+import AngledArrow from './AngledArrow';
 
 const LinkWithIcon = ({ label, href }: { label: string; href: string }) => {
   return (
     <a
       href={href}
       target="_blank"
-      className="flex w-fit items-center gap-x-1 rounded-md border border-slate-500 px-2 py-1 text-sm font-light  text-slate-300 duration-300 hover:border-red-400 hover:text-slate-300 group-hover:text-slate-200 group-hover:duration-300 max-sm:py-0.5 max-sm:text-[11px]"
+      className="group/link-with-icon flex w-fit gap-x-1 rounded-md border border-slate-500 px-2 py-1  hover:border-red-400 hover:text-slate-300 hover:duration-300 max-sm:gap-x-0 max-sm:py-0.5  "
     >
-      <p>{label}</p>
-
-      <ExternalLinkIcon className="mb-0.5 flex size-4 items-center stroke-slate-200 stroke-1 max-sm:size-3" />
+      <p className="text-sm font-light text-slate-300 max-sm:text-[13px] 3xl:text-base">
+        {label}
+      </p>
+      <AngledArrow
+        alt="arrow-up-right"
+        className="mt-px flex size-5 stroke-slate-400 group-hover/link-with-icon:-translate-y-0.5 group-hover/link-with-icon:translate-x-0.5 group-hover/link-with-icon:duration-300 max-sm:mt-[3px] max-sm:size-4 3xl:mt-1"
+      />
     </a>
   );
 };

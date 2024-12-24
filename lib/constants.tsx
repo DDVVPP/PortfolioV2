@@ -1,7 +1,6 @@
 import GitNoteLaptopMobile from '@/public/GitNoteLaptopMobile.png';
-import GitNoteFigma from '@/public/GitNote-Figma.png';
-import DevTodayFigma from '@/public/DevToday-Figma.png';
 import DevTodayLaptopMobile from '@/public/DevTodayLaptopMobile.png';
+import MyPortfolioLaptopMobile from '@/public/MyPortfolioLaptopMobile.png';
 
 export const navbarItems = [
   {
@@ -201,18 +200,29 @@ export const architectureWorkItems = [
 
 export const projects = [
   {
-    title: 'DevToday',
-    description: 'A content creation platform tailored for developers',
+    title: 'DEVTODAY',
+    description: (
+      <p>
+        A content creation platform tailored for developers featuring posts,
+        podcasts, groups, and event feeds. The app encourages engagement through
+        likes, follows, and comments. Additional features include{' '}
+        <span className="textHighlight">authentication</span>, onboarding,{' '}
+        <span className="textHighlight">
+          cmd+K search, notifications, 3rd party API integrations
+        </span>
+        , profile and content management using{' '}
+        <span className="textHighlight">CRUD</span> operations,{' '}
+        <span className="textHighlight">light and dark modes</span>, and{' '}
+        <span className="textHighlight">mobile responsiveness</span>.
+      </p>
+    ),
     coverImage: DevTodayLaptopMobile,
-    mainImage: DevTodayFigma,
     altText: 'dev-today',
-    route: '/projects/dev-today',
-    demoLinkV1: 'https://capstone-darshin-adam.vercel.app',
-    demoLinkV2: 'https://dev-today-v2.vercel.app',
+    demoLink: 'https://dev-today-v2.vercel.app',
     githubLink: 'https://github.com/DDVVPP/DevToday',
     tags: [
-      'Next.js',
       'TypeScript',
+      'Next.js',
       'Clerk',
       'PostgreSQL',
       'Prisma ORM',
@@ -223,37 +233,23 @@ export const projects = [
       'TinyMCE',
       'Framer Motion',
     ],
-    overview:
-      'DevToday provides users with an array of tools and resources to effortlessly create and share content, enabling the exchange of knowledge and ideas within the community. The platform features developer-focused posts, podcasts, and event feeds, ensuring users stay informed on the latest in tech. The app encourages engagement through likes, follows, and comments, and allows users to create groups of like-minded individuals, professionals, and enthusiasts in the tech space.',
-    learnings: [
-      'Proficiency in NextJS: Developed solid proficiency in Next.js, focusing on file-based routing, server-side and client-side components, data fetching, caching, and revalidation.',
-      'Backend Development: Strengthened backend skills by working with Prisma and Supabase—creating relational schemas, executing CRUD operations and SQL queries, and building seed files using Prisma and faker.js.',
-      'Third-Party Library Integration: Successfully integrated a variety of libraries and frameworks, including TinyMCE, Framer Motion, Shadcn, Upload Dropzone, Google Maps API, and React Datepicker, utilizing Tailwind CSS for styling',
-      'Form Handling and Validation: Gained valuable experience in form generation and zod validation',
-      'Styling and Responsiveness: Advanced my styling skills in mobile responsiveness, light and dark mode integration, flex layout, while applying custom styles to third-party libraries like Clerk Authentication, TinyMCE, React Datepicker, and Google Maps API.',
-    ],
-    challenges: [
-      /* As a user I want to be able to select a range of dates and times for my meetup. a) My start date should start on today @ the current time b) My end date and time should never be before my start date and time If I select a "start date" that extends past (After) my "end date", my "end date" should automatically reset to the current start date. If I select a new "start date" that's before my "end date", the "end date" does not have to reset. */
-      'Create Meetup - React Datepicker: Implement custom logic for selecting start and end date/time. Disable irrelevant options and auto-select relevant date and time according to user selection.',
-      /* Adding a member to members input shouldn't make them show in admins box, and vice versa */
-      'Create Group - Search and Add Members/Admins: Ensure no duplicates in either the members or admins fields. When a user is added to one field, remove them from the search results of the other.',
-      /* Logic currently is to order them like linkedIn - in order they are received - whether read or unread, with infinite scroll */
-      'Notifications: Developed a system for ordering all notifications according to most recent first, while highlighting unread ones. Implemented functionality to mark all notifications as read without disrupting the display order. Integrated infinite scroll to allow users to view all notifications.',
-      /* createRoot loses the clerkContext (ClerkInstanceContext). It creates a new root typically at the top level of the app - context providers rendered into this root won't have the same context as components outside this root.  Each root has its own separate context hierarchy.
-      createPortal: keeps the React component tree intact, but physically renders the component elsewhere in the DOM, like outside the parent div, but within the same root. The context from the parent tree is maintained */
-      "Custom Clerk Menu: Utilized React's createPortal() to customize Clerk menu items. Used createPortal() over createRoot() and root.render() as it allowed for better placement within the existing DOM tree, and for maintaining context.",
-    ],
-    isDisabled: false,
+    demoCredentials: true,
   },
   {
-    title: 'GitNote',
-    description: 'A knowledge and progress tracker for developers',
+    title: <h1 className="animate-pulse">GITNOTE - Work In Progress</h1>,
+    description: (
+      <p>
+        A knowledge and progress tracker for developers featuring{' '}
+        <span className="textHighlight">authentication</span>, onboarding,{' '}
+        <span className="textHighlight">cmd+K search and filtering</span>,
+        posts, post and profile management using{' '}
+        <span className="textHighlight">CRUD</span> operations.
+      </p>
+    ),
     coverImage: GitNoteLaptopMobile,
-    mainImage: GitNoteFigma,
     altText: 'git-note',
-    route: '/projects/git-note',
-    demoLinkV1: 'https://capstone-darshin-adam.vercel.app',
-    githubLink: 'https://github.com/DDVVPP/PortfolioV2',
+    demoLink: 'https://git-note-tracker.vercel.app/',
+    githubLink: 'https://github.com/DDVVPP/GitNote',
     tags: [
       'Next.js',
       'TypeScript',
@@ -266,20 +262,30 @@ export const projects = [
       'Shadcn',
       'TinyMCE',
     ],
-    overview: 'Git Note text',
-    learnings: [
-      'Acquired proficiency in NextJS: File based routing, server side and client side components, data fetching, caching and revalidation',
-      'Sharpened my backend skills: Prisma and Supabase, creating schemas with relations, CRUD operations SQL queries, and the creation of a seed file using prisma and faker.js.',
-      'Successfully incorporated 3rd party libraries and frameworks: TinyMCE, Framer Motion, Shadcn, Upload Dropzone, Google Maps Api, React Datepicker, Tailwind CSS',
-      'Gained a better understanding of form generation and zod validation',
-      'Advanced my knowledge of styling: Custom styling for 3rd party libraries and frameworks such as Clerk Authentication, TinyMCE, React Datepicker, and Google Maps Api, mobile responsiveness, light and dark modes, and flex',
+    demoCredentials: true,
+  },
+  {
+    title: 'MY PORTFOLIO',
+    description: (
+      <p>
+        This website, which you are currently exploring, is designed and built
+        by me to showcase my professional experience, software engineering
+        projects, art work, and personal background, featuring{' '}
+        <span className="textHighlight">3rd party API integration</span> and{' '}
+        <span className="textHighlight">mobile responsiveness</span>.
+      </p>
+    ),
+    coverImage: MyPortfolioLaptopMobile,
+    altText: 'my-portfolio',
+    githubLink: 'https://github.com/DDVVPP/PortfolioV2',
+    tags: [
+      'TypeScript',
+      'Next.js',
+      'Tailwind CSS',
+      'Shadcn',
+      'Cloudinary',
+      'Framer Motion',
     ],
-    challenges: [
-      'Create Meetup - React Datepicker: Start and end date and time custom logic selection - disable irrelevant dates and times and auto-select relavant date and time according to user selection.',
-      'Create Group - Search and add members and/or admins: Adding a user to one input removes user from search in other input - ensure that there are no duplicates in either field or search.',
-      'Notifications: Ordering notifications, indicating unread notifications in decided order, marking all notifications as read while maintaining the order, and infinite scroll',
-    ],
-    isDisabled: true,
   },
 ];
 
