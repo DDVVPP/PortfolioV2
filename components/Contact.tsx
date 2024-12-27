@@ -46,7 +46,7 @@ const Contact = () => {
                     <Tag
                       key={tech}
                       text={tech}
-                      pillWidth="w-[84px] max-sm:w-20"
+                      pillWidth="w-[84px] max-sm:w-20 3xl:w-24"
                     />
                   );
                 })}
@@ -57,7 +57,7 @@ const Contact = () => {
                     <Tag
                       key={tech}
                       text={tech}
-                      pillWidth="w-[84px] max-sm:w-20"
+                      pillWidth="w-[84px] max-sm:w-20 3xl:w-24"
                     />
                   );
                 })}
