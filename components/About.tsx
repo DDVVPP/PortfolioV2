@@ -31,9 +31,8 @@ const About = () => {
             Javascript, Typescript, React.js, Next.js, PostgreSQL,
           </span>{' '}
           and <span className="textHighlight">Node.js.</span> I’m currently
-          refining my personal projects and deepening my knowledge of{' '}
-          <span className="textHighlight">backend</span> functionality, patterns,
-          and best practices.
+          refining my personal projects and deepening my knowledge of backend
+          functionality, patterns, and best practices.
           <br />
           <br />
           My previous career in{' '}
@@ -49,8 +48,8 @@ const About = () => {
           <span className="textHighlight">clean code</span> and have a natural
           inclination towards visual design and attention to details. I
           especially enjoy the immediate visual feedback that{' '}
-          <span className="textHighlight">frontend</span> development provides. I
-          also value having read/write access to the{' '}
+          <span className="textHighlight">frontend</span> development provides.
+          I also value having read/write access to the{' '}
           <span className="textHighlight">backend</span> which provides a
           holistic view of the app, and allows for more efficient debugging and
           consistency within the codebase. <br />
