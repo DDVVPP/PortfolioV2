@@ -28,7 +28,11 @@
   }
 
   .textHighlight {
-    @apply text-red-300 font-normal
+    @apply text-red-300 font-normal;
+  }
+
+  .project-card-contact-me {
+    @apply inline-block animate-bounce-small group-hover/contact-me:[animation-play-state:paused];
   }
 
   /* For Webkit-based browsers (Chrome, Safari and Opera) */
