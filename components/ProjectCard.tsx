@@ -33,10 +33,13 @@ const ProjectCard = ({ project }: { project: Project }) => {
             <p className="mt-2">
               <em className="font-normal">
                 <a
-                  className="font-medium duration-300 hover:text-red-400"
+                  className="font-medium hover:text-red-400 hover:duration-300 group/contact-me"
                   href="mailto:darshinvp@gmail.com"
                 >
-                  *Contact me
+                  <span className="project-card-contact-me">*Contact</span>{' '}
+                  <span className="project-card-contact-me [animation-delay:0.1s]">
+                    me
+                  </span>
                 </a>{' '}
                 for demo credentials to explore an existing account
               </em>
