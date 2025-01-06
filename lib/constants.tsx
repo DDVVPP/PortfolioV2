@@ -47,7 +47,7 @@ export const softwareWorkItems = [
     company: 'UStrive',
     description: 'An online career and college mentoring platform.',
     role: 'Full-stack Developer',
-    details: `Developed and maintained mentor and student portals –– Debugged a duplicate messages issue –– Updated onboarding process in Mixpanel to document user interactions.`,
+    details: `Added and updated events to Mixpanel from the FE and BE to more accurately track mentor and student onboarding processes –– Debugged issues in mentor and student portals`,
     website: 'https://ustrive.com/',
     tags: [
       'JavaScript',
@@ -66,12 +66,13 @@ export const softwareWorkItems = [
       'An Environmental, Health, and Safety compliance SaaS platform and an early stage startup.',
     role: 'Full-stack / Front-end Developer',
     details:
-      'Contributed to dynamic form generation for internal and external use –– Successfully migrated existing app functionalities to a new site with updated UX/UI designs while maintaining the functionality of the old site –– Implemented Jest unit tests on the frontend and Mocha unit tests on the backend to ensure code quality',
+      'Developed the existing dashboard’s form stencils, form submissions, and custom forms, using SQL queries and React class methods –– Migrated the FE stack from Javascript, Backbone, React Redux, and Sass to Typescript, React, React Query, Styled Components, and MaterialUI with feature flag functionality and Figma designs –– Implemented a new user flow on the main dashboard by organizing content into subpages, ensuring seamless functionality and integration with the existing site –– Implemented Jest unit tests on the FE and Mocha unit tests on the BE to ensure code qualityImplemented Jest unit tests on the FE and Mocha unit tests on the BE to ensure code quality',
     website: 'https://www.mapistry.com/',
     tags: [
       'JavaScript',
       'TypeScript',
       'React.js',
+      'React-Redux',
       'Styled Components',
       'MaterialUI',
       'React Query',
@@ -87,7 +88,7 @@ export const softwareWorkItems = [
       "A healthcare startup that provides more easily accessible non-emergency healthcare by sending responders to a patient's home.",
     role: 'Front-end Software Engineer',
     details:
-      'Implemented new features for the client-facing app used by responders, supervisors, and clinicians –– Assisted in interviewing and evaluating 15+ candidates –– Implemented Jest unit tests for new features –– Transitioned the app on the frontend to a new tech stack',
+      'Developed patient registration and encounter records used by responders, supervisors, and clinicians, leveraging React, Formik, Yup validations, and Jest for unit testing –– Implemented dynamic logic to manage visibility, accessibility, and interactivity of inputs and fields, integrating user role-based authorization with encounter and task lifecycle conditions –– Created several custom, reusable frontend UI React components (e.g., Pill, AlertBox, Avatar), using Styled Components, Storybook, and Jest unit tests –– Played an active role in conducting technical interviews of 15+ candidates –– Successfully migrated the app from Javascript, React, GraphQL, and AWS Amplify, to Typescript, React, GraphQL/Apollo Client',
     website: 'https://www.mylaurelhealth.com/',
     tags: [
       'JavaScript',
@@ -107,7 +108,7 @@ export const softwareWorkItems = [
       'An online community marketplace connecting the user to local brick and mortars.',
     role: 'Full-stack Developer Intern',
     details:
-      'Implemented cart screen features through the full stack –– Contributed to new user signup and authentication processes –– Worked on the past orders screen',
+      'Implemented new user signup functionality and authentication –– Implemented cart screen features through the full-stack of the application using Figma designs –– Implemented past orders screen display using GraphQL queries',
     website: 'https://tyca.nyc/',
     tags: [
       'JavaScript',
@@ -241,9 +242,10 @@ export const projects = [
       <p>
         A knowledge and progress tracker for developers featuring{' '}
         <span className="textHighlight">authentication</span>, onboarding,{' '}
-        <span className="textHighlight">cmdK search and filtering</span>, posts,
-        post and profile management using{' '}
-        <span className="textHighlight">CRUD</span> operations.
+        <span className="textHighlight">cmdK search and filtering</span>, post
+        and profile management using <span className="textHighlight">CRUD</span>{' '}
+        operations, and{' '}
+        <span className="textHighlight">mobile responsiveness</span>.
       </p>
     ),
     coverImage: GitNoteLaptopMobile,
