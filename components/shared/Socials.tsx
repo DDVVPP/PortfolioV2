@@ -29,7 +29,7 @@ const Socials = ({ isHomePage }: { isHomePage: boolean }) => {
           <Image priority src={githubLogo} alt="LogoLight" width={19} />
         </a>
         <a
-          href="/resume-2024.pdf"
+          href="/resume-2025.pdf"
           target="_blank"
           className="rounded-md border border-slate-500 p-1 duration-300 hover:border-red-400 hover:text-slate-300 group-hover:text-slate-200 group-hover:duration-300 max-sm:text-xs"
           onClick={(event) => event.stopPropagation()}
