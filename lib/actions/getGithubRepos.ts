@@ -3,25 +3,29 @@
 export const getGithubRepos = async () => {
   try {
     const repoNames = await getThisYearsPublicRepoNames();
-    // console.log('reppoNames', repoNames);
+
     const repoPRs =
       repoNames &&
       (await Promise.all(
         repoNames.map(async (repoName) => {
-          const repoPR = await getRepoPRs(repoName);
-          return repoPR;
+          const repoPRs = await getRepoPRs(repoName, 2);
+          return repoPRs;
         })
       ));
+
     const repoCommits =
       repoNames &&
       (await Promise.all(
         repoNames.map(async (repoName) => {
-          const repoPR = await getRepoCommits(repoName);
-          return repoPR;
+          const repoCommits = await getRepoCommits(repoName, 2);
+          return repoCommits;
         })
       ));
-    console.log('repoPRs', repoPRs);
-    console.log('repoCommits', repoCommits);
+    return {
+      error: null,
+      repoPRs: repoPRs[0],
+      repoCommits: repoCommits[0],
+    };
   } catch (error) {
     console.error('Error fetching images from GitHub:', error);
     return { error: 'An unexpected error occurred while fetching repos' };
@@ -38,7 +42,7 @@ const getThisYearsPublicRepoNames = async () => {
     return updatedAtYear === '2025';
   });
   const repoNames = reposUpdatedThisYear
-    .filter((repo) => repo.name !== 'DDVVPP')
+    .filter((repo) => !['DDVVPP', 'HackForLA-Website'].includes(repo.name))
     .map((repo) => {
       return repo.name;
     });
@@ -46,7 +50,7 @@ const getThisYearsPublicRepoNames = async () => {
   return repoNames;
 };
 
-const getRepoPRs = async (repoName: string) => {
+const getRepoPRs = async (repoName: string, numberOfRepos: number) => {
   // console.log('repoName', repoName);
   const response = await fetch(
     `https://api.github.com/repos/DDVVPP/${repoName}/pulls?state=all`
@@ -55,15 +59,20 @@ const getRepoPRs = async (repoName: string) => {
     throw new Error(`HTTP error! Status: ${response.status}`);
   }
   const data = await response.json();
-  return {
-    repoName,
-    url: data[0]?.url,
-    title: data[0]?.title,
-    body: data[0]?.body,
-  };
+
+  const filteredData = data.map((repo) => {
+    return {
+      repoName,
+      url: repo.url,
+      title: repo.title,
+      body: repo.body,
+    };
+  });
+
+  return filteredData;
 };
 
-const getRepoCommits = async (repoName: string) => {
+const getRepoCommits = async (repoName: string, numberOfCommits: number) => {
   try {
     const response = await fetch(
       `https://api.github.com/repos/DDVVPP/${repoName}/commits`
@@ -72,13 +81,16 @@ const getRepoCommits = async (repoName: string) => {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
     const data = await response.json();
+    const filteredData = data.map((repo) => {
+      return {
+        repoName,
+        date: repo.commit.author.date,
+        message: repo.commit.message,
+        url: repo.html_url,
+      };
+    });
 
-    return {
-      repoName,
-      date: data[0]?.commit.author.date,
-      message: data[0]?.commit.message,
-      url: data[0]?.html_url,
-    };
+    return filteredData;
   } catch (error) {
     console.error('Error fetching commits from GitHub:', error);
     return { error: 'An unexpected error occurred while fetching commits' };
