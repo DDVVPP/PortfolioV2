@@ -23,7 +23,7 @@ export const getGithubRepos = async () => {
       ));
     return {
       error: null,
-      repoPRs: repoPRs[0],
+      repoPRs,
       repoCommits: repoCommits[0],
     };
   } catch (error) {
@@ -59,8 +59,13 @@ const getRepoPRs = async (repoName: string, numberOfRepos: number) => {
     throw new Error(`HTTP error! Status: ${response.status}`);
   }
   const data = await response.json();
-
-  const filteredData = data.map((repo) => {
+  // console.log('data', data);
+  const repoPRsUpdatedThisYear = data.filter((repo) => {
+    const updatedAtYear = repo.updated_at.split('-')[0];
+    return updatedAtYear === '2025';
+  });
+  // console.log('repos', repoPRsUpdatedThisYear);
+  const filteredData = repoPRsUpdatedThisYear.map((repo) => {
     return {
       repoName,
       url: repo.url,
@@ -81,7 +86,12 @@ const getRepoCommits = async (repoName: string, numberOfCommits: number) => {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
     const data = await response.json();
-    const filteredData = data.map((repo) => {
+    const repoPRsUpdatedThisYear = data.filter((repo) => {
+      const updatedAtYear = repo.commit.author.date.split('-')[0];
+      return updatedAtYear === '2025';
+    });
+
+    const filteredData = repoPRsUpdatedThisYear.map((repo) => {
       return {
         repoName,
         date: repo.commit.author.date,
