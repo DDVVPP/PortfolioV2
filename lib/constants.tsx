@@ -303,6 +303,7 @@ export const artImageOrder = [
   'disparate-thoughts',
   'spikey-thoughts',
   'fuzzy-splats',
+  'kaparos',
   'in-the-weeds',
   'tangled',
   'wormholes',
