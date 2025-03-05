@@ -355,4 +355,5 @@ export const artImageOrder = [
   'glazed-happy-little-dude',
   'greenware-loopy-dude',
   'glazed-loopy-dude',
+  'testing',
 ];
