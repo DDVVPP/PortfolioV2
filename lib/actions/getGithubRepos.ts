@@ -24,7 +24,7 @@ export const getGithubRepos = async () => {
 
     const repoCommits = await Promise.all(
       filteredRepoNames.map(async (repoName: string) => {
-        const repoCommits = await getRepoCommits(repoName, 2);
+        const repoCommits = await getRepoCommits(repoName, 3);
         return repoCommits;
       })
     );
@@ -107,19 +107,25 @@ const getRepoCommits = async (repoName: string, numberOfCommits: number) => {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
     const data = await response.json();
-    const repoPRsUpdatedThisYear = data.filter((repo: Repo) => {
-      const updatedAtYear = repo.commit.author.date.split('-')[0];
-      return updatedAtYear === '2025';
-    });
+    const repoCommitsUpdatedThisYear = data
+      .filter((repo: Repo) => {
+        const updatedAtYear = repo.commit.author.date.split('-')[0];
+        return updatedAtYear === '2025';
+      })
+      .sort((a: Repo, b: Repo) =>
+        b.commit.author.date.localeCompare(a.commit.author.date)
+      );
 
-    const filteredData = repoPRsUpdatedThisYear.map((repo: Repo) => {
-      return {
-        repoName,
-        date: repo.commit.author.date,
-        message: repo.commit.message,
-        url: repo.html_url,
-      };
-    });
+    const filteredData = repoCommitsUpdatedThisYear
+      .slice(0, numberOfCommits)
+      .map((repo: Repo) => {
+        return {
+          repoName,
+          date: repo.commit.author.date,
+          message: repo.commit.message,
+          url: repo.html_url,
+        };
+      });
 
     return filteredData;
   } catch (error) {
