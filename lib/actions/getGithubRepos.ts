@@ -1,24 +1,28 @@
 'use server';
 
+import { projects } from '../constants';
 import { Repo } from '../types';
 
 export const getGithubRepos = async () => {
   try {
+    const repoNamesFromUIProjects = projects.map((project) => project.githubLink.split('/').pop())
     const repoNames = await getThisYearsPublicRepoNames();
+    const filteredRepoNames = repoNames.filter((name: string) => repoNamesFromUIProjects.includes(name))
+
 
     const repoPRs =
-      repoNames &&
+      filteredRepoNames &&
       (await Promise.all(
-        repoNames.map(async (repoName: string) => {
+        filteredRepoNames.map(async (repoName: string) => {
           const repoPRs = await getRepoPRs(repoName, 2);
           return repoPRs;
         })
-      ));
+      )).flat();
 
     const repoCommits =
-      repoNames &&
+      filteredRepoNames &&
       (await Promise.all(
-        repoNames.map(async (repoName: string) => {
+        filteredRepoNames.map(async (repoName: string) => {
           const repoCommits = await getRepoCommits(repoName, 2);
           return repoCommits;
         })
@@ -66,9 +70,9 @@ const getRepoPRs = async (repoName: string, numberOfRepos: number) => {
   const repoPRsUpdatedThisYear = data.filter((repo: Repo) => {
     const updatedAtYear = repo.updated_at.split('-')[0];
     return updatedAtYear === '2025';
-  });
+  }).sort((a: Repo, b: Repo) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());;
 
-  const filteredData = repoPRsUpdatedThisYear.map((repo: Repo) => {
+  const filteredData = repoPRsUpdatedThisYear.slice(0, 2).map((repo: Repo) => {
     return {
       repoName,
       url: repo.url,
@@ -77,7 +81,7 @@ const getRepoPRs = async (repoName: string, numberOfRepos: number) => {
     };
   });
 
-  return filteredData;
+  return filteredData.length > 0 && filteredData;
 };
 
 const getRepoCommits = async (repoName: string, numberOfCommits: number) => {
