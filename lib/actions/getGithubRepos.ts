@@ -5,32 +5,33 @@ import { Repo } from '../types';
 
 export const getGithubRepos = async () => {
   try {
-    const repoNamesFromUIProjects = projects.map((project) => project.githubLink.split('/').pop())
+    const repoNamesFromUIProjects = projects.map((project) =>
+      project.githubLink.split('/').pop()
+    );
     const repoNames = await getThisYearsPublicRepoNames();
-    const filteredRepoNames = repoNames.filter((name: string) => repoNamesFromUIProjects.includes(name))
+    const filteredRepoNames = repoNames.filter((name: string) =>
+      repoNamesFromUIProjects.includes(name)
+    );
 
-
-    const repoPRs =
-      filteredRepoNames &&
-      (await Promise.all(
+    const repoPRs = (
+      await Promise.all(
         filteredRepoNames.map(async (repoName: string) => {
           const repoPRs = await getRepoPRs(repoName, 2);
           return repoPRs;
         })
-      )).flat();
+      )
+    ).flat();
 
-    const repoCommits =
-      filteredRepoNames &&
-      (await Promise.all(
-        filteredRepoNames.map(async (repoName: string) => {
-          const repoCommits = await getRepoCommits(repoName, 2);
-          return repoCommits;
-        })
-      ));
+    const repoCommits = await Promise.all(
+      filteredRepoNames.map(async (repoName: string) => {
+        const repoCommits = await getRepoCommits(repoName, 2);
+        return repoCommits;
+      })
+    );
     return {
       error: null,
       repoPRs,
-      repoCommits: repoCommits[0],
+      repoCommits,
     };
   } catch (error) {
     console.error('Error fetching images from GitHub:', error);
@@ -58,30 +59,43 @@ const getThisYearsPublicRepoNames = async () => {
   return repoNames;
 };
 
-const getRepoPRs = async (repoName: string, numberOfRepos: number) => {
-  const response = await fetch(
-    `https://api.github.com/repos/DDVVPP/${repoName}/pulls?state=all`
-  );
-  if (!response.ok) {
-    throw new Error(`HTTP error! Status: ${response.status}`);
+const getRepoPRs = async (repoName: string, numberOfPRs: number) => {
+  try {
+    const response = await fetch(
+      `https://api.github.com/repos/DDVVPP/${repoName}/pulls?state=all`
+    );
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json();
+
+    // Find repos that are updated this year and sort them by most recent
+    const repoPRsUpdatedThisYear = data
+      .filter((repo: Repo) => {
+        const updatedAtYear = repo.updated_at.split('-')[0];
+        return updatedAtYear === '2025';
+      })
+      .sort((a: Repo, b: Repo) => b.updated_at.localeCompare(a.updated_at));
+
+    // Return the n most recent repos with the specified object properties
+    const filteredData = repoPRsUpdatedThisYear
+      .slice(0, numberOfPRs)
+      .map((repo: Repo) => {
+        return {
+          repoName,
+          state: repo.state,
+          mergedAt: repo.merged_at,
+          url: repo.url,
+          title: repo.title,
+          body: repo.body,
+        };
+      });
+
+    return filteredData;
+  } catch (error) {
+    console.error('Error fetching PRs from GitHub:', error);
+    return { error: 'An unexpected error occurred while fetching PRs' };
   }
-  const data = await response.json();
-
-  const repoPRsUpdatedThisYear = data.filter((repo: Repo) => {
-    const updatedAtYear = repo.updated_at.split('-')[0];
-    return updatedAtYear === '2025';
-  }).sort((a: Repo, b: Repo) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());;
-
-  const filteredData = repoPRsUpdatedThisYear.slice(0, 2).map((repo: Repo) => {
-    return {
-      repoName,
-      url: repo.url,
-      title: repo.title,
-      body: repo.body,
-    };
-  });
-
-  return filteredData.length > 0 && filteredData;
 };
 
 const getRepoCommits = async (repoName: string, numberOfCommits: number) => {

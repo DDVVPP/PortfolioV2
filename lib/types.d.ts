@@ -36,6 +36,8 @@ export type Project = {
 export type Repo = {
   updated_at: string;
   name: string;
+  state: 'open' | 'closed';
+  merged_at: string | null;
   title: string;
   url: string;
   html_url: string;
