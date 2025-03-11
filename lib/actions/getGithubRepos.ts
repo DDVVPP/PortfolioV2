@@ -1,5 +1,7 @@
 'use server';
 
+import { Repo } from '../types';
+
 export const getGithubRepos = async () => {
   try {
     const repoNames = await getThisYearsPublicRepoNames();
@@ -7,7 +9,7 @@ export const getGithubRepos = async () => {
     const repoPRs =
       repoNames &&
       (await Promise.all(
-        repoNames.map(async (repoName) => {
+        repoNames.map(async (repoName: string) => {
           const repoPRs = await getRepoPRs(repoName, 2);
           return repoPRs;
         })
@@ -16,7 +18,7 @@ export const getGithubRepos = async () => {
     const repoCommits =
       repoNames &&
       (await Promise.all(
-        repoNames.map(async (repoName) => {
+        repoNames.map(async (repoName: string) => {
           const repoCommits = await getRepoCommits(repoName, 2);
           return repoCommits;
         })
@@ -37,13 +39,15 @@ const getThisYearsPublicRepoNames = async () => {
     'https://api.github.com/users/DDVVPP/repos?visibility=public'
   );
   const data = await response.json();
-  const reposUpdatedThisYear = data.filter((repo) => {
+  const reposUpdatedThisYear = data.filter((repo: Repo) => {
     const updatedAtYear = repo.updated_at.split('-')[0];
     return updatedAtYear === '2025';
   });
   const repoNames = reposUpdatedThisYear
-    .filter((repo) => !['DDVVPP', 'HackForLA-Website'].includes(repo.name))
-    .map((repo) => {
+    .filter(
+      (repo: Repo) => !['DDVVPP', 'HackForLA-Website'].includes(repo.name)
+    )
+    .map((repo: Repo) => {
       return repo.name;
     });
 
@@ -51,7 +55,6 @@ const getThisYearsPublicRepoNames = async () => {
 };
 
 const getRepoPRs = async (repoName: string, numberOfRepos: number) => {
-  // console.log('repoName', repoName);
   const response = await fetch(
     `https://api.github.com/repos/DDVVPP/${repoName}/pulls?state=all`
   );
@@ -59,13 +62,13 @@ const getRepoPRs = async (repoName: string, numberOfRepos: number) => {
     throw new Error(`HTTP error! Status: ${response.status}`);
   }
   const data = await response.json();
-  // console.log('data', data);
-  const repoPRsUpdatedThisYear = data.filter((repo) => {
+
+  const repoPRsUpdatedThisYear = data.filter((repo: Repo) => {
     const updatedAtYear = repo.updated_at.split('-')[0];
     return updatedAtYear === '2025';
   });
-  // console.log('repos', repoPRsUpdatedThisYear);
-  const filteredData = repoPRsUpdatedThisYear.map((repo) => {
+
+  const filteredData = repoPRsUpdatedThisYear.map((repo: Repo) => {
     return {
       repoName,
       url: repo.url,
@@ -86,12 +89,12 @@ const getRepoCommits = async (repoName: string, numberOfCommits: number) => {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
     const data = await response.json();
-    const repoPRsUpdatedThisYear = data.filter((repo) => {
+    const repoPRsUpdatedThisYear = data.filter((repo: Repo) => {
       const updatedAtYear = repo.commit.author.date.split('-')[0];
       return updatedAtYear === '2025';
     });
 
-    const filteredData = repoPRsUpdatedThisYear.map((repo) => {
+    const filteredData = repoPRsUpdatedThisYear.map((repo: Repo) => {
       return {
         repoName,
         date: repo.commit.author.date,

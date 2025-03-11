@@ -32,3 +32,13 @@ export type Project = {
   tags: string[];
   demoCredentials?: boolean;
 };
+
+export type Repo = {
+  updated_at: string;
+  name: string;
+  title: string;
+  url: string;
+  html_url: string;
+  body: string;
+  commit: { author: { date: string }; message: string };
+};
