@@ -8,26 +8,27 @@ export const getGithubRepos = async () => {
     const repoNamesFromUIProjects = projects.map((project) =>
       project.githubLink.split('/').pop()
     );
-    const repoNames = await getThisYearsPublicRepoNames();
+    const repoNames = await getThisYearsPublicRepoNames('2025');
     const filteredRepoNames = repoNames.filter((name: string) =>
       repoNamesFromUIProjects.includes(name)
     );
 
     const repoPRs = (
       await Promise.all(
-        filteredRepoNames.map(async (repoName: string) => {
-          const repoPRs = await getRepoPRs(repoName, 2);
-          return repoPRs;
-        })
+        filteredRepoNames.map((repoName: string) =>
+          getRepoPRs(repoName, 2, '2025')
+        )
       )
     ).flat();
 
-    const repoCommits = await Promise.all(
-      filteredRepoNames.map(async (repoName: string) => {
-        const repoCommits = await getRepoCommits(repoName, 3);
-        return repoCommits;
-      })
-    );
+    const repoCommits = (
+      await Promise.all(
+        filteredRepoNames.map((repoName: string) =>
+          getRepoCommits(repoName, 3, '2025')
+        )
+      )
+    ).flat();
+
     return {
       error: null,
       repoPRs,
@@ -39,14 +40,14 @@ export const getGithubRepos = async () => {
   }
 };
 
-const getThisYearsPublicRepoNames = async () => {
+const getThisYearsPublicRepoNames = async (year: string) => {
   const response = await fetch(
     'https://api.github.com/users/DDVVPP/repos?visibility=public'
   );
   const data = await response.json();
   const reposUpdatedThisYear = data.filter((repo: Repo) => {
     const updatedAtYear = repo.updated_at.split('-')[0];
-    return updatedAtYear === '2025';
+    return updatedAtYear === year;
   });
   const repoNames = reposUpdatedThisYear
     .filter(
@@ -59,7 +60,11 @@ const getThisYearsPublicRepoNames = async () => {
   return repoNames;
 };
 
-const getRepoPRs = async (repoName: string, numberOfPRs: number) => {
+const getRepoPRs = async (
+  repoName: string,
+  numberOfPRs: number,
+  year: string
+) => {
   try {
     const response = await fetch(
       `https://api.github.com/repos/DDVVPP/${repoName}/pulls?state=all`
@@ -73,7 +78,7 @@ const getRepoPRs = async (repoName: string, numberOfPRs: number) => {
     const repoPRsUpdatedThisYear = data
       .filter((repo: Repo) => {
         const updatedAtYear = repo.updated_at.split('-')[0];
-        return updatedAtYear === '2025';
+        return updatedAtYear === year;
       })
       .sort((a: Repo, b: Repo) => b.updated_at.localeCompare(a.updated_at));
 
@@ -98,7 +103,11 @@ const getRepoPRs = async (repoName: string, numberOfPRs: number) => {
   }
 };
 
-const getRepoCommits = async (repoName: string, numberOfCommits: number) => {
+const getRepoCommits = async (
+  repoName: string,
+  numberOfCommits: number,
+  year: string
+) => {
   try {
     const response = await fetch(
       `https://api.github.com/repos/DDVVPP/${repoName}/commits`
@@ -110,7 +119,7 @@ const getRepoCommits = async (repoName: string, numberOfCommits: number) => {
     const repoCommitsUpdatedThisYear = data
       .filter((repo: Repo) => {
         const updatedAtYear = repo.commit.author.date.split('-')[0];
-        return updatedAtYear === '2025';
+        return updatedAtYear === year;
       })
       .sort((a: Repo, b: Repo) =>
         b.commit.author.date.localeCompare(a.commit.author.date)
