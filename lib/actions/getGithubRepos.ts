@@ -5,14 +5,17 @@ import { Repo } from '../types';
 
 export const getGithubRepos = async () => {
   try {
+    // Grab the last item in link array - ie.'https://github.com/DDVVPP/DevToday'
     const repoNamesFromUIProjects = projects.map((project) =>
       project.githubLink.split('/').pop()
     );
+    // Helper function to fetch specific year's repos
     const repoNames = await getThisYearsPublicRepoNames('2025');
+    // Match fetched repos to repos in project tab
     const filteredRepoNames = repoNames.filter((name: string) =>
       repoNamesFromUIProjects.includes(name)
     );
-
+    // Helper function to fetch PRs from specified repo
     const repoPRs = (
       await Promise.all(
         filteredRepoNames.map((repoName: string) =>
@@ -20,7 +23,7 @@ export const getGithubRepos = async () => {
         )
       )
     ).flat();
-
+    // Helper function to fetch commits from specified repo
     const repoCommits = (
       await Promise.all(
         filteredRepoNames.map((repoName: string) =>
