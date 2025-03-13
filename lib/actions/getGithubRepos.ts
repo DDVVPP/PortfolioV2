@@ -5,7 +5,7 @@ import { Repo } from '../types';
 
 export const getGithubRepos = async () => {
   try {
-    // Grab the last item in link array - ie.'https://github.com/DDVVPP/DevToday'
+    // Grab the last item in link array - ie.'DevToday' in 'https://github.com/DDVVPP/DevToday'
     const repoNamesFromUIProjects = projects.map((project) =>
       project.githubLink.split('/').pop()
     );
