@@ -1,9 +1,17 @@
 import Image from 'next/image';
 import Tag from './shared/Tag';
 import LinkWithIcon from './shared/LinkWithIcon';
-import { Project } from '@/lib/types';
+import { Project, RepoCommit, RepoPR } from '@/lib/types';
 
-const ProjectCard = ({ project }: { project: Project }) => {
+const ProjectCard = ({
+  project,
+  pullRequests,
+  commits,
+}: {
+  project: Project;
+  pullRequests: RepoPR[];
+  commits: RepoCommit[];
+}) => {
   return (
     <section className="group flex gap-x-9 gap-y-4 rounded-lg bg-slate-900/50 p-6 pl-3 max-md:flex-col max-md:gap-y-3">
       <div className="relative ml-4 w-80 min-w-20 content-center pt-1 max-md:mx-0  max-md:mt-1 max-md:w-full">
@@ -33,7 +41,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             <p className="mt-2">
               <em className="font-normal">
                 <a
-                  className="font-medium hover:text-red-400 hover:duration-300 group/contact-me"
+                  className="group/contact-me font-medium hover:text-red-400 hover:duration-300"
                   href="mailto:darshinvp@gmail.com"
                 >
                   <span className="project-card-contact-me">*Contact</span>{' '}
