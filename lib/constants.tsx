@@ -43,6 +43,16 @@ export const aboutMeTech = [
 
 export const softwareWorkItems = [
   {
+    date: 'Feb 2025 - Current',
+    company: 'Hack for LA',
+    description:
+      'A civic tech organization that brings together volunteers to build digital tools and services in collaboration with community partners and local government.',
+    role: 'Software Developer',
+    details: `Contributed to the Hack for LA website, by updating project profile pages and addressing prioritized GitHub issues –– Submitted PRs and participated in peer code reviews to ensure quality and consistency across the codebase –– Created GitHub issues using team templates to help expand and refine the project backlog`,
+    website: 'https://www.hackforla.org/',
+    tags: ['JavaScript', 'HTML', 'Docker'],
+  },
+  {
     date: 'Feb 2023 - May 2023',
     company: 'UStrive',
     description: 'An online career and college mentoring platform.',
