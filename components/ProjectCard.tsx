@@ -18,6 +18,7 @@ const ProjectCard = ({
   pullRequests: RepoPR[];
   commits: RepoCommit[];
 }) => {
+  console.log('pullRequests', pullRequests);
   return (
     <section className="group flex gap-x-9 gap-y-4 rounded-lg bg-slate-900/50 p-6 pl-3 max-md:flex-col max-md:gap-y-3">
       <div className="relative ml-4 w-80 min-w-20 content-center pt-1 max-md:mx-0  max-md:mt-1 max-md:w-full">
@@ -67,14 +68,36 @@ const ProjectCard = ({
           })}
         </div>
 
-        <Accordion type="single" collapsible className="my-2">
-          <AccordionItem value="item-1">
-            <AccordionTrigger>Is it accessible?</AccordionTrigger>
-            <AccordionContent>
-              Yes. It adheres to the WAI-ARIA design pattern.
-            </AccordionContent>
-          </AccordionItem>
-        </Accordion>
+        {pullRequests.length > 0 ? (
+          <Accordion
+            type="single"
+            collapsible
+            className="my-2 flex flex-col gap-y-2"
+          >
+            <AccordionItem value="pull-requests">
+              <AccordionTrigger>
+                {pullRequests.length > 1 ? 'Pull Requests' : 'Pull Request'}
+              </AccordionTrigger>
+
+              {pullRequests.map((pullRequest) => {
+                return (
+                  <AccordionContent key={pullRequest.title}>
+                    <p> {pullRequest.title}</p>
+                    <p> {pullRequest.mergedAt ? 'Merged' : 'In Progress'}</p>
+                    <p> {pullRequest.url}</p>
+                    <p> {pullRequest.body}</p>
+                  </AccordionContent>
+                );
+              })}
+            </AccordionItem>
+          </Accordion>
+        ) : (
+          <div className="rounded-md border border-slate-500/60 p-2">
+            <p className="text-sm font-light text-slate-300/70 max-sm:text-[13px] 3xl:text-base">
+              No pull requests created this year
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );
