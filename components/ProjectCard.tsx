@@ -67,7 +67,7 @@ const ProjectCard = ({
           })}
         </div>
 
-        <Accordion type="single" collapsible>
+        <Accordion type="single" collapsible className="my-2">
           <AccordionItem value="item-1">
             <AccordionTrigger>Is it accessible?</AccordionTrigger>
             <AccordionContent>
