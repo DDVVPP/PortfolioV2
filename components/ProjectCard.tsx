@@ -8,6 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import Link from 'next/link';
 
 const ProjectCard = ({
   project,
@@ -72,28 +73,39 @@ const ProjectCard = ({
           <Accordion
             type="single"
             collapsible
-            className="my-2 flex flex-col gap-y-2"
+            className="my-2 flex flex-col rounded-md bg-dark-800/65 border border-dark-800 hover:border-dark-700 hover:duration-300 p-4"
           >
             <AccordionItem value="pull-requests">
-              <AccordionTrigger>
+              <AccordionTrigger className="">
                 {pullRequests.length > 1 ? 'Pull Requests' : 'Pull Request'}
               </AccordionTrigger>
 
               {pullRequests.map((pullRequest) => {
                 return (
-                  <AccordionContent key={pullRequest.title}>
-                    <p> {pullRequest.title}</p>
-                    <p> {pullRequest.mergedAt ? 'Merged' : 'In Progress'}</p>
-                    <p> {pullRequest.url}</p>
-                    <p> {pullRequest.body}</p>
+                  <AccordionContent
+                    key={pullRequest.title}
+                    className="pb-0 py-2"
+                  >
+                    <section className="mb-1">
+                      <p className="font-normal"> {pullRequest.title}</p>
+                      <em className="">
+                        {pullRequest.mergedAt ? 'Merged' : 'In Progress'}
+                      </em>
+                    </section>
+
+                    <LinkWithIcon label="PR Link" href={pullRequest.url} />
+
+                    <section className="mt-3">
+                      <p> {pullRequest.body}</p>
+                    </section>
                   </AccordionContent>
                 );
               })}
             </AccordionItem>
           </Accordion>
         ) : (
-          <div className="rounded-md border border-slate-500/60 p-2">
-            <p className="text-sm font-light text-slate-300/70 max-sm:text-[13px] 3xl:text-base">
+          <div className="rounded-md bg-dark-800/65 border border-dark-800 p-4">
+            <p className="text-sm font-light text-slate-300 max-sm:text-[13px] 3xl:text-base">
               No pull requests created this year
             </p>
           </div>
