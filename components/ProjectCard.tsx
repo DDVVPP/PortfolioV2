@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { format as formatDate } from 'date-fns';
 
 import Tag from './shared/Tag';
 import LinkWithIcon from './shared/LinkWithIcon';
@@ -21,7 +22,6 @@ const ProjectCard = ({
   pullRequests: RepoPR[];
   commits: RepoCommit[];
 }) => {
-  console.log('commits', commits);
   return (
     <section className="group flex gap-x-9 gap-y-4 rounded-lg bg-slate-900/50 p-6 pl-3 max-md:flex-col max-md:gap-y-3">
       <div className="relative ml-4 w-80 min-w-20 content-center pt-1 max-md:mx-0  max-md:mt-1 max-md:w-full">
@@ -93,8 +93,10 @@ const ProjectCard = ({
                         {' '}
                         {pullRequest.title}
                       </p>
-                      <em className="">
-                        {pullRequest.mergedAt ? 'Merged' : 'In Progress'}
+                      <em>
+                        {pullRequest.mergedAt
+                          ? `Merged on ${formatDate(new Date(pullRequest.mergedAt), 'MMMM dd, yyyy')}`
+                          : 'In Progress'}
                       </em>
                     </section>
 
@@ -143,7 +145,9 @@ const ProjectCard = ({
                 return (
                   <AccordionContent key={commit.url} className="pb-0 py-3 px-4">
                     <section className="mb-1">
-                      <p>{commit.date}</p>
+                      <em>
+                        {formatDate(new Date(commit.date), 'MMMM dd, yyyy')}
+                      </em>
                       <p>
                         {commit.message[0].toUpperCase() +
                           commit.message.slice(1)}
