@@ -27,8 +27,11 @@
     @apply max-md:flex-row max-md:justify-between max-sm:text-sm;
   }
 
-  .textHighlight {
+  .textHighlightFontNormal {
     @apply text-red-300 font-normal;
+  }
+  .textHighlightFontSemiBold {
+    @apply text-red-300 font-semibold;
   }
 
   .project-card-contact-me {
