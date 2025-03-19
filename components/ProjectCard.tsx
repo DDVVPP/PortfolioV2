@@ -127,6 +127,42 @@ const ProjectCard = ({
             </p>
           </div>
         )}
+
+        {commits.length > 0 ? (
+          <Accordion
+            type="single"
+            collapsible
+            className="mb-2 flex flex-col rounded-md bg-dark-800/65 border border-dark-800 hover:border-dark-700 hover:duration-300 p-4"
+          >
+            <AccordionItem value="commits">
+              <AccordionTrigger>
+                {commits.length > 1 ? 'Commits' : 'Commit'}
+              </AccordionTrigger>
+
+              {commits.map((commit) => {
+                return (
+                  <AccordionContent key={commit.url} className="pb-0 py-3 px-4">
+                    <section className="mb-1">
+                      <p>{commit.date}</p>
+                      <p>
+                        {commit.message[0].toUpperCase() +
+                          commit.message.slice(1)}
+                      </p>
+                    </section>
+
+                    <LinkWithIcon label="Commit Link" href={commit.url} />
+                  </AccordionContent>
+                );
+              })}
+            </AccordionItem>
+          </Accordion>
+        ) : (
+          <div className="rounded-md bg-dark-800/65 border border-dark-800 p-4">
+            <p className="text-sm font-light text-slate-300 max-sm:text-[13px] 3xl:text-base">
+              No commits created this year
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );
