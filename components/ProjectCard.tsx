@@ -1,4 +1,7 @@
 import Image from 'next/image';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+
 import Tag from './shared/Tag';
 import LinkWithIcon from './shared/LinkWithIcon';
 import { Project, RepoCommit, RepoPR } from '@/lib/types';
@@ -18,7 +21,7 @@ const ProjectCard = ({
   pullRequests: RepoPR[];
   commits: RepoCommit[];
 }) => {
-  console.log('pullRequests', pullRequests);
+  console.log('commits', commits);
   return (
     <section className="group flex gap-x-9 gap-y-4 rounded-lg bg-slate-900/50 p-6 pl-3 max-md:flex-col max-md:gap-y-3">
       <div className="relative ml-4 w-80 min-w-20 content-center pt-1 max-md:mx-0  max-md:mt-1 max-md:w-full">
@@ -72,10 +75,10 @@ const ProjectCard = ({
           <Accordion
             type="single"
             collapsible
-            className="my-2 flex flex-col rounded-md bg-dark-800/65 border border-dark-800 hover:border-dark-700 hover:duration-300 p-4"
+            className="mt-2 flex flex-col rounded-md bg-dark-800/65 border border-dark-800 hover:border-dark-700 hover:duration-300 p-4"
           >
             <AccordionItem value="pull-requests">
-              <AccordionTrigger className="">
+              <AccordionTrigger>
                 {pullRequests.length > 1 ? 'Pull Requests' : 'Pull Request'}
               </AccordionTrigger>
 
@@ -83,10 +86,13 @@ const ProjectCard = ({
                 return (
                   <AccordionContent
                     key={pullRequest.title}
-                    className="pb-0 py-2"
+                    className="pb-0 py-3 px-4"
                   >
                     <section className="mb-1">
-                      <p className="font-normal"> {pullRequest.title}</p>
+                      <p className="textHighlightFontSemiBold">
+                        {' '}
+                        {pullRequest.title}
+                      </p>
                       <em className="">
                         {pullRequest.mergedAt ? 'Merged' : 'In Progress'}
                       </em>
@@ -94,8 +100,20 @@ const ProjectCard = ({
 
                     <LinkWithIcon label="PR Link" href={pullRequest.url} />
 
-                    <section className="mt-3">
-                      <p> {pullRequest.body}</p>
+                    <section className="mt-1">
+                      <ReactMarkdown
+                        remarkPlugins={[remarkGfm]}
+                        components={{
+                          h3: ({ node, ...props }) => (
+                            <h3 className="font-semibold mt-1" {...props} />
+                          ),
+                          ul: ({ node, ...props }) => (
+                            <ul className="list-disc ml-5 mt-0" {...props} />
+                          ),
+                        }}
+                      >
+                        {pullRequest.body}
+                      </ReactMarkdown>
                     </section>
                   </AccordionContent>
                 );
