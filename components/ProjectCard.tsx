@@ -79,7 +79,9 @@ const ProjectCard = ({
           >
             <AccordionItem value="pull-requests">
               <AccordionTrigger>
-                {pullRequests.length > 1 ? 'Pull Requests' : 'Pull Request'}
+                {pullRequests.length > 1
+                  ? 'Recent GitHub Pull Requests'
+                  : 'Recent GitHub Pull Request'}
               </AccordionTrigger>
 
               {pullRequests.map((pullRequest) => {
@@ -138,7 +140,9 @@ const ProjectCard = ({
           >
             <AccordionItem value="commits">
               <AccordionTrigger>
-                {commits.length > 1 ? 'Commits' : 'Commit'}
+                {commits.length > 1
+                  ? 'Recent GitHub Commits'
+                  : 'Recent GitHub Commit'}
               </AccordionTrigger>
 
               {commits.map((commit) => {
