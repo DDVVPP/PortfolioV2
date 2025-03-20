@@ -10,8 +10,8 @@ const Projects = ({
   repoPRs,
   repoCommits,
 }: {
-  repoPRs: RepoPR[];
-  repoCommits: RepoCommit[];
+  repoPRs?: RepoPR[];
+  repoCommits?: RepoCommit[];
 }) => {
   return (
     <motion.section
@@ -22,19 +22,23 @@ const Projects = ({
     >
       {projects.map((project) => {
         const repoName = project.githubLink.split('/').pop();
-        const pullRequests = repoPRs.filter(
-          (pullRequest: RepoPR) => pullRequest.repoName === repoName
-        );
-        const commits = repoCommits.filter(
-          (commit: RepoCommit) => commit.repoName === repoName
-        );
+        const pullRequests =
+          repoPRs &&
+          repoPRs.filter(
+            (pullRequest: RepoPR) => pullRequest.repoName === repoName
+          );
+        const commits =
+          repoCommits &&
+          repoCommits.filter(
+            (commit: RepoCommit) => commit.repoName === repoName
+          );
 
         return (
           <ProjectCard
             project={project}
             key={project.altText}
-            pullRequests={pullRequests}
-            commits={commits}
+            pullRequests={pullRequests ?? []}
+            commits={commits ?? []}
           />
         );
       })}
