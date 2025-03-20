@@ -89,7 +89,7 @@ const getRepoPRs = async (
           repoName,
           state: repo.state,
           mergedAt: repo.merged_at,
-          url: repo.url,
+          url: repo.html_url,
           title: repo.title,
           body: repo.body,
         };
