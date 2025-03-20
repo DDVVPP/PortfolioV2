@@ -27,7 +27,7 @@ const ProjectCard = ({
   };
 
   return (
-    <section className="group flex gap-x-9 gap-y-4 rounded-lg bg-slate-900/50 p-6 pl-3 max-md:flex-col max-md:gap-y-3">
+    <section className="group flex gap-x-9 gap-y-4 rounded-lg bg-slate-900/50 p-6 pl-3 max-md:p-6 max-md:flex-col max-md:gap-y-3">
       <div className="relative ml-4 w-80 min-w-20 content-center pt-1 max-md:mx-0  max-md:mt-1 max-md:w-full">
         <Image
           alt={project.altText}

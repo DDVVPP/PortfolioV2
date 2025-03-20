@@ -20,7 +20,7 @@ const PullRequestsAccordion = ({
     <Accordion
       type="single"
       collapsible
-      className="mt-2 flex flex-col rounded-md bg-dark-800/65 border border-dark-800 hover:border-dark-700 hover:duration-300 p-4"
+      className="mt-2 flex flex-col rounded-md bg-dark-800/65 border border-dark-700 hover:border-dark-700 hover:duration-300 p-4 max-md:p-3"
     >
       <AccordionItem value="pull-requests">
         <AccordionTrigger>
@@ -33,14 +33,14 @@ const PullRequestsAccordion = ({
           return (
             <AccordionContent
               key={pullRequest.title}
-              className="pb-0 py-3 px-4"
+              className="pb-0 py-3 px-4 max-md:px-3"
             >
               <section className="mb-1">
-                <p className="textHighlightFontSemiBold">
+                <p className="textHighlightFontSemiBold max-sm:text-[13px]">
                   {' '}
                   {pullRequest.title}
                 </p>
-                <em>
+                <em className="max-sm:text-[13px]">
                   {pullRequest.mergedAt
                     ? `Merged on ${formatDate(new Date(pullRequest.mergedAt), 'MMMM dd, yyyy')}`
                     : 'In Progress'}
@@ -49,7 +49,7 @@ const PullRequestsAccordion = ({
 
               <LinkWithIcon label="PR Link" href={pullRequest.url} />
 
-              <section className="mt-1">
+              <section className="mt-1 max-sm:text-[13px]">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   components={{

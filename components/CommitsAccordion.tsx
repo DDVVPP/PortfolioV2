@@ -14,7 +14,7 @@ const CommitsAccordion = ({ commits }: { commits: RepoCommit[] }) => {
     <Accordion
       type="single"
       collapsible
-      className="mb-2 flex flex-col rounded-md bg-dark-800/65 border border-dark-800 hover:border-dark-700 hover:duration-300 p-4"
+      className="mb-2 flex flex-col rounded-md bg-dark-800/65 border border-dark-700 hover:border-dark-700 hover:duration-300 p-4 max-md:p-3"
     >
       <AccordionItem value="commits">
         <AccordionTrigger>
@@ -23,7 +23,7 @@ const CommitsAccordion = ({ commits }: { commits: RepoCommit[] }) => {
             : 'Recent GitHub Commit'}
         </AccordionTrigger>
         <AccordionContent>
-          <em className="text-sm font-extralight text-slate-300">
+          <em className="text-sm font-extralight text-slate-300 max-sm:text-[13px]">
             *Note: The commits listed here are from the main branch. Commits
             tied to open pull requests will appear after merging.
           </em>
@@ -31,8 +31,11 @@ const CommitsAccordion = ({ commits }: { commits: RepoCommit[] }) => {
 
         {commits.map((commit) => {
           return (
-            <AccordionContent key={commit.url} className="pb-0 py-3 px-4">
-              <section className="mb-1">
+            <AccordionContent
+              key={commit.url}
+              className="pb-0 py-3 px-4 max-md:px-3"
+            >
+              <section className="mb-1 max-sm:text-[13px]">
                 <em>{formatDate(new Date(commit.date), 'MMMM dd, yyyy')}</em>
                 <p>
                   {commit.message[0].toUpperCase() + commit.message.slice(1)}
