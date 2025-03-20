@@ -17,11 +17,7 @@ const PullRequestsAccordion = ({
   pullRequests: RepoPR[];
 }) => {
   return (
-    <Accordion
-      type="single"
-      collapsible
-      className="mt-2 flex flex-col rounded-md bg-dark-800/65 border border-dark-700 hover:border-dark-700 hover:duration-300 p-4 max-md:p-3"
-    >
+    <Accordion type="single" collapsible className="accordion-custom">
       <AccordionItem value="pull-requests">
         <AccordionTrigger>
           {pullRequests.length > 1
@@ -33,7 +29,7 @@ const PullRequestsAccordion = ({
           return (
             <AccordionContent
               key={pullRequest.title}
-              className="pb-0 py-3 px-4 max-md:px-3"
+              className="accordion-content-custom"
             >
               <section className="mb-1">
                 <p className="textHighlightFontSemiBold max-sm:text-[13px]">

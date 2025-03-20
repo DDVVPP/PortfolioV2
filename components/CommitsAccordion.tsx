@@ -11,11 +11,7 @@ import LinkWithIcon from './shared/LinkWithIcon';
 
 const CommitsAccordion = ({ commits }: { commits: RepoCommit[] }) => {
   return (
-    <Accordion
-      type="single"
-      collapsible
-      className="mb-2 flex flex-col rounded-md bg-dark-800/65 border border-dark-700 hover:border-dark-700 hover:duration-300 p-4 max-md:p-3"
-    >
+    <Accordion type="single" collapsible className="accordion-custom">
       <AccordionItem value="commits">
         <AccordionTrigger>
           {commits.length > 1
@@ -33,7 +29,7 @@ const CommitsAccordion = ({ commits }: { commits: RepoCommit[] }) => {
           return (
             <AccordionContent
               key={commit.url}
-              className="pb-0 py-3 px-4 max-md:px-3"
+              className="accordion-content-custom"
             >
               <section className="mb-1 max-sm:text-[13px]">
                 <em>{formatDate(new Date(commit.date), 'MMMM dd, yyyy')}</em>
