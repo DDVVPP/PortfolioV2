@@ -69,7 +69,7 @@ const ProjectCard = ({
           )}
         </p>
 
-        <div className="flex flex-wrap gap-x-3 gap-y-2 max-md:justify-center">
+        <div className="flex flex-wrap gap-x-3 gap-y-2 max-md:justify-center mb-2">
           {project.tags.map((tag) => {
             return <Tag key={tag} text={tag} />;
           })}
