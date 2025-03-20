@@ -1,17 +1,18 @@
 import Image from 'next/image';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+
 import { format as formatDate } from 'date-fns';
 
 import Tag from './shared/Tag';
 import LinkWithIcon from './shared/LinkWithIcon';
 import { Project, RepoCommit, RepoPR } from '@/lib/types';
+
+import PullRequestsAccordion from './PullRequestsAccordion';
+import CommitsAccordion from './CommitsAccordion';
 import {
   Accordion,
-  AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from '@/components/ui/accordion';
+} from '@radix-ui/react-accordion';
 
 const ProjectCard = ({
   project,
@@ -72,58 +73,7 @@ const ProjectCard = ({
         </div>
 
         {pullRequests.length > 0 ? (
-          <Accordion
-            type="single"
-            collapsible
-            className="mt-2 flex flex-col rounded-md bg-dark-800/65 border border-dark-800 hover:border-dark-700 hover:duration-300 p-4"
-          >
-            <AccordionItem value="pull-requests">
-              <AccordionTrigger>
-                {pullRequests.length > 1
-                  ? 'Recent GitHub Pull Requests'
-                  : 'Recent GitHub Pull Request'}
-              </AccordionTrigger>
-
-              {pullRequests.map((pullRequest) => {
-                return (
-                  <AccordionContent
-                    key={pullRequest.title}
-                    className="pb-0 py-3 px-4"
-                  >
-                    <section className="mb-1">
-                      <p className="textHighlightFontSemiBold">
-                        {' '}
-                        {pullRequest.title}
-                      </p>
-                      <em>
-                        {pullRequest.mergedAt
-                          ? `Merged on ${formatDate(new Date(pullRequest.mergedAt), 'MMMM dd, yyyy')}`
-                          : 'In Progress'}
-                      </em>
-                    </section>
-
-                    <LinkWithIcon label="PR Link" href={pullRequest.url} />
-
-                    <section className="mt-1">
-                      <ReactMarkdown
-                        remarkPlugins={[remarkGfm]}
-                        components={{
-                          h3: ({ node, ...props }) => (
-                            <h3 className="font-semibold mt-1" {...props} />
-                          ),
-                          ul: ({ node, ...props }) => (
-                            <ul className="list-disc ml-5 mt-0" {...props} />
-                          ),
-                        }}
-                      >
-                        {pullRequest.body}
-                      </ReactMarkdown>
-                    </section>
-                  </AccordionContent>
-                );
-              })}
-            </AccordionItem>
-          </Accordion>
+          <PullRequestsAccordion pullRequests={pullRequests} />
         ) : (
           <div className="rounded-md bg-dark-800/65 border border-dark-800 p-4">
             <p className="text-sm font-light text-slate-300 max-sm:text-[13px] 3xl:text-base">
@@ -133,43 +83,7 @@ const ProjectCard = ({
         )}
 
         {commits.length > 0 ? (
-          <Accordion
-            type="single"
-            collapsible
-            className="mb-2 flex flex-col rounded-md bg-dark-800/65 border border-dark-800 hover:border-dark-700 hover:duration-300 p-4"
-          >
-            <AccordionItem value="commits">
-              <AccordionTrigger>
-                {commits.length > 1
-                  ? 'Recent GitHub Commits'
-                  : 'Recent GitHub Commit'}
-              </AccordionTrigger>
-              <AccordionContent>
-                <em className="text-sm font-extralight text-slate-300">
-                  *Note: The commits listed here are from the main branch.
-                  Commits tied to open pull requests will appear after merging.
-                </em>
-              </AccordionContent>
-
-              {commits.map((commit) => {
-                return (
-                  <AccordionContent key={commit.url} className="pb-0 py-3 px-4">
-                    <section className="mb-1">
-                      <em>
-                        {formatDate(new Date(commit.date), 'MMMM dd, yyyy')}
-                      </em>
-                      <p>
-                        {commit.message[0].toUpperCase() +
-                          commit.message.slice(1)}
-                      </p>
-                    </section>
-
-                    <LinkWithIcon label="Commit Link" href={commit.url} />
-                  </AccordionContent>
-                );
-              })}
-            </AccordionItem>
-          </Accordion>
+          <CommitsAccordion commits={commits} />
         ) : (
           <div className="rounded-md bg-dark-800/65 border border-dark-800 p-4">
             <p className="text-sm font-light text-slate-300 max-sm:text-[13px] 3xl:text-base">
