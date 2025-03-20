@@ -46,7 +46,10 @@ export const getGithubPRsAndCommits = async () => {
 const getThisYearsPublicRepoNames = async (year: string) => {
   try {
     const response = await fetch(
-      'https://api.github.com/users/DDVVPP/repos?visibility=public'
+      'https://api.github.com/users/DDVVPP/repos?visibility=public',
+      {
+        next: { revalidate: 86400 }, // once a day
+      }
     );
     const data = await response.json();
 
@@ -69,7 +72,10 @@ const getRepoPRs = async (
 ) => {
   try {
     const response = await fetch(
-      `https://api.github.com/repos/DDVVPP/${repoName}/pulls?state=all`
+      `https://api.github.com/repos/DDVVPP/${repoName}/pulls?state=all`,
+      {
+        next: { revalidate: 86400 }, // once a day
+      }
     );
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -109,7 +115,10 @@ const getRepoCommits = async (
 ) => {
   try {
     const response = await fetch(
-      `https://api.github.com/repos/DDVVPP/${repoName}/commits`
+      `https://api.github.com/repos/DDVVPP/${repoName}/commits`,
+      {
+        next: { revalidate: 86400 }, // once a day
+      }
     );
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
