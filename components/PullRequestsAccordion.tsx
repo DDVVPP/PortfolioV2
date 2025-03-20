@@ -32,7 +32,7 @@ const PullRequestsAccordion = ({
               className="accordion-content-custom"
             >
               <section className="mb-1">
-                <p className="textHighlightFontSemiBold max-sm:text-[13px]">
+                <p className="text-highlight-font-semibold max-sm:text-[13px]">
                   {' '}
                   {pullRequest.title}
                 </p>

@@ -25,19 +25,19 @@ const About = () => {
       <div className="mt-7 w-4/5 justify-center max-md:w-full max-md:text-sm xl:mt-10 xl:w-3/4">
         <p className="text-center font-light text-slate-300">
           Hi! I am an Architectural Designer turned{' '}
-          <span className="textHighlightFontNormal">Software Developer</span>{' '}
+          <span className="text-highlight-font-normal">Software Developer</span>{' '}
           based in Los Angeles, California. I have experience building
           applications in{' '}
-          <span className="textHighlightFontNormal">
+          <span className="text-highlight-font-normal">
             Javascript, Typescript, React.js, Next.js, PostgreSQL,
           </span>{' '}
-          and <span className="textHighlightFontNormal">Node.js.</span> I’m
+          and <span className="text-highlight-font-normal">Node.js.</span> I’m
           currently refining my personal projects and deepening my knowledge of
           backend functionality, patterns, and best practices.
           <br />
           <br />
           My previous career in{' '}
-          <span className="textHighlightFontNormal">architecture</span> has
+          <span className="text-highlight-font-normal">architecture</span> has
           provided me with valuable skills in iterative design, team
           collaboration and coordination, and problem-solving. Architecture
           projects often involve tight deadlines, budget constraints, and
@@ -47,12 +47,12 @@ const About = () => {
           effectively.
           <br />
           <br />I am passionate about writing{' '}
-          <span className="textHighlightFontNormal">clean code</span> and have a
-          natural inclination towards visual design and attention to details. I
-          especially enjoy the immediate visual feedback that{' '}
-          <span className="textHighlightFontNormal">frontend</span> development
-          provides. I also value having read/write access to the{' '}
-          <span className="textHighlightFontNormal">backend</span> which
+          <span className="text-highlight-font-normal">clean code</span> and
+          have a natural inclination towards visual design and attention to
+          details. I especially enjoy the immediate visual feedback that{' '}
+          <span className="text-highlight-font-normal">frontend</span>{' '}
+          development provides. I also value having read/write access to the{' '}
+          <span className="text-highlight-font-normal">backend</span> which
           provides a holistic view of the app, and allows for more efficient
           debugging and consistency within the codebase. <br />
           <br />
