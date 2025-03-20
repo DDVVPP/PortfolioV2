@@ -1,18 +1,11 @@
 import Image from 'next/image';
 
-import { format as formatDate } from 'date-fns';
-
 import Tag from './shared/Tag';
 import LinkWithIcon from './shared/LinkWithIcon';
 import { Project, RepoCommit, RepoPR } from '@/lib/types';
 
 import PullRequestsAccordion from './PullRequestsAccordion';
 import CommitsAccordion from './CommitsAccordion';
-import {
-  Accordion,
-  AccordionItem,
-  AccordionTrigger,
-} from '@radix-ui/react-accordion';
 
 const ProjectCard = ({
   project,
