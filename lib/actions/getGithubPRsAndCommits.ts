@@ -1,7 +1,7 @@
 'use server';
 
 import { projects } from '../constants';
-import { Repo } from '../types';
+import { Repo, RepoCommit, RepoPR } from '../types';
 
 export const getGithubPRsAndCommits = async () => {
   try {
@@ -16,7 +16,7 @@ export const getGithubPRsAndCommits = async () => {
       repoNamesFromUIProjects.includes(name)
     );
     // Helper function to fetch PRs from specified repo
-    const repoPRs = (
+    const repoPRs: RepoPR[] = (
       await Promise.all(
         filteredRepoNames.map((repoName: string) =>
           getRepoPRs(repoName, 2, '2025')
@@ -24,7 +24,7 @@ export const getGithubPRsAndCommits = async () => {
       )
     ).flat();
     // Helper function to fetch commits from specified repo
-    const repoCommits = (
+    const repoCommits: RepoCommit[] = (
       await Promise.all(
         filteredRepoNames.map((repoName: string) =>
           getRepoCommits(repoName, 3, '2025')
@@ -89,7 +89,7 @@ const getRepoPRs = async (
           repoName,
           state: repo.state,
           mergedAt: repo.merged_at,
-          url: repo.url,
+          url: repo.html_url,
           title: repo.title,
           body: repo.body,
         };

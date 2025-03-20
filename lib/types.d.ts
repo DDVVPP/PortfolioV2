@@ -44,3 +44,19 @@ export type Repo = {
   body: string;
   commit: { author: { date: string }; message: string };
 };
+
+export type RepoPR = {
+  repoName: string;
+  state: 'open' | 'closed';
+  mergedAt: string | null;
+  url: string;
+  title: string;
+  body: string;
+};
+
+export type RepoCommit = {
+  repoName: string;
+  date: string;
+  message: string;
+  url: string;
+};

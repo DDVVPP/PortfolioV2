@@ -217,14 +217,19 @@ export const projects = [
         A content creation platform tailored for developers featuring posts,
         podcasts, groups, and event feeds. The app encourages engagement through
         likes, follows, and comments. Additional features include{' '}
-        <span className="textHighlight">authentication</span>, onboarding,{' '}
-        <span className="textHighlight">
+        <span className="text-highlight-font-normal">authentication</span>,
+        onboarding,{' '}
+        <span className="text-highlight-font-normal">
           cmdK search, notifications, 3rd party API integrations
         </span>
         , profile and content management using{' '}
-        <span className="textHighlight">CRUD</span> operations,{' '}
-        <span className="textHighlight">light and dark modes</span>, and{' '}
-        <span className="textHighlight">mobile responsiveness</span>.
+        <span className="text-highlight-font-normal">CRUD</span> operations,{' '}
+        <span className="text-highlight-font-normal">light and dark modes</span>
+        , and{' '}
+        <span className="text-highlight-font-normal">
+          mobile responsiveness
+        </span>
+        .
       </p>
     ),
     coverImage: DevTodayLaptopMobile,
@@ -251,11 +256,17 @@ export const projects = [
     description: (
       <p>
         A knowledge and progress tracker for developers featuring{' '}
-        <span className="textHighlight">authentication</span>, onboarding,{' '}
-        <span className="textHighlight">cmdK search and filtering</span>, post
-        and profile management using <span className="textHighlight">CRUD</span>{' '}
-        operations, and{' '}
-        <span className="textHighlight">mobile responsiveness</span>.
+        <span className="text-highlight-font-normal">authentication</span>,
+        onboarding,{' '}
+        <span className="text-highlight-font-normal">
+          cmdK search and filtering
+        </span>
+        , post and profile management using{' '}
+        <span className="text-highlight-font-normal">CRUD</span> operations, and{' '}
+        <span className="text-highlight-font-normal">
+          mobile responsiveness
+        </span>
+        .
       </p>
     ),
     coverImage: GitNoteLaptopMobile,
@@ -283,8 +294,14 @@ export const projects = [
         This website, which you are currently exploring, is designed and built
         by me to showcase my professional experience, software engineering
         projects, art work, and personal background, featuring{' '}
-        <span className="textHighlight">3rd party API integration</span> and{' '}
-        <span className="textHighlight">mobile responsiveness</span>.
+        <span className="text-highlight-font-normal">
+          3rd party API integration
+        </span>{' '}
+        and{' '}
+        <span className="text-highlight-font-normal">
+          mobile responsiveness
+        </span>
+        .
       </p>
     ),
     coverImage: MyPortfolioLaptopMobile,

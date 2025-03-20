@@ -1,11 +1,33 @@
 import Image from 'next/image';
+
 import Tag from './shared/Tag';
 import LinkWithIcon from './shared/LinkWithIcon';
-import { Project } from '@/lib/types';
+import { Project, RepoCommit, RepoPR } from '@/lib/types';
 
-const ProjectCard = ({ project }: { project: Project }) => {
+import PullRequestsAccordion from './PullRequestsAccordion';
+import CommitsAccordion from './CommitsAccordion';
+
+const ProjectCard = ({
+  project,
+  pullRequests,
+  commits,
+}: {
+  project: Project;
+  pullRequests: RepoPR[];
+  commits: RepoCommit[];
+}) => {
+  const renderNoCommitsOrNoPRsDiv = (type: string) => {
+    return (
+      <div className="rounded-md bg-dark-800/65 border border-dark-800 p-4">
+        <p className="text-sm font-light text-slate-300 max-sm:text-[13px] 3xl:text-base">
+          No {type} created this year
+        </p>
+      </div>
+    );
+  };
+
   return (
-    <section className="group flex gap-x-9 gap-y-4 rounded-lg bg-slate-900/50 p-6 pl-3 max-md:flex-col max-md:gap-y-3">
+    <section className="group flex gap-x-9 gap-y-4 rounded-lg bg-slate-900/50 p-6 pl-3 max-md:p-6 max-md:flex-col max-md:gap-y-3">
       <div className="relative ml-4 w-80 min-w-20 content-center pt-1 max-md:mx-0  max-md:mt-1 max-md:w-full">
         <Image
           alt={project.altText}
@@ -33,7 +55,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
             <p className="mt-2">
               <em className="font-normal">
                 <a
-                  className="font-medium hover:text-red-400 hover:duration-300 group/contact-me"
+                  className="group/contact-me font-medium hover:text-red-400 hover:duration-300"
                   href="mailto:darshinvp@gmail.com"
                 >
                   <span className="project-card-contact-me">*Contact</span>{' '}
@@ -47,11 +69,23 @@ const ProjectCard = ({ project }: { project: Project }) => {
           )}
         </p>
 
-        <div className="flex flex-wrap gap-x-3 gap-y-2 max-md:justify-center">
+        <div className="flex flex-wrap gap-x-3 gap-y-2 max-md:justify-center mb-2">
           {project.tags.map((tag) => {
             return <Tag key={tag} text={tag} />;
           })}
         </div>
+
+        {pullRequests.length > 0 ? (
+          <PullRequestsAccordion pullRequests={pullRequests} />
+        ) : (
+          renderNoCommitsOrNoPRsDiv('pull requests')
+        )}
+
+        {commits.length > 0 ? (
+          <CommitsAccordion commits={commits} />
+        ) : (
+          renderNoCommitsOrNoPRsDiv('commits')
+        )}
       </div>
     </section>
   );
