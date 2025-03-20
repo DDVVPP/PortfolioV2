@@ -144,6 +144,12 @@ const ProjectCard = ({
                   ? 'Recent GitHub Commits'
                   : 'Recent GitHub Commit'}
               </AccordionTrigger>
+              <AccordionContent>
+                <em className="text-sm font-extralight text-slate-300">
+                  *Note: The commits listed here are from the main branch.
+                  Commits tied to open pull requests will appear after merging.
+                </em>
+              </AccordionContent>
 
               {commits.map((commit) => {
                 return (
