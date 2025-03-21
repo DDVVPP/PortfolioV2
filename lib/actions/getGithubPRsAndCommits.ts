@@ -15,22 +15,22 @@ export const getGithubPRsAndCommits = async () => {
     const filteredRepoNames = repoNames.filter((name: string) =>
       repoNamesFromUIProjects.includes(name)
     );
-    // Helper function to fetch PRs from specified repo
-    const repoPRs: RepoPR[] = (
-      await Promise.all(
+
+    // Helper functions to fetch PRs and commits from specified repo in parallel
+    const [repoPRsFetch, repoCommitsFetch] = await Promise.all([
+      Promise.all(
         filteredRepoNames.map((repoName: string) =>
           getRepoPRs(repoName, 2, '2025')
         )
-      )
-    ).flat();
-    // Helper function to fetch commits from specified repo
-    const repoCommits: RepoCommit[] = (
-      await Promise.all(
+      ),
+      Promise.all(
         filteredRepoNames.map((repoName: string) =>
           getRepoCommits(repoName, 3, '2025')
         )
-      )
-    ).flat();
+      ),
+    ]);
+    const repoPRs: RepoPR[] = repoPRsFetch.flat();
+    const repoCommits: RepoCommit[] = repoCommitsFetch.flat();
 
     return {
       error: null,
@@ -51,6 +51,9 @@ const getThisYearsPublicRepoNames = async (year: string) => {
         next: { revalidate: 86400 }, // once a day
       }
     );
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
     const data = await response.json();
 
     // Return the name of repos that were updated this year
