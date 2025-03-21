@@ -3,7 +3,7 @@
 import { projects } from '../constants';
 import { Repo, RepoCommit, RepoPR } from '../types';
 
-export const getGithubPRsAndCommits = async () => {
+export const getGitHubPRsAndCommits = async () => {
   try {
     // Grab the last item in link array - ie.'DevToday' in 'https://github.com/DDVVPP/DevToday'
     const repoNamesFromUIProjects = projects.map((project) =>
