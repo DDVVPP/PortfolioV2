@@ -25,7 +25,7 @@ export const getGitHubPRsAndCommits = async () => {
       ),
       Promise.all(
         filteredRepoNames.map((repoName: string) =>
-          getRepoCommits(repoName, 3, '2025')
+          getRepoCommits(repoName, 4, '2025')
         )
       ),
     ]);
