@@ -3,7 +3,7 @@
 import { projects } from '../constants';
 import { Repo, RepoCommit, RepoPR } from '../types';
 
-export const getGithubPRsAndCommits = async () => {
+export const getGitHubPRsAndCommits = async () => {
   try {
     // Grab the last item in link array - ie.'DevToday' in 'https://github.com/DDVVPP/DevToday'
     const repoNamesFromUIProjects = projects.map((project) =>
@@ -15,22 +15,22 @@ export const getGithubPRsAndCommits = async () => {
     const filteredRepoNames = repoNames.filter((name: string) =>
       repoNamesFromUIProjects.includes(name)
     );
-    // Helper function to fetch PRs from specified repo
-    const repoPRs: RepoPR[] = (
-      await Promise.all(
+
+    // Helper functions to fetch PRs and commits from specified repo in parallel
+    const [repoPRsFetch, repoCommitsFetch] = await Promise.all([
+      Promise.all(
         filteredRepoNames.map((repoName: string) =>
           getRepoPRs(repoName, 2, '2025')
         )
-      )
-    ).flat();
-    // Helper function to fetch commits from specified repo
-    const repoCommits: RepoCommit[] = (
-      await Promise.all(
+      ),
+      Promise.all(
         filteredRepoNames.map((repoName: string) =>
-          getRepoCommits(repoName, 3, '2025')
+          getRepoCommits(repoName, 4, '2025')
         )
-      )
-    ).flat();
+      ),
+    ]);
+    const repoPRs: RepoPR[] = repoPRsFetch.flat();
+    const repoCommits: RepoCommit[] = repoCommitsFetch.flat();
 
     return {
       error: null,
@@ -46,8 +46,14 @@ export const getGithubPRsAndCommits = async () => {
 const getThisYearsPublicRepoNames = async (year: string) => {
   try {
     const response = await fetch(
-      'https://api.github.com/users/DDVVPP/repos?visibility=public'
+      'https://api.github.com/users/DDVVPP/repos?visibility=public',
+      {
+        next: { revalidate: 86400 }, // once a day
+      }
     );
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
     const data = await response.json();
 
     // Return the name of repos that were updated this year
@@ -69,7 +75,10 @@ const getRepoPRs = async (
 ) => {
   try {
     const response = await fetch(
-      `https://api.github.com/repos/DDVVPP/${repoName}/pulls?state=all`
+      `https://api.github.com/repos/DDVVPP/${repoName}/pulls?state=all`,
+      {
+        next: { revalidate: 86400 }, // once a day
+      }
     );
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -109,7 +118,10 @@ const getRepoCommits = async (
 ) => {
   try {
     const response = await fetch(
-      `https://api.github.com/repos/DDVVPP/${repoName}/commits`
+      `https://api.github.com/repos/DDVVPP/${repoName}/commits`,
+      {
+        next: { revalidate: 86400 }, // once a day
+      }
     );
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
