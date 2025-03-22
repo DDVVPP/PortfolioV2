@@ -38,8 +38,8 @@ export const getGitHubPRsAndCommits = async () => {
       repoCommits,
     };
   } catch (error) {
-    console.error('Error fetching images from GitHub:', error);
-    return { error: 'An unexpected error occurred while fetching repos' };
+    console.error('Error fetching from GitHub:', error);
+    return { error: 'An unexpected error occurred while fetching from GitHub' };
   }
 };
 

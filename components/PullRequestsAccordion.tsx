@@ -50,10 +50,10 @@ const PullRequestsAccordion = ({
                   remarkPlugins={[remarkGfm]}
                   components={{
                     h3: ({ node, ...props }) => (
-                      <h3 className="font-semibold mt-1" {...props} />
+                      <h3 className="mt-1 font-semibold" {...props} />
                     ),
                     ul: ({ node, ...props }) => (
-                      <ul className="list-disc ml-5 mt-0" {...props} />
+                      <ul className="ml-5 mt-0 list-disc" {...props} />
                     ),
                   }}
                 >
