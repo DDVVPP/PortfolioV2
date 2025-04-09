@@ -346,6 +346,7 @@ export const artImageOrder = [
   "flowers-for-mother's-day",
   'bleeding-blues',
   'heart-splatters',
+  'a-slice-of-vibrance',
   'sketch-from-memory-unnerved',
   'sketch-from-memory-burst',
   'sketch-from-memory-nighttime-moonscape',
