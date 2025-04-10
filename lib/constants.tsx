@@ -48,7 +48,7 @@ export const softwareWorkItems = [
     description:
       'A civic tech organization that brings together volunteers to build digital tools and services in collaboration with community partners and local government.',
     role: 'Software Developer',
-    details: `Contributed to the Hack for LA website, by updating project profile pages and addressing prioritized GitHub issues –– Submitted PRs and participated in peer code reviews to ensure quality and consistency across the codebase –– Created GitHub issues using team templates to help expand and refine the project backlog`,
+    details: `Contributed to Hack for LA's static website using GitHub Pages and Jekyll, with Markdown-based data and a JavaScript frontend –– Updated project profile pages and addressed prioritized GitHub issues –– Submitted PRs and participated in peer code reviews to ensure quality and consistency across the codebase –– Created GitHub issues using team templates to help expand and refine the project backlog`,
     website: 'https://www.hackforla.org/',
     tags: ['JavaScript', 'HTML', 'Docker'],
   },
@@ -76,7 +76,7 @@ export const softwareWorkItems = [
       'An Environmental, Health, and Safety compliance SaaS platform and an early stage startup.',
     role: 'Full-stack / Front-end Developer',
     details:
-      'Developed the existing dashboard’s form stencils, form submissions, and custom forms, using SQL queries and React class methods –– Migrated the FE stack from Javascript, Backbone, React Redux, and Sass to Typescript, React, React Query, Styled Components, and MaterialUI with feature flag functionality and Figma designs –– Implemented a new user flow on the main dashboard by organizing content into subpages, ensuring seamless functionality and integration with the existing site –– Implemented Jest unit tests on the FE and Mocha unit tests on the BE to ensure code qualityImplemented Jest unit tests on the FE and Mocha unit tests on the BE to ensure code quality',
+      'Developed the existing dashboard’s form stencils, form submissions, and custom forms, using SQL queries and React class methods –– Migrated the FE stack from Javascript, Backbone, React Redux, and Sass to Typescript, React, React Query, Styled Components, and MaterialUI with feature flag functionality and Figma designs –– Implemented a new user flow on the main dashboard by organizing content into subpages, ensuring seamless functionality and integration with the existing site –– Implemented Jest unit tests on the FE and Mocha unit tests on the BE to ensure code quality',
     website: 'https://www.mapistry.com/',
     tags: [
       'JavaScript',
