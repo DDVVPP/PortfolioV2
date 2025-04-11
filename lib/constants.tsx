@@ -50,7 +50,14 @@ export const softwareWorkItems = [
     role: 'Software Developer',
     details: `Contributed to Hack for LA's static website using GitHub Pages and Jekyll, with Markdown-based data and a JavaScript frontend –– Updated project profile pages and addressed prioritized GitHub issues –– Submitted PRs and participated in peer code reviews to ensure quality and consistency across the codebase –– Created GitHub issues using team templates to help expand and refine the project backlog`,
     website: 'https://www.hackforla.org/',
-    tags: ['JavaScript', 'HTML', 'Docker'],
+    tags: [
+      'JavaScript',
+      'HTML',
+      'Docker',
+      'Jekyll',
+      'Markdown',
+      'GitHub Pages',
+    ],
   },
   {
     date: 'Feb 2023 - May 2023',
