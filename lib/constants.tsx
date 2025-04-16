@@ -229,8 +229,7 @@ export const projects = [
         <span className="text-highlight-font-normal">
           cmdK search, notifications, 3rd party API integrations
         </span>
-        , profile and content management using{' '}
-        <span className="text-highlight-font-normal">CRUD</span> operations,{' '}
+        , profile and content management,{' '}
         <span className="text-highlight-font-normal">light and dark modes</span>
         , and{' '}
         <span className="text-highlight-font-normal">
@@ -268,8 +267,7 @@ export const projects = [
         <span className="text-highlight-font-normal">
           cmdK search and filtering
         </span>
-        , post and profile management using{' '}
-        <span className="text-highlight-font-normal">CRUD</span> operations, and{' '}
+        , post and profile management, and{' '}
         <span className="text-highlight-font-normal">
           mobile responsiveness
         </span>
