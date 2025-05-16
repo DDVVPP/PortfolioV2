@@ -1,6 +1,7 @@
 import GitNoteLaptopMobile from '@/public/GitNoteLaptopMobile.png';
 import DevTodayLaptopMobile from '@/public/DevTodayLaptopMobile.png';
 import MyPortfolioLaptopMobile from '@/public/MyPortfolioLaptopMobile.png';
+import PupSpotsLaptopMobile from '@/public/PupSpotsLaptopMobile.png';
 
 export const navbarItems = [
   {
@@ -218,6 +219,66 @@ export const architectureWorkItems = [
 
 export const projects = [
   {
+    title: 'MY PORTFOLIO',
+    description: (
+      <p>
+        This website, which you are currently exploring, is designed and built
+        by me to showcase my professional experience, software engineering
+        projects, art work, and personal background, featuring{' '}
+        <span className="text-highlight-font-normal">
+          3rd party API integration
+        </span>{' '}
+        and{' '}
+        <span className="text-highlight-font-normal">
+          mobile responsiveness
+        </span>
+        .
+      </p>
+    ),
+    coverImage: MyPortfolioLaptopMobile,
+    altText: 'my-portfolio',
+    githubLink: 'https://github.com/DDVVPP/PortfolioV2',
+    tags: [
+      'TypeScript',
+      'Next.js',
+      'Tailwind CSS',
+      'Shadcn',
+      'Cloudinary',
+      'Framer Motion',
+    ],
+  },
+  {
+    title: <h1 className="animate-pulse">PUP SPOTS - Work In Progress</h1>,
+    description: (
+      <p>
+        A curated map of dog-friendly hangouts across Los Angeles featuring{' '}
+        <span className="text-highlight-font-normal">
+          Mapbox GL integration
+        </span>{' '}
+        and{' '}
+        <span className="text-highlight-font-normal">
+          mobile responsiveness
+        </span>
+        . Currently a work in progress, with plans for{' '}
+        <span className="text-highlight-font-normal">
+          category and badge filtering
+        </span>
+        , <span className="text-highlight-font-normal">personal notes</span>,
+        and{' '}
+        <span className="text-highlight-font-normal">
+          public pin submissions
+        </span>
+        .
+      </p>
+    ),
+    coverImage: PupSpotsLaptopMobile,
+    altText: 'pup-spots',
+    demoLink: 'https://pup-spots-vuejs.vercel.app/',
+    githubLink: 'https://github.com/DDVVPP/pup-spots-vuejs',
+    tags: ['Vue.js', 'Mapbox GL', 'TypeScript', 'Tailwind CSS'],
+    demoCredentials: false,
+  },
+  {
     title: 'DEVTODAY',
     description: (
       <p>
@@ -258,7 +319,7 @@ export const projects = [
     demoCredentials: true,
   },
   {
-    title: <h1 className="animate-pulse">GITNOTE - Work In Progress</h1>,
+    title: 'GITNOTE',
     description: (
       <p>
         A knowledge and progress tracker for developers featuring{' '}
@@ -291,35 +352,6 @@ export const projects = [
       'TinyMCE',
     ],
     demoCredentials: true,
-  },
-  {
-    title: 'MY PORTFOLIO',
-    description: (
-      <p>
-        This website, which you are currently exploring, is designed and built
-        by me to showcase my professional experience, software engineering
-        projects, art work, and personal background, featuring{' '}
-        <span className="text-highlight-font-normal">
-          3rd party API integration
-        </span>{' '}
-        and{' '}
-        <span className="text-highlight-font-normal">
-          mobile responsiveness
-        </span>
-        .
-      </p>
-    ),
-    coverImage: MyPortfolioLaptopMobile,
-    altText: 'my-portfolio',
-    githubLink: 'https://github.com/DDVVPP/PortfolioV2',
-    tags: [
-      'TypeScript',
-      'Next.js',
-      'Tailwind CSS',
-      'Shadcn',
-      'Cloudinary',
-      'Framer Motion',
-    ],
   },
 ];
 
