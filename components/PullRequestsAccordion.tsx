@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { format as formatDate } from 'date-fns';
+import Image from 'next/image';
 
 import {
   Accordion,
@@ -54,6 +55,21 @@ const PullRequestsAccordion = ({
                     ),
                     ul: ({ node, ...props }) => (
                       <ul className="ml-5 mt-0 list-disc" {...props} />
+                    ),
+                    img: ({ node, ...props }) => (
+                      <div className="mt-2 w-full">
+                        {props.src && (
+                          <Image
+                            {...props}
+                            src={props.src}
+                            alt="pr-image"
+                            width={800}
+                            height={600}
+                            className="h-auto w-full rounded-md"
+                            placeholder="empty"
+                          />
+                        )}
+                      </div>
                     ),
                   }}
                 >
