@@ -18,7 +18,7 @@ const ProjectCard = ({
 }) => {
   const renderNoCommitsOrNoPRsDiv = (type: string) => {
     return (
-      <div className="rounded-md bg-dark-800/65 border border-dark-800 p-4">
+      <div className="rounded-md border border-dark-800 bg-dark-800/65 p-4">
         <p className="text-sm font-light text-slate-300 max-sm:text-[13px] 3xl:text-base">
           No {type} created this year
         </p>
@@ -27,8 +27,8 @@ const ProjectCard = ({
   };
 
   return (
-    <section className="group flex gap-x-9 gap-y-4 rounded-lg bg-slate-900/50 p-6 pl-3 max-md:p-6 max-md:flex-col max-md:gap-y-3">
-      <div className="relative ml-4 w-80 min-w-20 content-center pt-1 max-md:mx-0  max-md:mt-1 max-md:w-full">
+    <section className="group flex gap-x-9 gap-y-4 rounded-lg bg-slate-900/50 p-6 pl-3 max-md-projects:flex-col max-md-projects:gap-y-3 max-md-projects:p-6">
+      <div className="relative ml-4 w-[500px] min-w-20 pt-1 max-md-projects:mx-0 max-md-projects:mt-1 max-md-projects:flex max-md-projects:w-full max-md-projects:flex-wrap max-md-projects:justify-center">
         <Image
           alt={project.altText}
           src={project.coverImage}
@@ -36,9 +36,9 @@ const ProjectCard = ({
           placeholder="blur"
         />
       </div>
-      <div className="flex w-3/4 max-w-[1000px] flex-col justify-between gap-y-4 max-md:-order-1 max-md:w-full max-md:gap-y-3">
-        <section className="flex flex-col gap-y-4 max-md:flex-row max-md:items-center max-md:justify-between max-md:gap-y-2.5 max-sm:flex-col">
-          <h1 className="text-wrap text-sm font-medium text-slate-100 duration-300 group-hover:text-corral max-md:text-base max-sm:text-center max-sm:text-sm 3xl:text-lg">
+      <div className="flex w-3/4 max-w-[1000px] flex-col justify-between gap-y-4 max-md-projects:-order-1 max-md-projects:w-full max-md-projects:gap-y-3">
+        <section className="flex flex-col gap-y-4 max-md-projects:flex-row max-md-projects:items-center max-md-projects:justify-between max-md-projects:gap-y-2.5 max-sm:flex-col">
+          <h1 className="text-wrap text-sm font-medium text-slate-100 duration-300 group-hover:text-corral max-md-projects:text-base max-sm:text-center max-sm:text-sm 3xl:text-lg">
             {project.title}
           </h1>
           <div className="flex gap-x-4">
@@ -49,7 +49,7 @@ const ProjectCard = ({
           </div>
         </section>
 
-        <p className="text-sm font-light text-slate-300 max-md:text-center max-sm:text-sm 3xl:text-base">
+        <p className="text-sm font-light text-slate-300 max-md-projects:text-center max-sm:text-sm 3xl:text-base">
           {project.description}{' '}
           {project.demoCredentials && (
             <p className="mt-2">
@@ -69,7 +69,7 @@ const ProjectCard = ({
           )}
         </p>
 
-        <div className="flex flex-wrap gap-x-3 gap-y-2 max-md:justify-center mb-2">
+        <div className="mb-2 flex flex-wrap gap-x-3 gap-y-2 max-md-projects:justify-center">
           {project.tags.map((tag) => {
             return <Tag key={tag} text={tag} />;
           })}
