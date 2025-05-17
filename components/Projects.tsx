@@ -18,7 +18,7 @@ const Projects = ({
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="mx-7 my-32 flex flex-col gap-y-8 max-md:my-12 max-md:gap-y-10"
+      className="mx-7 my-32 flex flex-col gap-y-8 max-md-projects:mx-5 max-md-projects:my-11 max-md-projects:gap-y-10"
     >
       {projects.map((project) => {
         const repoName = project.githubLink.split('/').pop();
