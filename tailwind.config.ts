@@ -24,6 +24,7 @@ const config = {
         'xs-345': '345px',
         'xs-362': '362px',
         md: '820px',
+        'md-projects': '1180px',
         '2xl': '1400px',
         '3xl': '2000px',
       },
