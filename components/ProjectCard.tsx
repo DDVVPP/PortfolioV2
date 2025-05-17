@@ -16,25 +16,25 @@ const ProjectCard = ({
   pullRequests: RepoPR[];
   commits: RepoCommit[];
 }) => {
-  const renderNoCommitsOrNoPRsDiv = (type: string) => {
-    return (
-      <div className="rounded-md border border-dark-800 bg-dark-800/65 p-4">
-        <p className="text-sm font-light text-slate-300 max-sm:text-[13px] 3xl:text-base">
-          No {type} created this year
-        </p>
-      </div>
-    );
-  };
-
   const renderImage = () => {
     return (
-      <div className="relative ml-4 w-[500px] min-w-20 pt-1 max-md-projects:mx-0 max-md-projects:mb-4 max-md-projects:mt-3 max-md-projects:flex max-md-projects:w-full max-md-projects:flex-wrap max-md-projects:justify-center">
+      <div className="relative ml-4 w-[500px] min-w-20 pt-1 max-md-projects:mx-0 max-md-projects:mb-3 max-md-projects:mt-2 max-md-projects:flex max-md-projects:w-full max-md-projects:flex-wrap max-md-projects:justify-center">
         <Image
           alt={project.altText}
           src={project.coverImage}
           className="rounded-lg"
           placeholder="blur"
         />
+      </div>
+    );
+  };
+
+  const renderNoCommitsOrNoPRsDiv = (type: string) => {
+    return (
+      <div className="rounded-md border border-dark-800 bg-dark-800/65 p-4">
+        <p className="text-sm font-light text-slate-300 max-sm:text-[13px] 3xl:text-base">
+          No {type} created this year
+        </p>
       </div>
     );
   };
