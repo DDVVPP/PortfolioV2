@@ -12,13 +12,13 @@ const About = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className="relative size-64 shrink-0 align-middle max-md:size-60">
+      <div className="relative size-64 align-middle max-md:size-60">
         <Image
           priority
           alt="profile-photo"
           src={profile}
           fill
-          className="rounded-full"
+          className="rounded-full object-cover object-top"
           placeholder="blur"
         />
       </div>
