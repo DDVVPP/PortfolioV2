@@ -84,7 +84,7 @@ export const softwareWorkItems = [
       'An Environmental, Health, and Safety compliance SaaS platform and an early stage startup.',
     role: 'Full-stack / Front-end Developer',
     details:
-      'Developed the existing dashboard’s form stencils, form submissions, and custom forms, using SQL queries and React class methods –– Migrated the FE stack from Javascript, Backbone, React Redux, and Sass to Typescript, React, React Query, Styled Components, and MaterialUI with feature flag functionality and Figma designs –– Implemented a new user flow on the main dashboard by organizing content into subpages, ensuring seamless functionality and integration with the existing site –– Implemented Jest unit tests on the FE and Mocha unit tests on the BE to ensure code quality',
+      'Developed the existing dashboard’s form stencils, form submissions, and custom forms, using SQL queries and React class methods –– Migrated the FE stack from JavaScript, Backbone, React Redux, and Sass to TypeScript, React, React Query, Styled Components, and MaterialUI with feature flag functionality and Figma designs –– Implemented a new user flow on the main dashboard by organizing content into subpages, ensuring seamless functionality and integration with the existing site –– Implemented Jest unit tests on the FE and Mocha unit tests on the BE to ensure code quality',
     website: 'https://www.mapistry.com/',
     tags: [
       'JavaScript',
@@ -106,7 +106,7 @@ export const softwareWorkItems = [
       "A healthcare startup that provides more easily accessible non-emergency healthcare by sending responders to a patient's home.",
     role: 'Front-end Software Engineer',
     details:
-      'Developed patient registration and encounter records used by responders, supervisors, and clinicians, leveraging React, Formik, Yup validations, and Jest for unit testing –– Implemented dynamic logic to manage visibility, accessibility, and interactivity of inputs and fields, integrating user role-based authorization with encounter and task lifecycle conditions –– Created several custom, reusable frontend UI React components (e.g., Pill, AlertBox, Avatar), using Styled Components, Storybook, and Jest unit tests –– Played an active role in conducting technical interviews of 15+ candidates –– Successfully migrated the app from Javascript, React, GraphQL, and AWS Amplify, to Typescript, React, GraphQL/Apollo Client',
+      'Developed patient registration and encounter records used by responders, supervisors, and clinicians, leveraging React, Formik, Yup validations, and Jest for unit testing –– Implemented dynamic logic to manage visibility, accessibility, and interactivity of inputs and fields, integrating user role-based authorization with encounter and task lifecycle conditions –– Created several custom, reusable frontend UI React components (e.g., Pill, AlertBox, Avatar), using Styled Components, Storybook, and Jest unit tests –– Played an active role in conducting technical interviews of 15+ candidates –– Successfully migrated the app from JavaScript, React, GraphQL, and AWS Amplify, to TypeScript, React, GraphQL/Apollo Client',
     website: 'https://www.mylaurelhealth.com/',
     tags: [
       'JavaScript',

@@ -12,7 +12,7 @@ const Children = ({ children }: { children: React.ReactNode }) => {
       case '/art':
         return 'max-md:rounded-tr-none max-md:rounded-tl-2xl';
       default:
-        break;
+        return '';
     }
   };
 

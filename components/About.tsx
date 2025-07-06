@@ -29,7 +29,7 @@ const About = () => {
           based in Los Angeles, California. I have experience building
           applications in{' '}
           <span className="text-highlight-font-normal">
-            Javascript, Typescript, React.js, Next.js, PostgreSQL,
+            JavaScript, TypeScript, React.js, Next.js, PostgreSQL,
           </span>{' '}
           and <span className="text-highlight-font-normal">Node.js.</span> I’m
           currently refining my personal projects and deepening my knowledge of

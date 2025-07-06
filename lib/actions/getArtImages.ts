@@ -9,7 +9,7 @@ export const getUpdatedArtImages = async () => {
     const cloudinaryResources = await fetchCloudinaryResources();
     // Format images to include necessary properties for rendering
     const formattedImages = await formatImages(cloudinaryResources);
-    // Sort images using the artImageOrderAndTitle array
+    // Sort images using the artImageOrder array
     const sortedArtImages = sortImages(formattedImages as ProcessedImage[]);
 
     return { sortedArtImages, error: null };
