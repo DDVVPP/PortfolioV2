@@ -21,7 +21,7 @@ export const getUpdatedArtImages = async () => {
 
 const generateBlurDataURL = async (publicId: string) => {
   const cloudinaryBaseURL = `https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload`;
-  const blurURL = `${cloudinaryBaseURL}/e_blur:300,w_22,h_22,c_scale/${publicId}.jpg`;
+  const blurURL = `${cloudinaryBaseURL}/c_fill,w_32,f_auto,q_1/${publicId}.webp`;
   const blurBuffer = await fetch(blurURL).then((res) => res.arrayBuffer());
   return `data:image/webp;base64,${Buffer.from(blurBuffer).toString('base64')}`;
 };
@@ -63,14 +63,16 @@ const formatImages = async (images: CloudinaryResource[]) => {
         display_name: title,
         secure_url: secureUrl,
         tags,
+        width,
+        height,
       } = image;
       try {
         const blurDataURL = await generateBlurDataURL(publicId);
         const altText = title
           .toLowerCase()
           .split(' ')
-          .join('-')
-          .replace(':', '');
+          .map((word) => word.replace(':', '').replace('?', ''))
+          .join('-');
 
         return {
           id: publicId,
@@ -79,6 +81,8 @@ const formatImages = async (images: CloudinaryResource[]) => {
           altText,
           blurDataURL,
           tags: tags ?? [],
+          width,
+          height,
         };
       } catch (error) {
         console.error(`Error formatting image ${publicId}:`, error);
