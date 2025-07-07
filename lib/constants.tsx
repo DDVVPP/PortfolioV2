@@ -397,6 +397,7 @@ export const artImageOrder = [
   'black-bird',
   'process-abstract-flower',
   'abstract-flower',
+  'coral-tree',
   'jellyfish',
   'process-winged-gecko',
   'winged-gecko',
