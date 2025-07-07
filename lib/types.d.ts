@@ -8,6 +8,8 @@ export type ProcessedImage = {
   altText: string;
   blurDataURL: string;
   tags: string[];
+  width: string;
+  height: string;
 };
 
 export type ArtImagesResponse = {
@@ -20,6 +22,8 @@ export type CloudinaryResource = {
   display_name: string;
   secure_url: string;
   tags: string[];
+  width: string;
+  height: string;
 };
 
 export type Project = {

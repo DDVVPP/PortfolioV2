@@ -61,7 +61,7 @@ const Art = ({ sortedArtImages }: { sortedArtImages: ProcessedImage[] }) => {
         open={activeIndex !== null}
         onOpenChange={() => setActiveIndex(null)}
       >
-        <DialogContent className="scrollbar-hide flex max-h-screen w-[95vw] max-w-[700px] flex-col items-center justify-center overflow-y-auto rounded-xl bg-white px-3 sm:py-10">
+        <DialogContent className="scrollbar-hide flex max-h-screen w-[95vw] max-w-[700px] flex-col items-center justify-center overflow-y-auto rounded-xl bg-white px-2 py-6 sm:px-6 sm:py-10">
           {activeIndex !== null && (
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
@@ -71,7 +71,7 @@ const Art = ({ sortedArtImages }: { sortedArtImages: ProcessedImage[] }) => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.5 }}
-                className="flex min-h-0 w-full flex-col items-center justify-center gap-4"
+                className="flex min-h-0 w-full flex-col items-center justify-center"
               >
                 <DialogHeader>
                   <DialogTitle className="text-center text-slate-800">
@@ -79,16 +79,17 @@ const Art = ({ sortedArtImages }: { sortedArtImages: ProcessedImage[] }) => {
                   </DialogTitle>
                 </DialogHeader>
 
-                <div className="flex w-full max-w-[95vw] items-center justify-between gap-2">
-                  <button onClick={handlePrev} className="">
+                <div className="my-2 flex w-full max-w-[95vw] items-center justify-between">
+                  <button onClick={handlePrev} className="mr-1">
                     <ChevronLeft className="size-6 hover:stroke-corral hover:duration-300" />
                   </button>
-                  <div className="relative aspect-[3/4] w-[60vw] max-w-[400px] overflow-hidden rounded-lg">
+                  <div className="relative flex h-[55vh] w-[85vw] max-w-[400px] items-center justify-center overflow-hidden rounded-lg sm:h-[70vh] sm:w-[60vw] xl:h-[40vh]">
                     <Image
                       key={sortedArtImages[activeIndex]?.src}
                       alt={sortedArtImages[activeIndex]?.altText}
                       src={sortedArtImages[activeIndex]?.src}
-                      fill
+                      width={Number(sortedArtImages[activeIndex]?.width)}
+                      height={Number(sortedArtImages[activeIndex]?.height)}
                       className="object-contain"
                       placeholder={
                         sortedArtImages[activeIndex]?.blurDataURL
@@ -98,11 +99,10 @@ const Art = ({ sortedArtImages }: { sortedArtImages: ProcessedImage[] }) => {
                       blurDataURL={sortedArtImages[activeIndex]?.blurDataURL}
                     />
                   </div>
-                  <button onClick={handleNext} className="">
+                  <button onClick={handleNext} className="ml-1">
                     <ChevronRight className="size-6 hover:stroke-corral hover:duration-300" />
                   </button>
                 </div>
-
                 <div className="flex flex-wrap justify-center gap-2">
                   {sortedArtImages[activeIndex]?.tags.map((tag) => (
                     <Tag
