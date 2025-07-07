@@ -62,7 +62,7 @@ const Art = ({ sortedArtImages }: { sortedArtImages: ProcessedImage[] }) => {
         open={activeIndex !== null}
         onOpenChange={() => setActiveIndex(null)}
       >
-        <DialogContent className="scrollbar-hide flex max-h-screen w-[95vw] max-w-[700px] flex-col items-center justify-center overflow-y-auto rounded-xl bg-white px-2 py-6 sm:px-6 sm:py-10">
+        <DialogContent className="scrollbar-hide flex max-h-[90vh] w-[95vw] max-w-[700px] flex-col items-center justify-center overflow-hidden rounded-xl bg-white p-0 sm:p-6">
           {activeIndex !== null && (
             <AnimatePresence mode="wait" initial={false}>
               <motion.div
@@ -74,7 +74,7 @@ const Art = ({ sortedArtImages }: { sortedArtImages: ProcessedImage[] }) => {
                 transition={{ duration: 0.5 }}
                 className="flex min-h-0 w-full flex-col items-center justify-center"
               >
-                <DialogHeader className="relative flex w-full items-center justify-center px-2">
+                <DialogHeader className="relative mt-5 flex w-full items-center justify-center px-2">
                   <DialogTitle className="text-center text-slate-800">
                     {sortedArtImages[activeIndex]?.title}
                   </DialogTitle>
@@ -90,14 +90,14 @@ const Art = ({ sortedArtImages }: { sortedArtImages: ProcessedImage[] }) => {
                   <button onClick={handlePrev} className="mr-1">
                     <ChevronLeft className="size-6 hover:stroke-corral hover:duration-300" />
                   </button>
-                  <div className="relative flex h-[55vh] w-[85vw] max-w-[400px] items-center justify-center overflow-hidden sm:h-[70vh] sm:w-[60vw] xl:h-[40vh]">
+                  <div className="relative flex h-[60vh] w-[90vw] max-w-[600px] items-center justify-center overflow-hidden sm:h-[65vh] md:h-[70vh]">
                     <Image
                       key={sortedArtImages[activeIndex]?.src}
                       alt={sortedArtImages[activeIndex]?.altText}
                       src={sortedArtImages[activeIndex]?.src}
                       width={Number(sortedArtImages[activeIndex]?.width)}
                       height={Number(sortedArtImages[activeIndex]?.height)}
-                      className="object-contain"
+                      className="max-h-full w-auto object-contain"
                       placeholder={
                         sortedArtImages[activeIndex]?.blurDataURL
                           ? 'blur'
@@ -110,7 +110,7 @@ const Art = ({ sortedArtImages }: { sortedArtImages: ProcessedImage[] }) => {
                     <ChevronRight className="size-6 hover:stroke-corral hover:duration-300" />
                   </button>
                 </div>
-                <div className="flex flex-wrap justify-center gap-2">
+                <div className="mx-4 mb-5 flex flex-wrap justify-center gap-2">
                   {sortedArtImages[activeIndex]?.tags.map((tag) => (
                     <Tag
                       key={tag}
