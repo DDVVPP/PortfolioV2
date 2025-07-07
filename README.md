@@ -2,7 +2,7 @@
 An app to showcase my professional work experience, my personal software engineering projects, my artwork, and my background and interests.
 
 ## <a name="tech">🚀 Deployed Site</a>
-&nbsp;&nbsp;&nbsp;&nbsp;[darshin.me](darshin.me)\
+&nbsp;&nbsp;&nbsp;&nbsp;[darshin.me](https://www.darshin.me)\
 &nbsp;&nbsp;&nbsp;&nbsp;© Designed & Built by Darshin Van Parijs & Deployed with Vercel
 
 ## <a name="tech">⚙️ Tech</a>
