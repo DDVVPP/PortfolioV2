@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import {
   Dialog,
   DialogContent,
@@ -63,46 +63,58 @@ const Art = ({ sortedArtImages }: { sortedArtImages: ProcessedImage[] }) => {
       >
         <DialogContent className="scrollbar-hide flex max-h-screen w-[95vw] max-w-[700px] flex-col items-center justify-center overflow-y-auto rounded-xl bg-white px-3 sm:py-10">
           {activeIndex !== null && (
-            <>
-              <DialogHeader>
-                <DialogTitle className="text-center text-slate-800">
-                  {sortedArtImages[activeIndex]?.title}
-                </DialogTitle>
-              </DialogHeader>
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                layout
+                key={sortedArtImages[activeIndex]?.src}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5 }}
+                className="flex min-h-0 w-full flex-col items-center justify-center gap-4"
+              >
+                <DialogHeader>
+                  <DialogTitle className="text-center text-slate-800">
+                    {sortedArtImages[activeIndex]?.title}
+                  </DialogTitle>
+                </DialogHeader>
 
-              <div className="relative flex w-full max-w-[700px] items-center justify-between">
-                <button onClick={handlePrev} className="p-2">
-                  <ChevronLeft className="size-6" />
-                </button>
-
-                <div className="flex w-[85%] items-center justify-center ">
-                  <Image
-                    alt={sortedArtImages[activeIndex].altText}
-                    src={sortedArtImages[activeIndex].src}
-                    width={700}
-                    height={700}
-                    className="h-auto rounded-lg border border-slate-200 object-contain"
-                    placeholder="blur"
-                    blurDataURL={sortedArtImages[activeIndex].blurDataURL}
-                  />
+                <div className="flex w-full max-w-[95vw] items-center justify-between gap-2">
+                  <button onClick={handlePrev} className="">
+                    <ChevronLeft className="size-6 hover:stroke-corral hover:duration-300" />
+                  </button>
+                  <div className="relative aspect-[3/4] w-[60vw] max-w-[400px] overflow-hidden rounded-lg">
+                    <Image
+                      key={sortedArtImages[activeIndex]?.src}
+                      alt={sortedArtImages[activeIndex]?.altText}
+                      src={sortedArtImages[activeIndex]?.src}
+                      fill
+                      className="object-contain"
+                      placeholder={
+                        sortedArtImages[activeIndex]?.blurDataURL
+                          ? 'blur'
+                          : undefined
+                      }
+                      blurDataURL={sortedArtImages[activeIndex]?.blurDataURL}
+                    />
+                  </div>
+                  <button onClick={handleNext} className="">
+                    <ChevronRight className="size-6 hover:stroke-corral hover:duration-300" />
+                  </button>
                 </div>
 
-                <button onClick={handleNext} className="p-2 ">
-                  <ChevronRight className="size-6 hover:stroke-corral" />
-                </button>
-              </div>
-
-              <div className="flex flex-wrap justify-center gap-2">
-                {sortedArtImages[activeIndex].tags.map((tag) => (
-                  <Tag
-                    key={tag}
-                    text={tag}
-                    textColor="text-slate-500"
-                    borderColor="border-slate-500"
-                  />
-                ))}
-              </div>
-            </>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {sortedArtImages[activeIndex]?.tags.map((tag) => (
+                    <Tag
+                      key={tag}
+                      text={tag}
+                      textColor="text-slate-500"
+                      borderColor="border-slate-500"
+                    />
+                  ))}
+                </div>
+              </motion.div>
+            </AnimatePresence>
           )}
         </DialogContent>
       </Dialog>
