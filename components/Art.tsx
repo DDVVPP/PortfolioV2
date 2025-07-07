@@ -5,11 +5,12 @@ import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   Dialog,
+  DialogClose,
   DialogContent,
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import Tag from '@/components/shared/Tag';
 import { ProcessedImage } from '@/lib/types';
 
@@ -73,17 +74,23 @@ const Art = ({ sortedArtImages }: { sortedArtImages: ProcessedImage[] }) => {
                 transition={{ duration: 0.5 }}
                 className="flex min-h-0 w-full flex-col items-center justify-center"
               >
-                <DialogHeader>
+                <DialogHeader className="relative flex w-full items-center justify-center px-2">
                   <DialogTitle className="text-center text-slate-800">
                     {sortedArtImages[activeIndex]?.title}
                   </DialogTitle>
+
+                  <DialogClose asChild>
+                    <button className="absolute right-2 top-1/2 -translate-y-3/4 duration-300 hover:text-corral focus:outline-none">
+                      <X className="size-5 leading-none sm:size-6" />
+                    </button>
+                  </DialogClose>
                 </DialogHeader>
 
-                <div className="my-2 flex w-full max-w-[95vw] items-center justify-between">
+                <div className="my-2 flex w-full max-w-[95vw] items-center justify-between px-2">
                   <button onClick={handlePrev} className="mr-1">
                     <ChevronLeft className="size-6 hover:stroke-corral hover:duration-300" />
                   </button>
-                  <div className="relative flex h-[55vh] w-[85vw] max-w-[400px] items-center justify-center overflow-hidden rounded-lg sm:h-[70vh] sm:w-[60vw] xl:h-[40vh]">
+                  <div className="relative flex h-[55vh] w-[85vw] max-w-[400px] items-center justify-center overflow-hidden sm:h-[70vh] sm:w-[60vw] xl:h-[40vh]">
                     <Image
                       key={sortedArtImages[activeIndex]?.src}
                       alt={sortedArtImages[activeIndex]?.altText}
