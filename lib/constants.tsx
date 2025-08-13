@@ -44,11 +44,40 @@ export const aboutMeTech = [
 
 export const softwareWorkItems = [
   {
-    date: 'Feb 2025 - Current',
+    date: 'May 2025 - Aug 2025',
+    company: 'Spherical Studio',
+    description:
+      'A design and research studio creating tools and experiences that support climate resilience and regenerative development.',
+    role: 'Front-end Software Engineering Intern',
+    details: `Designed the architecture for a prototype feature panel system for the Living Infrastructure Toolkit using Vue, TypeScript, Tailwind CSS, and pure CSS animations –– Built reusable Vue composables that leveraged dynamic site data for randomized content, an animated progress bar, and persistent interaction history with local storage –– Developed interactive, animated UI components, including perspective card flipping, layered effects, blur-on-scroll, and randomized image transitions with Ken Burns pan and zoom effects –– Wrote end-to-end Playwright tests, migrated legacy Storybook stories to a modern format, and resolved UI/interaction bugs across the platform  –– Implemented event tracking for user actions such as site renaming and file uploads`,
+    website: 'https://spherical.studio/',
+    tags: [
+      'TypeScript',
+      'Vue.js',
+      'TailwindCSS',
+      'CSS Animations',
+      'Storybook',
+      'Playwright',
+      'Mapbox',
+      'Sanity',
+    ],
+  },
+  {
+    date: 'April 2025 - June 2025',
+    company: 'Bookworm Reads',
+    description:
+      'A volunteer-run book tracking, community platform for discovering new reads, sharing reviews, and connecting with other readers.',
+    role: 'Front-end Software Engineer',
+    details: `Implemented new web features including Advanced Search, user account deletion flow, and UI improvements for profile and search components –– Built reusable Next.js components with TypeScript, integrated Bootstrap for responsive layouts, and refined modal and form input handling`,
+    website: 'https://www.bookwormreads.co/about',
+    tags: ['TypeScript', 'Next.js', 'Bootstrap', 'Node.js'],
+  },
+  {
+    date: 'Feb 2025 - May 2025',
     company: 'Hack for LA',
     description:
-      'A civic tech organization that brings together volunteers to build digital tools and services in collaboration with community partners and local government.',
-    role: 'Software Developer',
+      'A volunteer-run civic tech organization that brings together volunteers to build digital tools and services in collaboration with community partners and local government.',
+    role: 'Front-end Software Engineer',
     details: `Contributed to Hack for LA's static website using GitHub Pages and Jekyll, with Markdown-based data and a JavaScript frontend –– Updated project profile pages and addressed prioritized GitHub issues –– Submitted PRs and participated in peer code reviews to ensure quality and consistency across the codebase –– Created GitHub issues using team templates to help expand and refine the project backlog`,
     website: 'https://www.hackforla.org/',
     tags: [
@@ -64,7 +93,7 @@ export const softwareWorkItems = [
     date: 'Feb 2023 - May 2023',
     company: 'UStrive',
     description: 'An online career and college mentoring platform.',
-    role: 'Full-stack Developer',
+    role: 'Full-stack Software Engineer',
     details: `Added and updated events to Mixpanel from the FE and BE to more accurately track mentor and student onboarding processes –– Debugged issues in mentor and student portals`,
     website: 'https://ustrive.com/',
     tags: [
@@ -82,7 +111,7 @@ export const softwareWorkItems = [
     company: 'Mapistry',
     description:
       'An Environmental, Health, and Safety compliance SaaS platform and an early stage startup.',
-    role: 'Full-stack / Front-end Developer',
+    role: 'Full-stack & Front-end Software Engineer',
     details:
       'Developed the existing dashboard’s form stencils, form submissions, and custom forms, using SQL queries and React class methods –– Migrated the FE stack from JavaScript, Backbone, React Redux, and Sass to TypeScript, React, React Query, Styled Components, and MaterialUI with feature flag functionality and Figma designs –– Implemented a new user flow on the main dashboard by organizing content into subpages, ensuring seamless functionality and integration with the existing site –– Implemented Jest unit tests on the FE and Mocha unit tests on the BE to ensure code quality',
     website: 'https://www.mapistry.com/',
@@ -124,7 +153,7 @@ export const softwareWorkItems = [
     company: 'Errunds',
     description:
       'An online community marketplace connecting the user to local brick and mortars.',
-    role: 'Full-stack Developer Intern',
+    role: 'Full-stack Software Engineering Intern',
     details:
       'Implemented new user signup functionality and authentication –– Implemented cart screen features through the full-stack of the application using Figma designs –– Implemented past orders screen display using GraphQL queries',
     website: 'https://tyca.nyc/',
