@@ -44,6 +44,23 @@ export const aboutMeTech = [
 
 export const softwareWorkItems = [
   {
+    date: 'Feb 2025 - May 2025 / Sep 2025 - Present',
+    company: 'Hack for LA',
+    description:
+      'A volunteer-run civic tech organization that brings together volunteers to build digital tools and services in collaboration with community partners and local government.',
+    role: 'Front-end Software Engineer',
+    details: `Contribute to Hack for LA's static website using GitHub Pages and Jekyll, with Markdown-based data and a JavaScript frontend –– Update project profile pages and address prioritized GitHub issues –– Submit PRs and participated in peer code reviews to ensure quality and consistency across the codebase –– Create GitHub issues using team templates to help expand and refine the project backlog –– Co-host dev meetings and merge approved PRs on a rotating schedule`,
+    website: 'https://www.hackforla.org/',
+    tags: [
+      'JavaScript',
+      'HTML',
+      'Docker',
+      'Jekyll',
+      'Markdown',
+      'GitHub Pages',
+    ],
+  },
+  {
     date: 'May 2025 - Aug 2025',
     company: 'Spherical Studio',
     description:
@@ -71,23 +88,6 @@ export const softwareWorkItems = [
     details: `Implemented new web features including Advanced Search, user account deletion flow, and UI improvements for profile and search components –– Built reusable Next.js components with TypeScript, integrated Bootstrap for responsive layouts, and refined modal and form input handling`,
     website: 'https://www.bookwormreads.co/about',
     tags: ['TypeScript', 'Next.js', 'Bootstrap', 'Node.js'],
-  },
-  {
-    date: 'Feb 2025 - May 2025',
-    company: 'Hack for LA',
-    description:
-      'A volunteer-run civic tech organization that brings together volunteers to build digital tools and services in collaboration with community partners and local government.',
-    role: 'Front-end Software Engineer',
-    details: `Contributed to Hack for LA's static website using GitHub Pages and Jekyll, with Markdown-based data and a JavaScript frontend –– Updated project profile pages and addressed prioritized GitHub issues –– Submitted PRs and participated in peer code reviews to ensure quality and consistency across the codebase –– Created GitHub issues using team templates to help expand and refine the project backlog`,
-    website: 'https://www.hackforla.org/',
-    tags: [
-      'JavaScript',
-      'HTML',
-      'Docker',
-      'Jekyll',
-      'Markdown',
-      'GitHub Pages',
-    ],
   },
   {
     date: 'Feb 2023 - May 2023',
