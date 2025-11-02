@@ -65,7 +65,7 @@ export const softwareWorkItems = [
     company: 'Spherical Studio',
     description:
       'A design and research studio creating tools and experiences that support climate resilience and regenerative development.',
-    role: 'Front-end Software Engineering Intern',
+    role: 'Front-end Software Engineer (Contract)',
     details: `Designed the architecture for a prototype feature panel system for the Living Infrastructure Toolkit using Vue, TypeScript, Tailwind CSS, and pure CSS animations –– Built reusable Vue composables that leveraged dynamic site data for randomized content, an animated progress bar, and persistent interaction history with local storage –– Developed interactive, animated UI components, including perspective card flipping, layered effects, blur-on-scroll, and randomized image transitions with Ken Burns pan and zoom effects –– Wrote end-to-end Playwright tests, migrated legacy Storybook stories to a modern format, and resolved UI/interaction bugs across the platform  –– Implemented event tracking for user actions such as site renaming and file uploads`,
     website: 'https://spherical.studio/',
     tags: [
@@ -93,7 +93,7 @@ export const softwareWorkItems = [
     date: 'Feb 2023 - May 2023',
     company: 'UStrive',
     description: 'An online career and college mentoring platform.',
-    role: 'Full-stack Software Engineer',
+    role: 'Full-stack Software Engineer (Contract)',
     details: `Added and updated events to Mixpanel from the FE and BE to more accurately track mentor and student onboarding processes –– Debugged issues in mentor and student portals`,
     website: 'https://ustrive.com/',
     tags: [
