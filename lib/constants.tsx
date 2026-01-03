@@ -44,7 +44,24 @@ export const aboutMeTech = [
 
 export const softwareWorkItems = [
   {
-    date: 'Feb 2025 - May 2025 / Sep 2025 - Present',
+    date: 'Dec 2025 - Present',
+    company: 'QDG Health',
+    description: `A comprehensive health management system that objectively measures Parkinson's disease motor symptoms.`,
+    role: 'Software Engineer',
+    details: `- Building a Next.js/TypeScript monorepo for clinical dashboards (physician/provider/admin), using legacy workflows as reference –– Creating a maintainable UI foundation: design system, reusable components, and clear routing/state patterns –– Prototyping core patient management screens with mock data to unblock iteration –– Integrating role-based authentication (Keycloak and SMART on FIHR) with an OpenAPI-generated client/types workflow.`,
+    website: 'https://www.qdghealth.com/',
+    tags: [
+      'TypeScript',
+      'Next.js',
+      'MUI',
+      'Jest',
+      'OpenAPI',
+      'Keycloak',
+      'Express',
+    ],
+  },
+  {
+    date: 'Feb 2025 - May 2025 / Sep 2025 - Dec 2025',
     company: 'Hack for LA',
     description:
       'A volunteer-run civic tech organization that brings together volunteers to build digital tools and services in collaboration with community partners and local government.',
@@ -426,6 +443,7 @@ export const artImageOrder = [
   'black-bird',
   'process-abstract-flower',
   'abstract-flower',
+  'a-jolt-of-joy',
   'coral-tree',
   'jellyfish',
   'process-winged-gecko',
