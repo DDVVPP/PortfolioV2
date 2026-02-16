@@ -31,9 +31,12 @@ const About = () => {
           <span className="text-highlight-font-normal">
             JavaScript, TypeScript, React.js, Next.js, PostgreSQL,
           </span>{' '}
-          and <span className="text-highlight-font-normal">Node.js.</span> I’m
-          currently refining my personal projects and deepening my knowledge of
-          backend functionality, patterns, and best practices.
+          and <span className="text-highlight-font-normal">Node.js.</span> I
+          currently work at QDG Health, building clinical dashboards in a
+          <span className="text-highlight-font-normal"> Next.js</span> and{' '}
+          <span className="text-highlight-font-normal">TypeScript</span>{' '}
+          monorepo and helping establish a maintainable UI foundation with
+          reusable components and clear state patterns.
           <br />
           <br />
           My previous career in{' '}
@@ -56,11 +59,9 @@ const About = () => {
           provides a holistic view of the app, and allows for more efficient
           debugging and consistency within the codebase. <br />
           <br />
-          Outside of programming, I dedicate my time to working out, climbing,
-          and dancing Brazilian Zouk – activities that require significant
-          technique and commitment. I also find fulfillment in painting,
-          drawing, and sculpting, which allows me to explore and refine my
-          creative skills. <br />
+          Outside of programming, I dedicate my time to working out, hiking with
+          my dog, and dancing Brazilian Zouk. I also find fulfillment in
+          painting, drawing, and sculpting. <br />
         </p>
       </div>
     </motion.section>
