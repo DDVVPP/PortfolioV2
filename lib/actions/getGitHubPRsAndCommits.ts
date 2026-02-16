@@ -138,9 +138,9 @@ const getRepoCommits = async (
     const shouldHideCommitMessage = (message: string) => {
       const trimmedMessage = message.trim().toLowerCase();
 
-      // squash merge default message
+      // hide squash merge default message
       if (trimmedMessage.startsWith('merge pull request')) return false;
-      // optional: hide plain merge commits too
+      // hide plain merge commits
       if (trimmedMessage.startsWith('merge branch')) return false;
 
       return true;
