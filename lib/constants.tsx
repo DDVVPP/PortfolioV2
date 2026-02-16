@@ -48,7 +48,12 @@ export const softwareWorkItems = [
     company: 'QDG Health',
     description: `A comprehensive health management system that objectively measures Parkinson's disease motor symptoms.`,
     role: 'Software Engineer',
-    details: `- Building a Next.js/TypeScript monorepo for clinical dashboards (physician/provider/admin), using legacy workflows as reference –– Creating a maintainable UI foundation: design system, reusable components, and clear routing/state patterns –– Prototyping core patient management screens with mock data to unblock iteration –– Integrating role-based authentication (Keycloak and SMART on FIHR) with an OpenAPI-generated client/types workflow.`,
+    details: [
+      'Building a Next.js/TypeScript monorepo for clinical dashboards (physician/provider/admin), using legacy workflows as reference',
+      'Creating a maintainable UI foundation: design system, reusable components, and clear routing/state patterns',
+      'Prototyping core patient management screens with mock data to unblock iteration',
+      'Integrating role-based authentication (Keycloak and SMART on FIHR) with an OpenAPI-generated client/types workflow.',
+    ],
     website: 'https://www.qdghealth.com/',
     tags: [
       'TypeScript',
@@ -58,6 +63,8 @@ export const softwareWorkItems = [
       'OpenAPI',
       'Keycloak',
       'Express',
+      'Node.js',
+      'PostgreSQL',
     ],
   },
   {
@@ -65,8 +72,14 @@ export const softwareWorkItems = [
     company: 'Hack for LA',
     description:
       'A volunteer-run civic tech organization that brings together volunteers to build digital tools and services in collaboration with community partners and local government.',
-    role: 'Front-end Software Engineer',
-    details: `Contribute to Hack for LA's static website using GitHub Pages and Jekyll, with Markdown-based data and a JavaScript frontend –– Update project profile pages and address prioritized GitHub issues –– Submit PRs and participated in peer code reviews to ensure quality and consistency across the codebase –– Create GitHub issues using team templates to help expand and refine the project backlog –– Co-host dev meetings and merge approved PRs on a rotating schedule`,
+    role: 'Front-end Software Engineer (Volunteer)',
+    details: [
+      "Contribute to Hack for LA's static website using GitHub Pages and Jekyll, with Markdown-based data and a JavaScript frontend",
+      'Update project profile pages and address prioritized GitHub issues',
+      'Submit PRs and participated in peer code reviews to ensure quality and consistency across the codebase',
+      'Create GitHub issues using team templates to help expand and refine the project backlog',
+      'Co-host dev meetings and merge approved PRs on a rotating schedule',
+    ],
     website: 'https://www.hackforla.org/',
     tags: [
       'JavaScript',
@@ -83,7 +96,13 @@ export const softwareWorkItems = [
     description:
       'A design and research studio creating tools and experiences that support climate resilience and regenerative development.',
     role: 'Front-end Software Engineer (Contract)',
-    details: `Designed the architecture for a prototype feature panel system for the Living Infrastructure Toolkit using Vue, TypeScript, Tailwind CSS, and pure CSS animations –– Built reusable Vue composables that leveraged dynamic site data for randomized content, an animated progress bar, and persistent interaction history with local storage –– Developed interactive, animated UI components, including perspective card flipping, layered effects, blur-on-scroll, and randomized image transitions with Ken Burns pan and zoom effects –– Wrote end-to-end Playwright tests, migrated legacy Storybook stories to a modern format, and resolved UI/interaction bugs across the platform  –– Implemented event tracking for user actions such as site renaming and file uploads`,
+    details: [
+      'Designed the architecture for a prototype feature panel system for the Living Infrastructure Toolkit using Vue, TypeScript, Tailwind CSS, and pure CSS animations',
+      'Built reusable Vue composables that leveraged dynamic site data for randomized content, an animated progress bar, and persistent interaction history with local storage',
+      'Developed interactive, animated UI components, including perspective card flipping, layered effects, blur-on-scroll, and randomized image transitions with Ken Burns pan and zoom effects',
+      'Wrote end-to-end Playwright tests, migrated legacy Storybook stories to a modern format, and resolved UI/interaction bugs across the platform ',
+      'Implemented event tracking for user actions such as site renaming and file uploads',
+    ],
     website: 'https://spherical.studio/',
     tags: [
       'TypeScript',
@@ -101,17 +120,47 @@ export const softwareWorkItems = [
     company: 'Bookworm Reads',
     description:
       'A volunteer-run book tracking, community platform for discovering new reads, sharing reviews, and connecting with other readers.',
-    role: 'Front-end Software Engineer',
-    details: `Implemented new web features including Advanced Search, user account deletion flow, and UI improvements for profile and search components –– Built reusable Next.js components with TypeScript, integrated Bootstrap for responsive layouts, and refined modal and form input handling`,
+    role: 'Front-end Software Engineer (Volunteer)',
+    details: [
+      'Implemented new web features including Advanced Search, user account deletion flow, and UI improvements for profile and search components',
+      'Built reusable Next.js components with TypeScript, integrated Bootstrap for responsive layouts, and refined modal and form input handling',
+    ],
     website: 'https://www.bookwormreads.co/about',
     tags: ['TypeScript', 'Next.js', 'Bootstrap', 'Node.js'],
   },
   {
-    date: 'Feb 2023 - May 2023',
+    date: 'Nov 2023 - April 2025',
+    company: 'Professional Development',
+    description:
+      'Focused on deepening frontend and full-stack skills through structured training and self-directed projects.',
+    role: 'Career Break',
+    details: [
+      'Completed JavaScript Mastery Masterclass (500+ hours)',
+      'Built and iterated on full-stack apps such as DevToday, GitNote and PupSpots, with Next.js, Vue 3, TypeScript, Node.js, and PostgreSQL emphasizing reusable UI components, modern frontend patterns, and clean architecture',
+    ],
+    website: '/projects',
+    tags: [
+      'Next.js',
+      'Vue 3',
+      'MapboxGL',
+      'TypeScript',
+      'Node.js',
+      'PostgreSQL',
+      'Prisma',
+      'Supabase',
+      'Tailwind',
+    ],
+  },
+  {
+    date: 'Feb 2023 - April 2023',
     company: 'UStrive',
-    description: 'An online career and college mentoring platform.',
+    description:
+      'A nonprofit mentoring platform that connects students with volunteer mentors.',
     role: 'Full-stack Software Engineer (Contract)',
-    details: `Added and updated events to Mixpanel from the FE and BE to more accurately track mentor and student onboarding processes –– Debugged issues in mentor and student portals`,
+    details: [
+      'Added and updated events to Mixpanel from the FE and BE to more accurately track mentor and student onboarding processes',
+      'Debugged issues in mentor and student portals',
+    ],
     website: 'https://ustrive.com/',
     tags: [
       'JavaScript',
@@ -129,8 +178,12 @@ export const softwareWorkItems = [
     description:
       'An Environmental, Health, and Safety compliance SaaS platform and an early stage startup.',
     role: 'Full-stack & Front-end Software Engineer',
-    details:
-      'Developed the existing dashboard’s form stencils, form submissions, and custom forms, using SQL queries and React class methods –– Migrated the FE stack from JavaScript, Backbone, React Redux, and Sass to TypeScript, React, React Query, Styled Components, and MaterialUI with feature flag functionality and Figma designs –– Implemented a new user flow on the main dashboard by organizing content into subpages, ensuring seamless functionality and integration with the existing site –– Implemented Jest unit tests on the FE and Mocha unit tests on the BE to ensure code quality',
+    details: [
+      'Developed the existing dashboard’s form stencils, form submissions, and custom forms, using SQL queries and React class methods',
+      'Migrated the FE stack from JavaScript, Backbone, React Redux, and Sass to TypeScript, React, React Query, Styled Components, and MaterialUI with feature flag functionality and Figma designs',
+      'Implemented a new user flow on the main dashboard by organizing content into subpages, ensuring seamless functionality and integration with the existing site',
+      'Implemented Jest unit tests on the FE and Mocha unit tests on the BE to ensure code quality',
+    ],
     website: 'https://www.mapistry.com/',
     tags: [
       'JavaScript',
@@ -151,8 +204,13 @@ export const softwareWorkItems = [
     description:
       "A healthcare startup that provides more easily accessible non-emergency healthcare by sending responders to a patient's home.",
     role: 'Front-end Software Engineer',
-    details:
-      'Developed patient registration and encounter records used by responders, supervisors, and clinicians, leveraging React, Formik, Yup validations, and Jest for unit testing –– Implemented dynamic logic to manage visibility, accessibility, and interactivity of inputs and fields, integrating user role-based authorization with encounter and task lifecycle conditions –– Created several custom, reusable frontend UI React components (e.g., Pill, AlertBox, Avatar), using Styled Components, Storybook, and Jest unit tests –– Played an active role in conducting technical interviews of 15+ candidates –– Successfully migrated the app from JavaScript, React, GraphQL, and AWS Amplify, to TypeScript, React, GraphQL/Apollo Client',
+    details: [
+      'Developed patient registration and encounter records used by responders, supervisors, and clinicians, leveraging React, Formik, Yup validations, and Jest for unit testing',
+      'Implemented dynamic logic to manage visibility, accessibility, and interactivity of inputs and fields, integrating user role-based authorization with encounter and task lifecycle conditions',
+      ' Created several custom, reusable frontend UI React components (e.g., Pill, AlertBox, Avatar), using Styled Components, Storybook, and Jest unit tests',
+      'Played an active role in conducting technical interviews of 15+ candidates',
+      'Successfully migrated the app from JavaScript, React, GraphQL, and AWS Amplify, to TypeScript, React, GraphQL/Apollo Client',
+    ],
     website: 'https://www.mylaurelhealth.com/',
     tags: [
       'JavaScript',
@@ -171,8 +229,11 @@ export const softwareWorkItems = [
     description:
       'An online community marketplace connecting the user to local brick and mortars.',
     role: 'Full-stack Software Engineering Intern',
-    details:
-      'Implemented new user signup functionality and authentication –– Implemented cart screen features through the full-stack of the application using Figma designs –– Implemented past orders screen display using GraphQL queries',
+    details: [
+      'Implemented new user signup functionality and authentication',
+      'Implemented cart screen features through the full-stack of the application using Figma designs',
+      'Implemented past orders screen display using GraphQL queries',
+    ],
     website: 'https://tyca.nyc/',
     tags: [
       'JavaScript',
@@ -192,7 +253,13 @@ export const architectureWorkItems = [
     date: 'Sept 2017 - Dec 2018',
     company: 'Bade Stageberg Cox Architecture',
     role: 'Project Architect / Architectural Designer',
-    description: `Supervised multiple phases for the relocation of Artists Space, an iconic NYC art gallery –– Managed the renovation of a summer kitchen highly tailored to high-profile client’s requirements –– Implemented diagrams, detailed sketches, and revised shop drawings –– Illustrated concepts as 3D models and renderings –– Managed correspondence with contractors, clients, and consultants, ensuring effective communication and coordination.`,
+    description: [
+      'Supervised multiple phases for the relocation of Artists Space, an iconic NYC art gallery',
+      'Managed the renovation of a summer kitchen highly tailored to high-profile client’s requirements',
+      'Implemented diagrams, detailed sketches, and revised shop drawings',
+      'Illustrated concepts as 3D models and renderings',
+      'Managed correspondence with contractors, clients, and consultants, ensuring effective communication and coordination.',
+    ],
     website: 'https://www.bscarchitecture.com/',
     tags: [
       'AutoCad',
@@ -207,7 +274,13 @@ export const architectureWorkItems = [
     date: 'Oct 2015 - Sept 2017',
     company: "O'Neill Rose Architects",
     role: 'Project Architect / Architectural Designer',
-    description: `Managed multiple phases of single-family NYC residences –– Developed and generated detailed construction drawings and sketches –– Revised shop drawings –– Created 3D models, diagrams, and renderings –– Managed correspondence with contractors, clients, and consultants, ensuring effective communication and coordination.`,
+    description: [
+      'Managed multiple phases of single-family NYC residences',
+      'Developed and generated detailed construction drawings and sketches',
+      'Revised shop drawings',
+      'Created 3D models, diagrams, and renderings',
+      'Managed correspondence with contractors, clients, and consultants, ensuring effective communication and coordination.',
+    ],
     website: 'https://www.oneillrosearchitects.com/',
     tags: [
       'AutoCad',
@@ -222,8 +295,12 @@ export const architectureWorkItems = [
     date: 'Jun 2013 - Oct 2015',
     company: 'Audrey Matlock Architect',
     role: 'Project Architect / Architectural Designer',
-    description: `Managed the Construction Administration phase for a single-family NYC apartment
-–– Organized and coordinated interior design work of an award-winning Hamptons residence –– Developed design drawings and detailed construction drawings –– Generated 3D models and renderings`,
+    description: [
+      'Managed the Construction Administration phase for a single-family NYC apartment',
+      'Organized and coordinated interior design work of an award-winning Hamptons residence',
+      'Developed design drawings and detailed construction drawings',
+      'Generated 3D models and renderings',
+    ],
     website: 'http://www.audreymatlock.com/',
     tags: ['Vectorworks', 'Illustrator', 'Photoshop', 'Vray', 'Rhinoceros'],
   },
@@ -231,8 +308,13 @@ export const architectureWorkItems = [
     date: 'Nov 2011 - Apr 2013',
     company: 'Lauren Rubin Architecture',
     role: 'Architectural Designer',
-    description: `Assisted in the Construction Administration phase of multiple single family residences
-–– Organized and coordinated interior design work for an advertising company and a single-family residence –– Generated drawings for furniture placement –– Created 3D concept renderings for each room –– Developed all phases of document sets for two single-family residences.`,
+    description: [
+      'Assisted in the Construction Administration phase of multiple single family residences',
+      'Organized and coordinated interior design work for an advertising company and a single-family residence',
+      'Generated drawings for furniture placement',
+      'Created 3D concept renderings for each room',
+      'Developed all phases of document sets for two single-family residences',
+    ],
     website: 'https://laurenrubinarchitecture.com/',
     tags: ['AutoCad', 'Photoshop', 'Sketchup'],
   },
@@ -240,8 +322,11 @@ export const architectureWorkItems = [
     date: 'Jul 2009 - Apr 2010',
     company: 'Brillembourg Architects',
     role: 'Junior Architectural Designer',
-    description:
-      'Assisted in the development of a design proposal for a housing complex/hotel in Venezuela with 3D models, renderings, and 2D drawings –– Assisted in all phases of design, development, and construction for a one-bedroom Manhattan residential renovation –– Revised shop drawings and implemented detailed construction sketches.',
+    description: [
+      'Assisted in the development of a design proposal for a housing complex/hotel in Venezuela with 3D models, renderings, and 2D drawings',
+      'Assisted in all phases of design, development, and construction for a one-bedroom Manhattan residential renovation',
+      'Revised shop drawings and implemented detailed construction sketches',
+    ],
     website: 'https://www.carlosbrillembourgarchitects.com/',
     tags: ['AutoCad', 'Photoshop', 'Sketchup'],
   },
@@ -249,8 +334,12 @@ export const architectureWorkItems = [
     date: 'Sep 2007 - April 2009',
     company: 'Garrison Architects',
     role: 'Junior Architectural Designer',
-    description:
-      'Managed the Grand Army Plaza International Competition submission in Brooklyn, NY –– Contributed to concept ideas, 3D models, renderings, and design drawings –– Assisted in all phases of design and development for the US Consulate Residence in Samoa –– Generated 3D Models, renderings, schematic design, design development, and construction documents',
+    description: [
+      'Managed the Grand Army Plaza International Competition submission in Brooklyn, NY',
+      'Contributed to concept ideas, 3D models, renderings, and design drawings',
+      'Assisted in all phases of design and development for the US Consulate Residence in Samoa ',
+      'Generated 3D Models, renderings, schematic design, design development, and construction documents',
+    ],
     website: 'https://www.garrisonarchitects.com/',
     tags: [
       'AutoCad',
