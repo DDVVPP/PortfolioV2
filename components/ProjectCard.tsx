@@ -29,16 +29,6 @@ const ProjectCard = ({
     );
   };
 
-  const renderNoCommitsOrNoPRsDiv = (type: string) => {
-    return (
-      <div className="rounded-md border border-dark-800 bg-dark-800/65 p-4">
-        <p className="text-sm font-light text-slate-300 max-sm:text-[13px] 3xl:text-base">
-          No {type} created this year
-        </p>
-      </div>
-    );
-  };
-
   return (
     <section className="group flex gap-x-9 gap-y-4 rounded-lg bg-slate-900/50 p-6 pl-3 max-md-projects:flex-col max-md-projects:gap-y-3 max-md-projects:p-6">
       <div className="max-md-projects:hidden md-projects:block">
@@ -85,17 +75,11 @@ const ProjectCard = ({
           })}
         </div>
 
-        {pullRequests.length > 0 ? (
+        {pullRequests.length > 0 && (
           <PullRequestsAccordion pullRequests={pullRequests} />
-        ) : (
-          renderNoCommitsOrNoPRsDiv('pull requests')
         )}
 
-        {commits.length > 0 ? (
-          <CommitsAccordion commits={commits} />
-        ) : (
-          renderNoCommitsOrNoPRsDiv('commits')
-        )}
+        {commits.length > 0 && <CommitsAccordion commits={commits} />}
       </div>
     </section>
   );
