@@ -22,7 +22,9 @@ const Software = () => {
               className="group rounded-lg p-4 pl-3 duration-300 hover:bg-slate-900/80 max-md:px-3"
             >
               <div className="flex gap-x-4 text-sm text-slate-300 max-md:flex-col max-md:gap-x-0">
-                <p className="min-w-44 uppercase text-slate-300">{item.date}</p>
+                <p className="shrink-0 uppercase text-slate-300 md:w-44">
+                  {item.date}
+                </p>
                 <div className="flex flex-col">
                   <div className="flex gap-x-0.5">
                     <h6 className="flex items-center font-medium uppercase text-slate-100">
@@ -40,7 +42,14 @@ const Software = () => {
                   <h6 className="mb-1 font-normal text-slate-100 duration-300 group-hover:text-corral">
                     {item.role}
                   </h6>
-                  <p className="font-light text-slate-300">{item.details}</p>
+                  <div className="space-y-1 font-light text-slate-300">
+                    {item.details.map((detail) => (
+                      <li key={detail} className="flex gap-2">
+                        <span className="shrink-0">-</span>
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </div>
                   <div className="mt-3 flex flex-wrap gap-x-3 gap-y-2">
                     {item.tags.map((tag) => {
                       return <Tag key={tag} text={tag} />;
