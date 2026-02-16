@@ -10,7 +10,7 @@ export const getGitHubPRsAndCommits = async () => {
       project.githubLink.split('/').pop()
     );
     // Helper function to fetch specific year's repos
-    const repoNames = await getThisYearsPublicRepoNames('2025');
+    const repoNames = await getThisYearsPublicRepoNames('2026');
     // Match fetched repos to repos in project tab
     const filteredRepoNames = repoNames.filter((name: string) =>
       repoNamesFromUIProjects.includes(name)
@@ -20,12 +20,12 @@ export const getGitHubPRsAndCommits = async () => {
     const [repoPRsFetch, repoCommitsFetch] = await Promise.all([
       Promise.all(
         filteredRepoNames.map((repoName: string) =>
-          getRepoPRs(repoName, 2, '2025')
+          getRepoPRs(repoName, 2, '2026')
         )
       ),
       Promise.all(
         filteredRepoNames.map((repoName: string) =>
-          getRepoCommits(repoName, 4, '2025')
+          getRepoCommits(repoName, 4, '2026')
         )
       ),
     ]);
@@ -135,8 +135,20 @@ const getRepoCommits = async (
         b.commit.author.date.localeCompare(a.commit.author.date)
       );
 
+    const shouldHideCommitMessage = (message: string) => {
+      const trimmedMessage = message.trim().toLowerCase();
+
+      // squash merge default message
+      if (trimmedMessage.startsWith('merge pull request')) return false;
+      // optional: hide plain merge commits too
+      if (trimmedMessage.startsWith('merge branch')) return false;
+
+      return true;
+    };
+
     // Return the n most recent repos with the specified object properties
     const filteredData = repoCommitsUpdatedThisYear
+      .filter((repo: Repo) => shouldHideCommitMessage(repo.commit.message))
       .slice(0, numberOfCommits)
       .map((repo: Repo) => {
         return {

@@ -85,17 +85,11 @@ const ProjectCard = ({
           })}
         </div>
 
-        {pullRequests.length > 0 ? (
+        {pullRequests.length > 0 && (
           <PullRequestsAccordion pullRequests={pullRequests} />
-        ) : (
-          renderNoCommitsOrNoPRsDiv('pull requests')
         )}
 
-        {commits.length > 0 ? (
-          <CommitsAccordion commits={commits} />
-        ) : (
-          renderNoCommitsOrNoPRsDiv('commits')
-        )}
+        {commits.length > 0 && <CommitsAccordion commits={commits} />}
       </div>
     </section>
   );
