@@ -49,10 +49,11 @@ export const softwareWorkItems = [
     description: `A comprehensive health management system that objectively measures Parkinson's disease motor symptoms.`,
     role: 'Software Engineer',
     details: [
-      'Building a Next.js/TypeScript monorepo for clinical dashboards (physician/provider/admin), using legacy workflows as reference',
-      'Creating a maintainable UI foundation: design system, reusable components, and clear routing/state patterns',
-      'Prototyping core patient management screens with mock data to unblock iteration',
-      'Integrating role-based authentication (Keycloak and SMART on FIHR) with an OpenAPI-generated client/types workflow.',
+      'Building provider-facing clinical dashboards in a Next.js and TypeScript monorepo for a Parkinson’s motor-assessment platform supporting an FDA 510(k) submission',
+      'Developing reusable UI infrastructure with an MUI-based design system, shared components, and routing/state patterns',
+      'Prototyping and iterating on core provider workflows using Figma + mock data',
+      'Implementing data visualizations with MUI X Charts (custom tooltips/markers, thresholds, backgrounds, zoom/pan patterns, date ranges) to surface patient mobility trends and therapy-state context',
+      'Integrating role-based access and auth workflows (Keycloak and SMART on FHIR) and consuming an OpenAPI-generated client/types layer for reliable, type-safe frontend development',
     ],
     website: 'https://www.qdghealth.com/',
     tags: [
